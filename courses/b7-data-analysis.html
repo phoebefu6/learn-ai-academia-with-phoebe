@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 7 · Data analysis without forking paths - learn ai academia with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-academia-with-phoebe</a> / Researcher session 7 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe · Researcher track · Session 7 of 10</div>
+    <h1>Data analysis without forking paths: <span class="accent">verify the code, count the choices</span></h1>
+    <p class="sub">AI analysis tools run real code on your real data and hand back real-looking numbers - and the vendor's own documentation tells you to check them. This session builds the two disciplines that keep AI-assisted analysis publishable: a verify loop for every number the tool produces, and a forking-paths audit for every choice you made on the way to it. Because a tool that can try a hundred specifications in a minute is a wonderful assistant and a terrifying accomplice.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Researcher track</span>
+      <span class="chip audience">PhD students · postdocs · anyone touching data</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-19 · The verify loop + the forking-paths accelerant</span>
+      <span class="a3" style="flex:5">19-41 · Build-along: EDA with receipts + your own path audit</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this sits in the track</h2>
+    </div>
+    <p class="lede">b5 gave you a preregistered analysis plan; b6 gave you tested, versioned research code. This session is where both earn their keep: the moment an AI tool starts producing plots and p-values from your data. The good news is that the honest workflow is not slower by much. The bad news is that the dishonest workflow now runs at machine speed, and it does not announce itself.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A verify loop you run on every AI-produced number (read the code, recompute one value, state the assumptions), a forking-paths audit of your own current analysis with the choice points counted, a clean split between confirmatory and exploratory results, and an anti-pattern gallery you will recognise from across the hallway.
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="tools">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the tool</span>
+      <h2>What AI analysis tools actually are <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">ChatGPT's Advanced Data Analysis is not a model guessing at statistics from memory. It writes real Python, runs it in a sandbox on the file you uploaded, and returns the output. That is genuinely better than hallucinated arithmetic - and it moves the risk, not removes it. The code it wrote embodies choices you did not make and assumptions you did not state. OpenAI's own documentation instructs you to review the generated code, outputs and assumptions. That vendor sentence is this whole session in one line.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The verify loop: the tool runs real code, you read the code, recompute one number independently, and state the assumptions - on every upload.">
+        <style>
+          .dvT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .dvH { font: 600 12.5px Inter, sans-serif; fill: #22252B; }
+          .dvX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .dvK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="30" width="196" height="64" rx="10" fill="#101C36"/>
+        <text class="dvT" x="40" y="56">1 · It runs real code</text>
+        <text class="dvX" x="40" y="76" fill="#A8B9D6">Python, on your upload</text>
+        <path d="M 224 62 L 246 62" stroke="#C9C9D6" stroke-width="2" marker-end="url(#dvAr)"/>
+        <rect x="252" y="30" width="180" height="64" rx="10" fill="#1B2A4A"/>
+        <text class="dvT" x="268" y="56">2 · Read the code</text>
+        <text class="dvX" x="268" y="76" fill="#A8B9D6">every line it wrote</text>
+        <path d="M 436 62 L 458 62" stroke="#C9C9D6" stroke-width="2" marker-end="url(#dvAr)"/>
+        <rect x="464" y="30" width="188" height="64" rx="10" fill="#3A5488"/>
+        <text class="dvT" x="480" y="56">3 · Check one number</text>
+        <text class="dvX" x="480" y="76" fill="#EEF2F9">recompute it yourself</text>
+        <path d="M 656 62 L 678 62" stroke="#C9C9D6" stroke-width="2" marker-end="url(#dvAr)"/>
+        <rect x="684" y="30" width="172" height="64" rx="10" fill="#A87B2F"/>
+        <text class="dvT" x="700" y="56">4 · Say the givens</text>
+        <text class="dvX" x="700" y="76" fill="#F7EFDF">assumptions, out loud</text>
+
+        <path d="M 770 94 L 770 122 L 122 122 L 122 100" fill="none" stroke="#C9C9D6" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#dvAr)"/>
+        <text class="dvX" x="380" y="138">the loop repeats for every upload and every figure</text>
+
+        <rect x="24" y="160" width="832" height="88" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="dvH" x="44" y="186">The vendor already wrote the rule</text>
+        <text class="dvX" x="44" y="206">OpenAI's own data-analysis docs instruct users to review the generated code, outputs and assumptions.</text>
+        <text class="dvX" x="44" y="223">Step 2 catches silent choices (dropped rows, filled missing values), step 3 catches silent errors,</text>
+        <text class="dvX" x="44" y="240">step 4 turns hidden defaults into stated methods. Skip any step and you are presenting unread work.</text>
+
+        <rect x="24" y="272" width="832" height="52" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="dvH" x="44" y="294" fill="#991B1B">The privacy gate from b1 still stands</text>
+        <text class="dvX" x="44" y="312" fill="#991B1B">Participant data does not go into consumer AI tools. Public or properly de-identified data only - or an approved enterprise instance (a6).</text>
+
+        <rect x="24" y="338" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="dvK" x="48" y="350">Never present a number you have not watched being computed.</text>
+        <defs><marker id="dvAr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#C9C9D6"/></marker></defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - the verify loop, the vendor's own instruction, and the gate that never opens</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why "it ran real code" is not the same as "it is right"<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A sandbox executes faithfully whatever the model decided to write. The classic silent choices, all observed in the wild and all invisible unless you read the code:</p>
+        <ul>
+          <li><strong>Missing values quietly handled</strong> - dropped, zero-filled, or mean-imputed, each of which is a methodological decision with a different effect on your estimate.</li>
+          <li><strong>Outliers quietly trimmed</strong> - a "cleaning" step you never asked for, which is a results-changing exclusion rule wearing a helpful costume.</li>
+          <li><strong>The convenient default test</strong> - a t-test where your design needs a mixed model, equal-variance assumptions nobody checked, the first significance threshold that came to mind.</li>
+        </ul>
+        <p>None of these are crashes. The output looks exactly as authoritative either way - which is why the loop's step 2 is reading the code, not admiring the chart.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The one-number check: cheap, embarrassing, essential<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Step 3 of the loop is deliberately minimal: pick ONE reported statistic and recompute it by an independent route - your own notebook cell, a spreadsheet pivot, a hand calculation on a small slice. If the group mean the tool reports does not match the group mean you compute, you have found either its bug or your misunderstanding of the data, and both are worth more than the plot.</p>
+        <p>One number is not a full audit, and is not meant to be. It is a tripwire: it converts "I trust the tool" into "I have evidence about this specific output", at a cost of two minutes. Your repro package (b6) is the full audit - the tripwire decides whether the output deserves to enter it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="forking">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the accelerant</span>
+      <h2>The garden of forking paths, now with an engine <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Gelman &amp; Loken (2013) made the uncomfortable point that multiple comparisons are a problem even without intentional fishing: every analysis involves choices - exclusions, transforms, covariates, outcome definitions - and each choice silently multiplies the paths through the data. A researcher who honestly walks one path still walked a path that the data helped choose. AI turns that garden into a highway: a tool that can try a hundred specifications in a minute industrializes researcher degrees of freedom.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Forking paths fan-out: one dataset, four choice points multiplying to 96 paths, with the preregistered plan choosing one in advance and AI able to walk them all.">
+        <style>
+          .dfT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .dfH { font: 600 12px Inter, sans-serif; fill: #22252B; }
+          .dfX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .dfR { font: 600 11px Inter, sans-serif; fill: #991B1B; }
+          .dfW { font: 600 11px Inter, sans-serif; fill: #3A2A08; }
+          .dfK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="128" width="190" height="64" rx="10" fill="#101C36"/>
+        <text class="dfT" x="40" y="154">One dataset</text>
+        <text class="dfX" x="40" y="174" fill="#A8B9D6">one research question</text>
+
+        <path d="M 214 148 L 292 50" stroke="#C9C9D6" stroke-width="2" marker-end="url(#dfAr)"/>
+        <path d="M 214 155 L 292 122" stroke="#C9C9D6" stroke-width="2" marker-end="url(#dfAr)"/>
+        <path d="M 214 168 L 292 194" stroke="#C9C9D6" stroke-width="2" marker-end="url(#dfAr)"/>
+        <path d="M 214 175 L 292 266" stroke="#C9C9D6" stroke-width="2" marker-end="url(#dfAr)"/>
+
+        <rect x="298" y="24" width="250" height="48" rx="10" fill="#1B2A4A"/>
+        <text class="dfT" x="314" y="44">Exclusion rules</text>
+        <text class="dfX" x="314" y="62" fill="#A8B9D6">3 defensible versions</text>
+        <rect x="298" y="96" width="250" height="48" rx="10" fill="#1B2A4A"/>
+        <text class="dfT" x="314" y="116">Transforms</text>
+        <text class="dfX" x="314" y="134" fill="#A8B9D6">4 defensible versions</text>
+        <rect x="298" y="168" width="250" height="48" rx="10" fill="#3A5488"/>
+        <text class="dfT" x="314" y="188">Covariate sets</text>
+        <text class="dfX" x="314" y="206" fill="#EEF2F9">4 defensible versions</text>
+        <rect x="298" y="240" width="250" height="48" rx="10" fill="#3A5488"/>
+        <text class="dfT" x="314" y="260">Outcome variants</text>
+        <text class="dfX" x="314" y="278" fill="#EEF2F9">2 defensible versions</text>
+
+        <path d="M 552 48 L 618 96" stroke="#C9C9D6" stroke-width="2" marker-end="url(#dfAr)"/>
+        <path d="M 552 120 L 618 116" stroke="#C9C9D6" stroke-width="2" marker-end="url(#dfAr)"/>
+        <path d="M 552 192 L 618 196" stroke="#C9C9D6" stroke-width="2" marker-end="url(#dfAr)"/>
+        <path d="M 552 264 L 618 216" stroke="#C9C9D6" stroke-width="2" marker-end="url(#dfAr)"/>
+
+        <rect x="624" y="76" width="232" height="72" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="dfR" x="640" y="98">3 × 4 × 4 × 2 = 96 paths</text>
+        <text class="dfX" x="640" y="116" fill="#991B1B">An AI agent can walk all 96</text>
+        <text class="dfX" x="640" y="132" fill="#991B1B">in minutes and show you</text>
+        <text class="dfX" x="640" y="148" fill="#991B1B">only the prettiest p-value.</text>
+
+        <rect x="624" y="164" width="232" height="72" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="dfW" x="640" y="186">The prereg plan (b5)</text>
+        <text class="dfX" x="640" y="204" fill="#3A2A08">picks ONE path before the</text>
+        <text class="dfX" x="640" y="220" fill="#3A2A08">data can vote. Everything</text>
+        <text class="dfX" x="640" y="236" fill="#3A2A08">else is labeled exploratory.</text>
+
+        <rect x="24" y="318" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="dfK" x="48" y="330">Gelman &amp; Loken (2013): forking paths bias results even with no intent to fish. AI just paves the garden.</text>
+        <defs><marker id="dfAr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#C9C9D6"/></marker></defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - four ordinary choice points multiply into 96 paths, and only one was chosen in advance</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The discipline: confirmatory, exploratory, and the count between them<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The defence is not abstinence; it is bookkeeping with teeth:</p>
+        <ul>
+          <li><strong>The preregistered analysis plan decides what is confirmatory.</strong> The plan you wrote in b5 - before seeing outcomes - names the one path whose p-values mean what p-values claim to mean.</li>
+          <li><strong>Everything else is exploratory and says so.</strong> Exploring is legitimate science; presenting exploration as confirmation is the misconduct. The label is the whole difference.</li>
+          <li><strong>Specification counts get reported.</strong> "We examined 14 model specifications; the preregistered primary analysis is Table 2; the remainder appear in the supplement" is one sentence, and it converts a suspicious pattern into an honest method.</li>
+        </ul>
+        <p>Notice what this makes of AI's speed: with the labels in place, a tool that runs many specifications fast becomes a robustness check - the same result across 90 of 96 paths is evidence of stability. Without the labels, the identical run is a p-hacking machine. The discipline, not the tool, decides which one you own.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The AI-specific literature has already named this<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is not a hypothetical the course invented - published commentary has been mapping the AI version of researcher degrees of freedom:</p>
+        <ul>
+          <li><strong>Prompt-Hacking (arXiv 2504.14571)</strong> - the prompt itself becomes a researcher degree of freedom: rephrase until the analysis flatters you.</li>
+          <li><strong>Sanity Checks for Agentic Data Science (arXiv 2604.11003)</strong> - agentic analysis pipelines need explicit guardrails precisely because they explore specification space autonomously.</li>
+          <li><strong>LLM-hacking in annotation (arXiv 2509.08825)</strong> - when an LLM does your labeling, model and prompt choices propagate into downstream conclusions like any other analytic fork.</li>
+        </ul>
+        <p>Different corners of the pipeline, one shared finding: every place an AI makes a choice for you is a fork you must either fix in advance or disclose. Note these are arXiv commentary and preprint-stage work - read them as the field thinking out loud, and verify the current versions before citing them yourself.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="section" id="workflow">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the workflow</span>
+      <h2>The honest analysis workflow, with AI in it <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The stable division of labour: AI assists exploration and mechanics; you own models, inference and claims. EDA assist - plots, summary tables, data-quality checks - is low-risk and high-value, because its outputs are inputs to your judgement rather than statements in your paper. Model choice and inference stay yours. Every AI-produced figure gets its code read before it gets believed. And the repro package from b6 captures the final path, so the analysis that appears in print is the one anyone can re-run.</p>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The anti-pattern gallery: three moves that end careers slowly<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="prompt-box bad">
+          <span class="label">Anti-pattern 1 · the specification slot machine</span>
+          <p>"That wasn't significant - try log-transforming the outcome. Still not? Try excluding participants over 65. Try adding the interaction term. Keep going until p &lt; .05."</p>
+        </div>
+        <div class="prompt-box bad">
+          <span class="label">Anti-pattern 2 · outsourcing the judgement call</span>
+          <p>"Is this result publishable? Which of these analyses would reviewers find most convincing?" - the model will answer, confidently, and the answer is worthless: publishability is a claim about truth and standards, not about text.</p>
+        </div>
+        <div class="prompt-box bad">
+          <span class="label">Anti-pattern 3 · the silent cleanup</span>
+          <p>"Clean the data and rerun" - and the tool removes outliers you never saw, under a rule you never chose, changing an estimate you are about to publish. Silent outlier removal is an exclusion criterion that skipped peer review.</p>
+        </div>
+        <p>All three share a signature: the human asked for an outcome and let the machine choose the path. The honest workflow reverses it - the human chooses the path, the machine does the walking.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What to delegate happily<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Task</th><th>Delegate?</th><th>Why</th></tr>
+          <tr><td>Distribution plots, summary tables, missingness maps</td><td>Yes, freely</td><td>Inputs to your judgement - errors here get caught by your eyes</td></tr>
+          <tr><td>Data-quality checks (types, ranges, duplicates)</td><td>Yes, freely</td><td>Mechanical, verifiable, and the tool is thorough where humans get bored</td></tr>
+          <tr><td>Boilerplate plotting and reshaping code</td><td>Yes, with code read</td><td>b6 rules apply - it is research code and gets tested like it</td></tr>
+          <tr><td>Choice of model and test</td><td>No - propose at most</td><td>This is the methods section; it carries your name, not the tool's</td></tr>
+          <tr><td>Inference, thresholds, and what the result means</td><td>Never</td><td>The gold box from b1: claims and conclusions are yours alone</td></tr>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Run the verify loop on a real upload <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Feel the loop once with your own hands and it becomes reflex. Use a SAFE dataset: a public one (a government open-data table, a classic teaching dataset) or your own non-sensitive data. The privacy gate is part of the demo, not an obstacle to it.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pick your safe dataset and confirm it passes the b1 gate: no participant data, nothing unpublished that is not yours, nothing a collaborator would be surprised to find in a consumer tool.</p></div>
+      <div class="step"><p>Upload it to an AI analysis tool and ask for EDA: distributions of the key variables, a missingness summary, and the three data-quality problems it would flag first.</p></div>
+      <div class="step"><p>Open the generated code and actually read it. Write down every decision it made that you did not ask for - filtering, imputation, type coercion, binning.</p></div>
+      <div class="step"><p>Pick one reported statistic - a group mean, a correlation, a count - and recompute it yourself in a notebook or spreadsheet, from the raw file. Compare.</p></div>
+      <div class="step"><p>Say the assumptions out loud: complete the sentence "these outputs are correct only if..." with at least two conditions the code silently assumed. That sentence is a draft of your methods section.</p></div>
+    </div>
+
+    <div class="prompt-box good">
+      <span class="label">★ Try it now - EDA with the receipts attached</span>
+      <p>Here is a dataset [attach safe file]. Do exploratory analysis only: distributions of each variable, missing-data summary, and the top three data-quality issues. For every step: show the code you ran, list every row you excluded or altered and why, and state the assumptions your choices rely on. Do not fit any models. Do not remove outliers without listing them.</p>
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>The forking-paths audit of YOUR analysis <span class="tag demo">★ 10 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Not a toy exercise: bring the analysis you are actually running this month. You will leave knowing your own path count - most people are surprised by their number, and the surprise is the point.</p>
+
+    <div class="steps">
+      <div class="step"><p>List every choice point in your current analysis: exclusion rules, variable transforms, covariate sets, outcome definitions, subgroup splits, the significance threshold itself.</p></div>
+      <div class="step"><p>For each choice point, count the defensible versions - the ones a reasonable colleague might have picked. Not the absurd ones; the plausible ones. Honesty beats flattery here.</p></div>
+      <div class="step"><p>Multiply. That product is your garden. A modest analysis with 4 choice points of 3 options each is already 81 paths.</p></div>
+      <div class="step"><p>Mark which choices were fixed BEFORE you saw the data - in your prereg plan (b5), your protocol, or a dated note. Those forks are closed; they are what "confirmatory" means.</p></div>
+      <div class="step"><p>For every fork still open, write the one-line rule that closes it now, dated today - or accept that the result it touches is exploratory and will be labeled so. Both are honest; only silence is not.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>If your path count scares you</strong>
+      Good - it should, and it is the same count it was yesterday; you just measured it. The fix is not deleting analyses, it is labeling: one preregistered path reported as confirmatory, the rest as exploratory with the specification count stated. Reviewers respect a stated garden far more than a suspiciously tidy single path.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 40-50 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the forking-paths audit if you ran out of time, and file it with your prereg plan. It is the appendix your future methods section will thank you for.</li>
+      <li>Run the verify loop on the next three AI-produced outputs in your real work, and keep a tally of what step 2 (reading the code) caught. Your personal catch rate is the best argument for the habit.</li>
+      <li>Add one sentence to your current draft's methods: how many specifications you examined and which one was preregistered. Feel how cheap honesty is when it is one sentence.</li>
+      <li>Check whether your target journal or field has reporting guidance on analytic flexibility (registered reports, robustness sections) - verify the current version of whatever you find before relying on it.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every tool and policy claim on this page traces to vendor documentation or published work catalogued in the course source map. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">ChatGPT Advanced Data Analysis: real Python sandbox + OpenAI's review-the-code instruction</span><span class="note">Part 1 · the vendor's own docs carry the rule</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Gelman &amp; Loken (2013): forking paths without intentional fishing</span><span class="note">Part 2 · the pre-AI theory the accelerant plugs into</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">AI-specific commentary: prompt-hacking, agentic sanity checks, LLM annotation forks</span><span class="note">Part 2 · arXiv 2504.14571, 2604.11003, 2509.08825</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Confirmatory vs exploratory labeling + specification-count reporting</span><span class="note">Parts 2-3 · rides on the b5 prereg plan and the b6 repro package</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Data-privacy terms of specific consumer tools</span><span class="note">Gate stated here · the tool-terms detail lives in b1 and a6</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Statistical method choice itself (which model, which test)</span><span class="note">Beyond scope by design - that is your field's methods training, not this course</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · What does OpenAI's own documentation say about Advanced Data Analysis outputs?</p>
+      <button class="qopt" type="button">A · They are verified by the sandbox, so no user review is needed</button>
+      <button class="qopt" type="button">B · They may not be used in academic publications</button>
+      <button class="qopt" type="button">C · Users should review the generated code, outputs and assumptions</button>
+      <p class="qwhy">The vendor's own instruction is the session's thesis: the sandbox guarantees the code ran, not that the code was right for your question. Reading the code catches silent choices, the one-number check catches silent errors, and stating assumptions turns hidden defaults into methods. The tool's maker asks for exactly the loop this session builds.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Gelman &amp; Loken showed forking paths bias results even without intentional fishing. Why does AI make this worse?</p>
+      <button class="qopt" type="button">A · A tool that tries a hundred specifications in a minute industrializes researcher degrees of freedom - the garden becomes a highway</button>
+      <button class="qopt" type="button">B · AI models compute p-values incorrectly</button>
+      <button class="qopt" type="button">C · It does not - automated analysis removes human bias from the choices</button>
+      <p class="qwhy">The original problem was a human wandering the garden one path at a time, guided by the data. AI removes the friction: all the paths, walked in minutes, prettiest result surfaced. The choices still multiply silently - now at machine speed. The same speed becomes a robustness check the moment the confirmatory path is fixed in advance and the count is reported.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · What makes a result confirmatory rather than exploratory?</p>
+      <button class="qopt" type="button">A · It reaches significance in the majority of specifications tried</button>
+      <button class="qopt" type="button">B · Its analysis path was fixed in the preregistered plan before the data could influence the choices</button>
+      <button class="qopt" type="button">C · It was produced without any AI assistance</button>
+      <p class="qwhy">The label is about timing, not tooling. A path chosen before seeing outcomes (b5's plan) yields p-values that mean what they claim; a path chosen after - by you or by an AI - is exploration, which is legitimate and valuable exactly when it is labeled. Robustness across many specifications is nice, but it is evidence of stability, not a substitute for the pre-commitment.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 7 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>What the tool is</b><span>ChatGPT ADA runs real Python in a sandbox on your upload. Real execution, not real judgement - the choices in the code are unowned until you read them.</span></div>
+      <div class="cheat-item"><b>The verify loop</b><span>Read the code it wrote → recompute one number independently → state the assumptions out loud. Every upload, every figure.</span></div>
+      <div class="cheat-item"><b>The vendor's rule</b><span>OpenAI's own docs: review the generated code, outputs and assumptions. The maker of the tool wrote your discipline for you.</span></div>
+      <div class="cheat-item"><b>The privacy gate</b><span>Participant data never enters consumer tools (b1/a6). Safe public data or approved enterprise instances only.</span></div>
+      <div class="cheat-item"><b>Forking paths</b><span>Gelman &amp; Loken (2013): choices multiply silently, no fishing intent needed. AI walks all the paths in minutes - the garden becomes a highway.</span></div>
+      <div class="cheat-item"><b>The three labels</b><span>Confirmatory = path fixed in the b5 prereg plan. Exploratory = everything else, said plainly. Specification counts reported, always.</span></div>
+      <div class="cheat-item"><b>Delegate happily</b><span>EDA plots, summaries, data-quality checks, boilerplate code (read it). Never: model choice, inference, what the result means.</span></div>
+      <div class="cheat-item"><b>Anti-pattern gallery</b><span>Try-until-significant · "is this publishable?" to a model · silent outlier removal. Shared signature: outcome requested, path delegated.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 7 of 10 · learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b6-research-code.html">← Previous: Research code</a> &nbsp;·&nbsp; <a href="b8-writing-and-publication.html">Next: Writing and publication →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

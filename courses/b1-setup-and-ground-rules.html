@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 1 · Setup and ground rules - learn ai academia with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-academia-with-phoebe</a> / Researcher session 1 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe · Researcher track · Session 1 of 10</div>
+    <h1>Setup and ground rules: <span class="accent">a working stack you can defend</span></h1>
+    <p class="sub">AI is already in your research whether you decided or not - in your search engine, your reference manager, your co-author's drafts. This session replaces drift with decisions: which tools go where in your research lifecycle, which rules your university, your funder and your target journals have already made for you, and the three ground rules that keep every later session honest. No hype, no doom - an inventory, a policy check, and a stack.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Researcher track</span>
+      <span class="chip audience">PhD students · postdocs · research staff</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · Lifecycle map + the rules that bind you</span>
+      <span class="a3" style="flex:5">18-40 · Build-along: policy check + your stack</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why this course exists</h2>
+    </div>
+    <p class="lede">Between the vendor pitch ("AI will do your literature review") and the common-room panic ("AI will end scholarship") there is a narrow, useful strip of ground: what these tools verifiably do, what your institutions verifiably allow, and how to use the first without violating the second. This track walks that strip for one full research cycle - search, screen, extract, hypothesise, code, analyse, write, review - with the receipts attached.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A one-page map of your research lifecycle with the AI-assist points marked, a completed policy check for YOUR university, funder and top-two target journals, a starting stack that costs nothing, and the three ground rules every later session builds on.
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="lifecycle">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the map</span>
+      <h2>Where AI actually helps, stage by stage <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The honest map is uneven. AI assistance is strong where the task is reading, ranking and reshaping text at volume; weak where the task is being right about the world. Mark your own lifecycle against this before installing anything.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Research lifecycle with AI leverage per stage: search and screening high, analysis and claims low - the human owns truth at every stage.">
+        <style>
+          .lcT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .lcH { font: 600 12px Inter, sans-serif; fill: #22252B; }
+          .lcX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .lcK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="196" height="56" rx="10" fill="#101C36"/>
+        <text class="lcT" x="40" y="47">Search + discovery</text>
+        <text class="lcX" x="40" y="66" fill="#A8B9D6">high leverage · b2</text>
+        <rect x="234" y="24" width="196" height="56" rx="10" fill="#1B2A4A"/>
+        <text class="lcT" x="250" y="47">Screening + review</text>
+        <text class="lcX" x="250" y="66" fill="#A8B9D6">high, verified · b3, b4</text>
+        <rect x="444" y="24" width="196" height="56" rx="10" fill="#3A5488"/>
+        <text class="lcT" x="460" y="47">Hypothesis + design</text>
+        <text class="lcX" x="460" y="66" fill="#EEF2F9">sparring partner · b5</text>
+        <rect x="654" y="24" width="202" height="56" rx="10" fill="#3A5488"/>
+        <text class="lcT" x="670" y="47">Code + pipelines</text>
+        <text class="lcX" x="670" y="66" fill="#EEF2F9">strong, tested · b6</text>
+
+        <rect x="24" y="104" width="196" height="56" rx="10" fill="#3A5488"/>
+        <text class="lcT" x="40" y="127">Data analysis</text>
+        <text class="lcX" x="40" y="146" fill="#EEF2F9">assist only · b7</text>
+        <rect x="234" y="104" width="196" height="56" rx="10" fill="#1B2A4A"/>
+        <text class="lcT" x="250" y="127">Writing + polish</text>
+        <text class="lcX" x="250" y="146" fill="#A8B9D6">policy-bound · b8</text>
+        <rect x="444" y="104" width="196" height="56" rx="10" fill="#101C36"/>
+        <text class="lcT" x="460" y="127">Peer review</text>
+        <text class="lcX" x="460" y="146" fill="#A8B9D6">tightly restricted · b9</text>
+        <rect x="654" y="104" width="202" height="56" rx="10" fill="#A87B2F"/>
+        <text class="lcT" x="670" y="127">Claims + conclusions</text>
+        <text class="lcX" x="670" y="146" fill="#F7EFDF">yours alone, always</text>
+
+        <rect x="24" y="192" width="832" height="94" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="lcH" x="44" y="218">The pattern to internalise</text>
+        <text class="lcX" x="44" y="238">AI is strongest where the task is high-volume text work with a human check at the end: ranking 3,000 abstracts,</text>
+        <text class="lcX" x="44" y="255">drafting boilerplate code, tightening prose. It is weakest exactly where academic careers are made or broken:</text>
+        <text class="lcX" x="44" y="272">whether a citation is real, whether an analysis is sound, whether a claim is true. The tools shift the labour, not the accountability.</text>
+
+        <rect x="24" y="310" width="404" height="66" rx="10" fill="#FFFFFF" stroke="#C9CFD9" stroke-width="1.5"/>
+        <text class="lcH" x="44" y="334">Every stage in this track has a session</text>
+        <text class="lcX" x="44" y="353">b2 search · b3 screening · b4 extraction · b5 hypothesis</text>
+        <text class="lcX" x="44" y="369">b6 code · b7 analysis · b8 writing · b9 review · b10 capstone</text>
+        <rect x="452" y="310" width="404" height="66" rx="10" fill="#FFFFFF" stroke="#C9CFD9" stroke-width="1.5"/>
+        <text class="lcH" x="472" y="334">And every stage has a rule-holder</text>
+        <text class="lcX" x="472" y="353">Your university (integrity + data), your funder (NIH, NSF, ERC...),</text>
+        <text class="lcX" x="472" y="369">your target journals (Nature, Science, Elsevier...) - Part 2</text>
+
+        <rect x="24" y="396" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="lcK" x="48" y="408">Gold box is the fixed point: conclusions are never delegated. Everything else is negotiable labour.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the lifecycle, the leverage, and the one box that never delegates</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The free starting stack (nothing to buy today)<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You can run this whole course on free tiers. The working set, by job:</p>
+        <table class="clean">
+          <tr><th>Job</th><th>Free starting point</th><th>What it verifiably is</th></tr>
+          <tr><td>Search</td><td>Semantic Scholar</td><td>Free academic search from the non-profit Ai2, 200M+ papers, free API</td></tr>
+          <tr><td>Open metadata</td><td>OpenAlex</td><td>Open scholarly index, CC0 data - the plumbing under many other tools</td></tr>
+          <tr><td>Discovery by graph</td><td>ResearchRabbit / Connected Papers</td><td>Citation-network explorers; ResearchRabbit keeps a free-forever tier</td></tr>
+          <tr><td>Screening</td><td>ASReview</td><td>Open-source active-learning screener from Utrecht University, validated in Nature Machine Intelligence (2021)</td></tr>
+          <tr><td>References</td><td>Zotero</td><td>Free and open source; AI arrives via community plugins, choose carefully</td></tr>
+          <tr><td>Source-grounded reading</td><td>NotebookLM free tier</td><td>50 sources per notebook, answers cite your uploads - grounding reduces, not eliminates, errors</td></tr>
+          <tr><td>General assistant</td><td>Claude / ChatGPT free tiers</td><td>Drafting, explaining, sparring - never a source of citations (Part 3)</td></tr>
+        </table>
+        <p>Paid tools (Elicit Pro's systematic-review workflow, scite, Covidence) earn their place later, when a specific session shows you exactly what the money buys. Never start a stack with a subscription.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Deep-research modes: what the agent buttons actually do<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>OpenAI's Deep Research, Google's Gemini Deep Research and Claude's Research mode all do a version of the same thing: plan a multi-step search, browse, and return a long cited report. Three honest observations before you lean on them:</p>
+        <ul>
+          <li><strong>Quotas are real and volatile.</strong> These modes are rationed on every plan tier and the allowances change frequently - check your plan's current numbers rather than remembering old ones.</li>
+          <li><strong>The citations are leads, not evidence.</strong> No published audit yet measures citation accuracy of these modes in academic domains. The nearest rigorous study - Stanford's preregistered audit of retrieval-grounded legal AI tools (Magesh et al., 2025) - found 17-33% hallucination even WITH retrieval grounding. Treat every citation in a generated report as unverified until you have resolved it to a DOI and read it.</li>
+          <li><strong>They are a b2 tool, not a b3-b4 replacement.</strong> A deep-research report is a fast first map of unfamiliar territory. It is not a screen, not an extraction, and not a literature review - those need the audit trail this track builds.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="rules">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the rule-holders</span>
+      <h2>The decisions already made for you <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Before you form an opinion about AI in research, three institutions formed theirs, and they bind you now: your funder, your target journals, and your university. The leader track (a2) reads the policies line by line; here is the researcher's working summary - verify the current version of each before you rely on it, because these are moving.</p>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Funders: the NIH pair everyone should know, whatever your field<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>NIH NOT-OD-23-149 (2023):</strong> generative AI is prohibited in NIH peer review - a reviewer who pastes any part of your application into an AI tool has breached confidentiality. This is about protecting YOUR unpublished ideas.</li>
+          <li><strong>NIH NOT-OD-25-132 (2025):</strong> applications "substantially developed by AI" will not be treated as the applicant's original ideas. AI may assist limited aspects; the aims, rationale, design and claims must remain the team's own intellectual work - and post-award discovery of substantial AI development can escalate to research-misconduct territory.</li>
+          <li><strong>NSF:</strong> proposers are responsible for the accuracy and authenticity of their submissions including AI-assisted content, and reviewers face their own restrictions. Check the current PAPPG language for the year you submit.</li>
+        </ul>
+        <p>The shared logic: <strong>assistance is tolerated, substitution is not, and your unpublished work must never leak through someone else's prompt.</strong> Every funder rule this course cites gets re-verified against the live notice before you rely on it - policy pages change faster than course pages.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Journals: the three-line summary of a messy landscape<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Nobody grants AI authorship.</strong> Every major publisher - Springer Nature, Elsevier, Science/AAAS, Wiley, IEEE, ACM - agrees an AI cannot be an author, because authorship carries accountability and a model cannot be accountable.</li>
+          <li><strong>The disclosure line sits at generation, not polish.</strong> Springer Nature says AI-assisted copy editing of your own text needs no declaration; Elsevier exempts basic grammar and spelling checks but requires a disclosure statement for generative use in writing. Science has historically been the strictest of the set. The safe default: if AI produced sentences you kept, disclose; if it fixed your grammar, you are in polish territory.</li>
+          <li><strong>Reviewers are locked down hardest.</strong> Elsevier and Springer Nature both forbid reviewers from uploading manuscripts to AI tools. ICMJE requires reviewers to ask the journal's permission first and disclose any AI use in the review. Details in b9.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>"Certainly, here is a possible introduction for your topic:"</strong> - that sentence opened the introduction of a materials-science paper published by Elsevier in 2024, retracted within months for undisclosed AI use. Nobody involved - authors, editors, reviewers - read the first line carefully enough. The failure was never the tool; it was that no human owned the text. This course exists so your name never sits above a sentence like that.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Your university and your data: the two local checks<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Your university almost certainly has GenAI research guidance already</strong> - research offices from Stanford Medicine to Utah to UCSF published theirs within months of the NIH notices. Find yours before assuming; it may be stricter than the funder's, and in a misconduct proceeding it is the document that counts.</li>
+          <li><strong>Unpublished data, participant data, and collaborators' drafts do not go into consumer AI tools.</strong> A free-tier chat window is not a data enclave: check the tool's data-retention terms and your ethics approval before anything sensitive crosses that boundary. Human-subjects data has its own rules that no productivity gain overrides. If your institution runs an approved enterprise instance with no-training guarantees, that changes the calculus - which is an a6 (leader track) decision.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="section" id="ground-rules">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the contract</span>
+      <h2>Three ground rules for the whole track <span class="tag concept">4 min live</span></h2>
+    </div>
+    <p class="lede">Every session that follows assumes these. They are not aspirations; they are the difference between assistance and misconduct.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three ground rules: never cite what you have not read, disclose what policy asks, never paste what is not yours to share.">
+        <style>
+          .grN { font: 800 22px Inter, sans-serif; fill: #FFFFFF; }
+          .grH { font: 700 13.5px Inter, sans-serif; fill: #22252B; }
+          .grX { font: 400 11.5px Inter, sans-serif; fill: #6A7180; }
+          .grK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="56" height="56" rx="12" fill="#101C36"/>
+        <text class="grN" x="45" y="61">1</text>
+        <rect x="94" y="24" width="762" height="56" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="grH" x="114" y="47">Never cite what you have not read</text>
+        <text class="grX" x="114" y="66">Published audits: 18-55% of GPT-generated citations were fabricated. Every AI-suggested reference resolves to a DOI and gets read - no exceptions</text>
+
+        <rect x="24" y="100" width="56" height="56" rx="12" fill="#1B2A4A"/>
+        <text class="grN" x="45" y="137">2</text>
+        <rect x="94" y="100" width="762" height="56" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="grH" x="114" y="123">Disclose what the policy in force asks you to disclose</text>
+        <text class="grX" x="114" y="142">Funder, journal, university - strictest applicable rule wins. A one-line disclosure costs nothing; an undisclosed discovery costs everything</text>
+
+        <rect x="24" y="176" width="56" height="56" rx="12" fill="#3A5488"/>
+        <text class="grN" x="45" y="213">3</text>
+        <rect x="94" y="176" width="762" height="56" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="grH" x="114" y="199">Never paste what is not yours to share</text>
+        <text class="grX" x="114" y="218">Unpublished manuscripts under review, participant data, collaborators' ideas, grant drafts you are reviewing - confidentiality survives the AI era intact</text>
+
+        <rect x="24" y="262" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="grK" x="48" y="274">One sentence version: the model assists, you remain the author, the accountable party, and the reader of record.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the three-rule contract every later session assumes</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>The policy check, on your real situation <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Not a toy exercise: by the end of this you know the actual rules that bind YOUR next paper and YOUR next proposal. Bring your laptop; leave with the table filled in.</p>
+
+    <div class="steps">
+      <div class="step"><p>Open a blank note titled "AI rules that bind me - checked [today's date]". Rules move; the date is part of the record.</p></div>
+      <div class="step"><p>Row 1 - university: search "[your university] generative AI research guidance". Record the URL and the one sentence that surprises you most.</p></div>
+      <div class="step"><p>Row 2 - funder: find your main funder's current AI notice (NIH: NOT-OD-23-149 and NOT-OD-25-132; NSF: current PAPPG; ERC/others: their latest statement). Record what is prohibited vs disclosed.</p></div>
+      <div class="step"><p>Rows 3-4 - your top two target journals: find the publisher's generative-AI policy page. Record: authorship (always no), what needs disclosure and where the statement goes, and the reviewer rule.</p></div>
+      <div class="step"><p>Bottom line: write the strictest rule that applies to you in one sentence. That sentence is your personal default from now on.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>If two policies conflict</strong>
+      They will not conflict by contradiction - they conflict by strictness. A journal that allows disclosed drafting does not override a funder that treats substantial AI development as unoriginal. The strictest applicable rule is always the operative one, and "applicable" follows the artifact: proposals follow funder rules, manuscripts follow journal rules, everything follows your university's.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>First contact, calibrated <span class="tag demo">★ 10 min · explore</span></h2>
+    </div>
+    <p class="lede">Two prompts on a topic you know deeply - your own thesis area. The point is to feel both edges of the tool in the domain where you cannot be fooled.</p>
+
+    <div class="steps">
+      <div class="step"><p>Ask a general assistant: "Give me 8 key papers on [your exact thesis topic] with authors, venues and years." Then check every one against Semantic Scholar. Count the fabrications and the subtle manglings - wrong venue, wrong year, merged authors.</p></div>
+      <div class="step"><p>Now ask: "Here is my one-paragraph study design. List the five strongest objections a hostile reviewer would raise." Notice the difference in quality - no facts were requested, so nothing could be fabricated; the reasoning is where the value is.</p></div>
+      <div class="step"><p>Write down your calibration sentence: what this tool is for (structured sparring over content you supply) and not for (facts, references, anything you cannot personally verify).</p></div>
+    </div>
+
+    <div class="prompt-box good">
+      <span class="label">★ Try it now - the sparring pattern you will reuse all course</span>
+      <p>I am a researcher in [field]. Here is my draft [research question / design / abstract]: [paste yours]. Act as a skeptical reviewer at a top venue in my field. List the five strongest specific objections, ordered by how likely they are to sink the paper. For each: the objection in one sentence, and what evidence would defuse it. Do not compliment the work. Do not invent citations.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the policy-check table if any row is blank, and put a quarterly reminder in your calendar to re-verify it - every policy in it has changed at least once since 2023.</li>
+      <li>Install the free stack: a Semantic Scholar account, Zotero, and one discovery tool (ResearchRabbit or Connected Papers). Seed the discovery tool with your three favourite papers and note what it surfaces that you did not know.</li>
+      <li>Run the fabrication test from Demo 2 on a second topic you know well, and keep the tally. Your personal fabrication rate estimate is worth more than any benchmark.</li>
+      <li>Find out whether your institution provides an enterprise AI instance with data protections - one email to your research office. The answer changes what you can do in b4 and b7.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every policy and tool claim on this page traces to a primary source - the live policy pages, vendor documentation, and peer-reviewed evaluations catalogued in this course's source map. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Research-lifecycle AI leverage map with per-stage session routing</span><span class="note">Part 1 · the track's table of contents in one diagram</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">NIH NOT-OD-23-149 + NOT-OD-25-132, NSF stance - working summaries</span><span class="note">Part 2 · full policy reading lives in leader session a2</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Publisher consensus: no AI authorship; disclosure at the generation line; reviewer lockdown</span><span class="note">Part 2 · per-publisher detail in a2 and b8</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Fabricated-citation base rates from published audits (Walters &amp; Wilder 2023; Chelli et al. 2024)</span><span class="note">Part 3 rule 1 + Demo 2 · you measure your own rate</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Free-tier tool specifics (quotas, limits) - stated as of course writing</span><span class="note">Vendor terms move · the course map carries the verification dates</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Institutional data-protection and ethics detail for human-subjects data</span><span class="note">Flagged here · your IRB/ethics office is the authority, not this course</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Where is AI assistance strongest in the research lifecycle, and where is it weakest?</p>
+      <button class="qopt" type="button">A · Strongest at forming conclusions, weakest at reading volume</button>
+      <button class="qopt" type="button">B · Strongest at high-volume text work with a human check; weakest where being right about the world is the whole task</button>
+      <button class="qopt" type="button">C · Uniformly strong - the limits are only in the policies</button>
+      <p class="qwhy">Ranking 3,000 abstracts, drafting boilerplate code and tightening prose are volume problems with a verification step. Whether a citation is real, an analysis sound, or a claim true - the things careers stand on - are exactly where the tools are least reliable. The map is uneven, and the gold box (claims and conclusions) never delegates.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Your funder allows disclosed AI assistance; your target journal exempts only grammar checks. Which rule do you work to?</p>
+      <button class="qopt" type="button">A · The funder's - funding decisions outrank publishing decisions</button>
+      <button class="qopt" type="button">B · Whichever you prefer, since they conflict</button>
+      <button class="qopt" type="button">C · The strictest applicable rule per artifact - the proposal follows the funder, the manuscript follows the journal</button>
+      <p class="qwhy">Policies attach to artifacts. Your proposal is governed by the funder's notice, your manuscript by the journal's policy, and everything you do by your university's guidance. Within one artifact, when rules overlap, the strictest applicable one is the operative default - a one-line disclosure costs nothing.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Why does ground rule 1 say every AI-suggested reference must resolve to a DOI and be read?</p>
+      <button class="qopt" type="button">A · Published audits found 18-55% of GPT-generated citations were fabricated, and the fakes look exactly like the real ones</button>
+      <button class="qopt" type="button">B · Because DOIs are required by every citation style</button>
+      <button class="qopt" type="button">C · Because AI-suggested references are usually paywalled</button>
+      <p class="qwhy">Walters &amp; Wilder (2023) measured 55% fabrication for GPT-3.5 and 18% for GPT-4; Chelli et al. (2024) found similar ranges. Newer models and retrieval grounding cut the rate but never to zero. A fabricated reference is indistinguishable from a real one until you resolve it - which is why resolving it is the rule.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The lifecycle map</b><span>High leverage: search, screening, code, polish. Low: facts, analysis, claims. Conclusions never delegate.</span></div>
+      <div class="cheat-item"><b>Three ground rules</b><span>Never cite unread. Disclose per the policy in force. Never paste what is not yours to share.</span></div>
+      <div class="cheat-item"><b>The NIH pair</b><span>NOT-OD-23-149: no AI in peer review. NOT-OD-25-132: substantially-AI-developed applications are not your original ideas.</span></div>
+      <div class="cheat-item"><b>Journal consensus</b><span>No AI authorship anywhere. Disclosure line sits at generation, not grammar. Reviewers must not upload manuscripts.</span></div>
+      <div class="cheat-item"><b>Free stack</b><span>Semantic Scholar + OpenAlex + ResearchRabbit + ASReview + Zotero + NotebookLM free tier. Subscriptions only when a session shows what they buy.</span></div>
+      <div class="cheat-item"><b>Strictest-rule default</b><span>Rules attach to artifacts: proposal → funder, manuscript → journal, everything → university. Strictest applicable wins.</span></div>
+      <div class="cheat-item"><b>Fabrication base rate</b><span>18-55% of GPT-generated citations fabricated in published audits. Your Demo 2 tally is your personal calibration.</span></div>
+      <div class="cheat-item"><b>The sparring pattern</b><span>Supply the content, request objections, forbid compliments and citations. Reasoning over your material - never facts from its memory.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 1 of 10 · learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← Course home</a> &nbsp;·&nbsp; <a href="b2-search-and-discovery.html">Next: Search and discovery →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

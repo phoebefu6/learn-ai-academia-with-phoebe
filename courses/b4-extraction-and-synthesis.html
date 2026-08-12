@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 4 · Extraction and synthesis - learn ai academia with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-academia-with-phoebe</a> / Researcher session 4 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe · Researcher track · Session 4 of 10</div>
+    <h1>Extraction and synthesis: <span class="accent">the table IS the review</span></h1>
+    <p class="sub">Your included set is decided (b3). Now every paper gets reduced to a row - population, design, N, measures, effect, limits - and that table, not your memory of the PDFs, is what your synthesis argues from. AI can draft the rows at remarkable speed; the peer-reviewed verdict is that it earns a place as a second reviewer, never as the only one. This session installs the one discipline that makes the speed safe: every AI-filled cell gets checked against the PDF before it enters your table, because a wrong N in your table becomes a wrong claim in your paper.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Researcher track</span>
+      <span class="chip audience">PhD students · postdocs · anyone building a review table</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-19 · Extraction, citations, synthesis</span>
+      <span class="a3" style="flex:5">19-41 · Build-along: extract, verify, interrogate</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this sits in the track</h2>
+    </div>
+    <p class="lede">b2 found the evidence, b3 decided what is in. This session is the quiet middle of every review: turning included PDFs into structured data you can argue from. It is also where AI assistance is at its most tempting - the work is repetitive, the tools are fluent, and the errors are invisible until a reader checks your source. The whole session is built around the gate that catches them.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A six-column extraction table started on YOUR review with the verify-every-cell gate installed, a calibrated read on what Elicit-class tools verifiably do (second reviewer, not replacement), a working grasp of what scite's Smart Citations can and cannot tell you, and a synthesis matrix that argues - including the one honest unknown every synthesis should state.
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="extraction">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the table</span>
+      <h2>Structured extraction, and the gate that keeps it honest <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">A literature review that lives in prose lives in impressions. The extraction table is where impressions become checkable: one row per study, one column per thing your synthesis will need. Decide the columns before you read - they are your synthesis's data model.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Extraction pipeline: included PDFs, AI draft extraction, verification gate checking every cell against the PDF, your table, your claims - with a red bypass path showing unverified cells becoming wrong claims.">
+        <style>
+          .xpT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .xpH { font: 600 12px Inter, sans-serif; fill: #22252B; }
+          .xpX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .xpR { font: 400 11px Inter, sans-serif; fill: #991B1B; }
+          .xpRH { font: 600 12px Inter, sans-serif; fill: #991B1B; }
+          .xpK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="28" width="150" height="64" rx="10" fill="#101C36"/>
+        <text class="xpT" x="40" y="54">Included PDFs</text>
+        <text class="xpX" x="40" y="73" fill="#A8B9D6">from your b3 screen</text>
+        <path d="M 178 60 L 194 60" stroke="#C9C9D6" stroke-width="2" marker-end="url(#xpAr)"/>
+        <rect x="198" y="28" width="180" height="64" rx="10" fill="#1B2A4A"/>
+        <text class="xpT" x="214" y="54">AI draft extraction</text>
+        <text class="xpX" x="214" y="73" fill="#A8B9D6">Elicit, Covidence, Rayyan</text>
+        <path d="M 382 60 L 398 60" stroke="#C9C9D6" stroke-width="2" marker-end="url(#xpAr)"/>
+        <rect x="402" y="28" width="174" height="64" rx="10" fill="#A87B2F"/>
+        <text class="xpT" x="418" y="54">Verification gate</text>
+        <text class="xpX" x="418" y="73" fill="#F7EFDF">every cell vs the PDF</text>
+        <path d="M 580 60 L 596 60" stroke="#C9C9D6" stroke-width="2" marker-end="url(#xpAr)"/>
+        <rect x="600" y="28" width="124" height="64" rx="10" fill="#3A5488"/>
+        <text class="xpT" x="616" y="54">Your table</text>
+        <text class="xpX" x="616" y="73" fill="#EEF2F9">now evidence</text>
+        <path d="M 728 60 L 744 60" stroke="#C9C9D6" stroke-width="2" marker-end="url(#xpAr)"/>
+        <rect x="748" y="28" width="108" height="64" rx="10" fill="#101C36"/>
+        <text class="xpT" x="762" y="54">Your claims</text>
+        <text class="xpX" x="762" y="73" fill="#A8B9D6">your paper</text>
+
+        <path d="M 288 96 C 288 152, 662 152, 662 96" fill="none" stroke="#FCA5A5" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#xpRd)"/>
+        <text class="xpRH" x="342" y="140">the bypass: unverified cells go straight in</text>
+
+        <rect x="24" y="168" width="832" height="74" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="xpRH" x="44" y="192">What the bypass costs</text>
+        <text class="xpR" x="44" y="212">A wrong N in your table becomes a wrong weight in your synthesis and a wrong claim in your paper -</text>
+        <text class="xpR" x="44" y="229">and nothing looks broken at any step. The error stays silent until a reader checks your source.</text>
+
+        <rect x="24" y="264" width="832" height="94" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="xpH" x="44" y="288">The honest evidence on AI extraction</text>
+        <text class="xpX" x="44" y="308">Peer-reviewed studies (a Research Synthesis Methods feasibility study; Social Science Computer Review 2025)</text>
+        <text class="xpX" x="44" y="325">place tools like Elicit as a SECOND reviewer: usable with human verification and iterative prompt refinement.</text>
+        <text class="xpX" x="44" y="342">The headline accuracy figures are self-published by the vendor - this course treats them as unverified.</text>
+
+        <rect x="24" y="386" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="xpK" x="48" y="398">The gate is the method: nothing AI-filled enters the table until a human has seen the sentence it came from.</text>
+        <defs>
+          <marker id="xpAr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#C9C9D6"/></marker>
+          <marker id="xpRd" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#FCA5A5"/></marker>
+        </defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - the pipeline with its one non-negotiable gate, and the dashed path that skips it</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The six columns your synthesis will need<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Columns vary by field, but six earn a place in almost every review:</p>
+        <table class="clean">
+          <tr><th>Column</th><th>What goes in the cell</th><th>Why the synthesis needs it</th></tr>
+          <tr><td>Population</td><td>Who was studied, where, in what context</td><td>Whether findings transfer to your question's population</td></tr>
+          <tr><td>Design</td><td>Experimental, quasi-experimental, observational...</td><td>How much weight the finding can carry</td></tr>
+          <tr><td>N</td><td>The analysed sample size, not the recruited one</td><td>Precision - and the cell most often silently wrong</td></tr>
+          <tr><td>Measures</td><td>What was actually measured, with what instrument</td><td>Whether "the same outcome" is really the same</td></tr>
+          <tr><td>Effect</td><td>Direction and size, in the paper's own terms</td><td>The raw material of every claim you will make</td></tr>
+          <tr><td>Limits</td><td>The authors' stated limitations plus yours</td><td>Where your one honest unknown will come from (Part 3)</td></tr>
+        </table>
+        <p>The quiet rule: a cell records what the paper SAYS, with a page reference - "not reported" is a valid and honest value. Inference is synthesis work, and it happens in the matrix, not in the extraction table.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The tools, at their verified size<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Elicit</strong> is the extraction specialist: its Pro tier is documented for screening up to 5,000 papers and building tables up to 20 columns wide - a whole systematic-review workflow. Its headline accuracy numbers are self-published; the peer-reviewed literature (a Research Synthesis Methods feasibility study; Social Science Computer Review 2025) found it usable as a second reviewer, with human verification and iterative prompt refinement doing real work in both studies. Verify the current pricing page before you commit.</li>
+          <li><strong>Covidence</strong> ships extraction suggestions and <strong>Rayyan</strong> ships relevance predictions - both vendor-documented assist features inside otherwise human-driven review platforms. Same rule applies: suggestions are drafts, and your protocol should say who verified them.</li>
+        </ul>
+        <p>Notice what the honest framing changes in practice: you budget verification time INTO the plan instead of discovering it later. The tools save reading-to-find time; they do not save reading-to-confirm time. Demo 1 makes you feel that ratio on your own papers.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Verify-every-cell: the mechanics<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The discipline is simple enough to fit on a sticky note, strict enough to catch what matters:</p>
+        <ul>
+          <li><strong>Every AI-filled cell gets opened against the PDF</strong> before it enters your table - the number, the page, the sentence. Not a sample of cells: every cell. Sampling is how the wrong N survives.</li>
+          <li><strong>Make the tool show its work.</strong> Ask for the supporting quote and location with every value. A cell with a quote takes seconds to verify; a bare number takes minutes - the prompt shape in Demo 1 builds this in.</li>
+          <li><strong>Log corrections.</strong> Every cell you fix is a data point on the tool's error profile for YOUR corpus - tables and dense methods sections are where extraction typically strains. After 20 or 30 papers, your correction log tells you where checking must slow down.</li>
+          <li><strong>Mark verification state.</strong> A simple tick per row: drafted / verified. Nothing unverified feeds the synthesis matrix, ever.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="citation-context">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the citations</span>
+      <h2>Citation context: what scite can tell you <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">A citation count says a paper was cited; it does not say how. scite's Smart Citations classify the citing sentences themselves - as supporting, contrasting, or merely mentioning - which turns "cited 400 times" into a question you can actually ask: cited 400 times saying WHAT?</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="scite Smart Citations classify citing sentences as supporting, mentioning or contrasting - with the verified anchor from QSS 2021 and the box listing what scite cannot tell you.">
+        <style>
+          .scT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .scH { font: 600 12px Inter, sans-serif; fill: #22252B; }
+          .scX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .scK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="110" width="190" height="70" rx="10" fill="#101C36"/>
+        <text class="scT" x="40" y="139">The paper you cite</text>
+        <text class="scX" x="40" y="158" fill="#A8B9D6">one target paper</text>
+
+        <rect x="290" y="28" width="230" height="56" rx="10" fill="#1B2A4A"/>
+        <text class="scT" x="306" y="51">Supporting</text>
+        <text class="scX" x="306" y="70" fill="#A8B9D6">cites it as confirming</text>
+        <rect x="290" y="104" width="230" height="56" rx="10" fill="#3A5488"/>
+        <text class="scT" x="306" y="127">Mentioning</text>
+        <text class="scX" x="306" y="146" fill="#EEF2F9">cites it in passing</text>
+        <rect x="290" y="180" width="230" height="56" rx="10" fill="#A87B2F"/>
+        <text class="scT" x="306" y="203">Contrasting</text>
+        <text class="scX" x="306" y="222" fill="#F7EFDF">cites it as conflicting</text>
+        <path d="M 286 56 L 236 128" stroke="#C9C9D6" stroke-width="2" marker-end="url(#scAr)"/>
+        <path d="M 286 132 L 222 140" stroke="#C9C9D6" stroke-width="2" marker-end="url(#scAr)"/>
+        <path d="M 286 208 L 236 156" stroke="#C9C9D6" stroke-width="2" marker-end="url(#scAr)"/>
+
+        <rect x="556" y="28" width="300" height="100" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="scH" x="572" y="52">The verified anchor</text>
+        <text class="scX" x="572" y="72">Nicholson et al. (QSS 2021):</text>
+        <text class="scX" x="572" y="88">~880M citation statements classified</text>
+        <text class="scX" x="572" y="104">then. Current counts: unverified.</text>
+        <rect x="556" y="144" width="300" height="92" rx="10" fill="#FFFFFF" stroke="#C9CFD9" stroke-width="1.5"/>
+        <text class="scH" x="572" y="168">What it cannot tell you</text>
+        <text class="scX" x="572" y="188">Whether the paper is right, and</text>
+        <text class="scX" x="572" y="204">whether YOUR citation of it is apt.</text>
+        <text class="scX" x="572" y="220">Both stay human, both stay yours.</text>
+
+        <rect x="24" y="296" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="scK" x="48" y="308">scite shows how the literature treats a paper - the claim-vs-source audit itself is AI + Research's territory.</text>
+        <defs><marker id="scAr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#C9C9D6"/></marker></defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - three kinds of citing sentence, one verified anchor, and the two questions no tool answers</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The boundary: verified capability vs your judgement<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Draw the line precisely, because tools blur it in their marketing:</p>
+        <ul>
+          <li><strong>What scite verifiably does:</strong> classify citing sentences as supporting, contrasting or mentioning. The verified anchor is the peer-reviewed system description - Nicholson et al. (QSS 2021), roughly 880M citation statements classified at that time. Whatever number the site shows today, treat as unverified until you check.</li>
+          <li><strong>What that buys your review:</strong> a triage signal. A key paper in your table with substantial contrasting citations is a paper whose row deserves a second look - and those contrasting papers may belong in your review themselves. It is also an honesty check on your own writing: are you citing something as settled that the literature actively disputes?</li>
+          <li><strong>What it cannot tell you:</strong> whether the paper is right (classification is not adjudication - a hundred supporting citations can share one bad assumption), and whether YOUR citation of it is apt (no tool reads your sentence and confirms the source says what you claim it says).</li>
+        </ul>
+        <p>That last gap - auditing your own claims against your own sources, sentence by sentence - is a full discipline of its own, and it belongs to the AI + Research course in this series. This session points across rather than duplicating it: here, scite is a lens on the literature's argument, not a verdict on truth.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="section" id="synthesis">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the argument</span>
+      <h2>Synthesis that argues, not summarises <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">A summary lists what each paper found. A synthesis argues: findings pattern BY study characteristics - the effect appears in designs like this, populations like that, and vanishes when measured the other way. The extraction table makes that argument possible; the synthesis matrix makes it visible.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>From extraction table to synthesis matrix<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The move is a pivot: rows stop being papers and become findings; columns become the study characteristics from your extraction table. Then you read the matrix for patterns:</p>
+        <ul>
+          <li><strong>Convergence:</strong> a finding that holds across designs and populations - the strongest thing your review can claim.</li>
+          <li><strong>Moderation:</strong> a finding that appears under some characteristics and not others. This is where reviews earn their keep - the pattern IS the contribution, and only a structured matrix reveals it.</li>
+          <li><strong>Contradiction:</strong> two verified rows that genuinely disagree. Do not average them in prose; ask what characteristic separates them. If nothing does, say so - that is a finding too.</li>
+          <li><strong>The one honest unknown:</strong> every synthesis states what the evidence cannot yet answer. Your Limits column plus the matrix's empty regions hand it to you: the population nobody studied, the delay nobody measured, the comparison nobody ran. Naming it is not weakness - it is the sentence reviewers trust most, and often your next study.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Source-grounded reading: interrogate YOUR corpus<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Source-grounded tools answer from documents you upload, with citations back to them. NotebookLM's free tier takes 50 sources per notebook and cites your uploads; Claude Projects offers a similar shape - your documents in, answers grounded on them. Two rules make them safe for synthesis work:</p>
+        <ul>
+          <li><strong>Grounding reduces errors; it does not eliminate them.</strong> That is Google's own framing in the NotebookLM FAQ, not a critic's. A grounded answer can still misread, overstate or stitch two sources into a claim neither makes - so an answer is a pointer to passages, and the passages are what you cite.</li>
+          <li><strong>Never let it answer beyond your corpus.</strong> The moment a response draws on anything outside your uploads, you are back to leads-not-evidence territory (b2). The value here is interrogation: which of my fifty papers speak to X? Where do two of them disagree? What did I upload that I have not used? Demo 2 runs exactly this.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The contradiction question is the best first prompt for any corpus.</strong> Ask your notebook for the strongest contradiction between your included papers, then open both papers it names. One of three things happens: you find a real tension your matrix missed (excellent), you find the tool overstated a difference in framing (a grounding-limits lesson for free), or you find your own inclusion criteria let in two papers answering different questions (a b3 lesson, arriving late but welcome). All three outcomes improve the review.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Extract three of your papers, then verify every cell <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Not a toy exercise: these three rows are the start of your actual review table. You will time the AI half and the verification half separately - the ratio you feel today is the number your project plan needs.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pick 3 papers from your included set - ideally one clean experiment, one messier design, one with a dense methods section. Have the PDFs open.</p></div>
+      <div class="step"><p>Start a timer. Run the extraction prompt below (in Elicit if you have it, otherwise any assistant that accepts your PDFs) for the six columns: population, design, N, measures, effect, limits. Stop the timer when three drafted rows exist.</p></div>
+      <div class="step"><p>Start the timer again. Verify every cell against the PDF: find the quoted sentence, confirm the number, mark each cell verified or corrected. All 18 cells - no sampling.</p></div>
+      <div class="step"><p>Count your corrections and note WHERE they happened - which column, which kind of paper. That is the start of your personal error profile for this tool on this literature.</p></div>
+      <div class="step"><p>Compare the two timer readings and write the ratio down. Drafting is fast; verifying is the real cost - and it is still usually far cheaper than extracting from scratch. Now your plan can budget for the whole method instead of the demo half.</p></div>
+    </div>
+
+    <div class="prompt-box bad">
+      <span class="label">The prompt that creates silent errors</span>
+      <p>Summarize these three papers into a table.</p>
+    </div>
+    <div class="prompt-box good">
+      <span class="label">★ Try it now - extraction with the verification handles built in</span>
+      <p>For each attached paper, fill exactly these columns: population, design, N (analysed sample, not recruited), measures, effect (direction and size in the paper's own terms), limits (as stated by the authors). For EVERY cell: quote the exact sentence you took it from and give its page or section. If a value is not stated, write "not reported" - never infer, never estimate. Flag any cell you are uncertain about.</p>
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Interrogate your corpus for its strongest contradiction <span class="tag demo">★ 9 min · explore</span></h2>
+    </div>
+    <p class="lede">Grounded tools are at their best asking questions OF your corpus, not questions beyond it. You will ask the sharpest question a synthesis needs answered - and then check the answer the way this session checks everything.</p>
+
+    <div class="steps">
+      <div class="step"><p>Load your included set (or today's best subset) into a NotebookLM notebook - the free tier takes 50 sources per notebook, which covers most review-sized corpora.</p></div>
+      <div class="step"><p>Ask: "What is the strongest contradiction between these papers? Name the two papers, state each one's finding, and quote the passages you are basing this on."</p></div>
+      <div class="step"><p>Open the two papers it names and read the actual passages. Is the contradiction real, or a difference in population, measure or framing that only LOOKS like disagreement?</p></div>
+      <div class="step"><p>If it is real: add it to your synthesis matrix as a contradiction and hunt the separating characteristic. If it is not: write one line on what the tool overstated - you just met the grounding limits first-hand, cheaply.</p></div>
+      <div class="step"><p>Ask one more: "What can these papers NOT answer about [your research question]?" Verify against your matrix's empty regions - between the two, your one honest unknown is usually staring at you.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The boundary to hold</strong>
+      Everything the notebook says is a pointer into documents you can open - so open them. The moment you catch yourself citing the notebook's phrasing instead of the paper's, you have crossed from interrogation to delegation, and the session's first SVG shows where that dashed path leads.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it on your own review - this week <span class="tag exercise">◐ 45-60 min total</span></h2>
+    </div>
+    <ul>
+      <li>Extend the extraction table to 10 papers with the same prompt and the same all-cells verification. Keep the correction log going - by row 10 you will know exactly which columns need slow checking on your literature.</li>
+      <li>Pivot the 10 rows into a first synthesis matrix (findings x study characteristics). Mark every convergence, moderation and contradiction you can see, and every empty region.</li>
+      <li>Draft your one honest unknown in a single sentence: what the included evidence cannot yet answer about your question. Pin it - b5 turns exactly this sentence into hypothesis material.</li>
+      <li>Look up two key papers from your table on scite. If either shows substantial contrasting citations, read one contrasting paper and decide whether it belongs in your review - that decision goes through your b3 criteria like any other.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every tool capability on this page traces to vendor documentation or a peer-reviewed evaluation catalogued in this course's source map - and the vendor-only claims are labelled as exactly that. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Six-column extraction discipline and the verify-every-cell gate</span><span class="note">Part 1 + Demo 1 · the session's method core, timed on your own papers</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Peer-reviewed Elicit evidence: second reviewer with human verification (RSM feasibility study; Soc Sci Computer Review 2025)</span><span class="note">Part 1 · vendor's self-published accuracy figures treated as unverified</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Covidence extraction suggestions + Rayyan relevance predictions</span><span class="note">Part 1 · vendor-documented assist features, drafts not verdicts</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">scite Smart Citations - Nicholson et al. (QSS 2021), ~880M statements as the verified anchor</span><span class="note">Part 2 · current counts unverified; claim-vs-source auditing pointed to AI + Research</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">NotebookLM free tier (50 sources/notebook) + grounding-reduces-not-eliminates per Google's own FAQ</span><span class="note">Part 3 + Demo 2 · Claude Projects carries the same framing</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Meta-analytic computation (pooling effect sizes, formal heterogeneity statistics)</span><span class="note">Beyond scope by design · this course teaches the extraction and synthesis discipline, not statistical synthesis</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Why does verify-every-cell insist on ALL cells rather than a spot-checked sample?</p>
+      <button class="qopt" type="button">A · Because sampling is statistically invalid for tables under 100 rows</button>
+      <button class="qopt" type="button">B · Because journals require a verification statement for every extracted value</button>
+      <button class="qopt" type="button">C · Because any single unverified cell can carry a wrong N into your table, your synthesis and your paper - silently, with nothing looking broken at any step</button>
+      <p class="qwhy">The failure mode is per-cell, not per-table: one wrong N becomes one wrong weight becomes one wrong sentence with your name on it, and no step in between raises an error. A sample catches the average error rate; the gate has to catch the specific error. That is why the discipline is every cell, with the quote and page requested up front so each check takes seconds.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · What is scite's verifiable claim, and where does it stop?</p>
+      <button class="qopt" type="button">A · It classifies how citing sentences treat a paper - supporting, contrasting, mentioning; it cannot tell you the paper is right or that your citation of it is apt</button>
+      <button class="qopt" type="button">B · It verifies whether a paper's findings have been replicated</button>
+      <button class="qopt" type="button">C · It checks that the citations in your manuscript are formatted and real</button>
+      <p class="qwhy">The verified anchor is Nicholson et al. (QSS 2021) - roughly 880M citation statements classified as supporting, contrasting or mentioning. That is a lens on the literature's argument, and a good one. Whether the paper is true, and whether your sentence uses it fairly, remain human judgements - the deep claim-vs-source audit discipline lives in the AI + Research course.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · NotebookLM answers a question with citations to your uploaded papers. What does grounding actually guarantee?</p>
+      <button class="qopt" type="button">A · That the answer is correct, since it can only draw on sources you chose</button>
+      <button class="qopt" type="button">B · Less than it seems: grounding reduces errors but does not eliminate them - Google's own FAQ says so - so the answer is a pointer to passages, and the passages are what you verify and cite</button>
+      <button class="qopt" type="button">C · Nothing at all - grounded tools are no better than open-ended chat</button>
+      <p class="qwhy">Grounding is a real improvement, which is why the tools earn a place for interrogating your corpus - and it still leaves room to misread a passage or stitch two sources into a claim neither makes. Demo 2's protocol is the answer in practice: ask the sharp question, then open the two papers it names. The tool finds candidates; the PDFs decide.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The table IS the review</b><span>Six columns: population, design, N, measures, effect, limits. Cells record what the paper says, with page refs - "not reported" is honest data.</span></div>
+      <div class="cheat-item"><b>Verify every cell</b><span>Every AI-filled cell gets checked against the PDF before it enters the table. All cells, not a sample - a wrong N becomes a wrong claim.</span></div>
+      <div class="cheat-item"><b>Elicit, honestly sized</b><span>Pro: screening to 5,000 papers, 20-column tables (vendor-documented). Peer-reviewed verdict: second reviewer with human verification, not replacement.</span></div>
+      <div class="cheat-item"><b>The extraction prompt</b><span>Exact columns · quote and page per cell · "not reported" over inference · flag uncertainty. The quote is what makes each check take seconds.</span></div>
+      <div class="cheat-item"><b>scite's boundary</b><span>Verifiable: citing sentences classified supporting/contrasting/mentioning (QSS 2021, ~880M anchor). Not verifiable: the paper's truth, your citation's aptness.</span></div>
+      <div class="cheat-item"><b>Synthesis matrix</b><span>Pivot to findings x study characteristics. Read for convergence, moderation, contradiction - the pattern is the contribution.</span></div>
+      <div class="cheat-item"><b>Grounded reading rule</b><span>NotebookLM free: 50 sources/notebook, cites your uploads; grounding reduces, not eliminates, errors. Interrogate your corpus, cite the PDFs.</span></div>
+      <div class="cheat-item"><b>The one honest unknown</b><span>Every synthesis states what the evidence cannot yet answer. The Limits column plus the matrix's empty regions hand it to you - b5 builds on it.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 4 of 10 · learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b3-screening-lab.html">← Previous: The screening lab</a> &nbsp;·&nbsp; <a href="b5-hypothesis-engine.html">Next: The hypothesis engine →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

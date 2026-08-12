@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 8 · Writing and publication assistance - learn ai academia with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-academia-with-phoebe</a> / Researcher session 8 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe · Researcher track · Session 8 of 10</div>
+    <h1>Writing and publication assistance: <span class="accent">polish freely, disclose honestly</span></h1>
+    <p class="sub">Every major publisher has now drawn the same line in roughly the same place: AI that fixes your grammar is polish and needs no announcement; AI that produces sentences you keep is generation and gets disclosed. This session walks the line publisher by publisher, tours the writing tools whose shapes are actually verified, states the equity evidence that makes polish tools a cause rather than a guilty secret - and then writes your disclosure statement in about a minute, because that is genuinely all it takes.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Researcher track</span>
+      <span class="chip audience">PhD students · postdocs · anyone submitting a manuscript</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-19 · The line, the tools, the equity evidence</span>
+      <span class="a3" style="flex:5">19-41 · Build-along: the diff + your disclosure statement</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this sits in the track</h2>
+    </div>
+    <p class="lede">Your analysis is done and honest (b7); your code is packaged (b6). Now the words. Writing is where AI assistance is most tempting, most used, and - by the numbers - least disclosed. It is also the one stage where the rules are actually clear once you line them up. This session lines them up.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The polish-vs-generation line as each rule-holder draws it, a verified map of the writing tools worth knowing, the Amano et al. equity numbers ready to quote, a one-minute disclosure statement written from the template for YOUR current manuscript, and the one red line that survives every policy: reviewer material never enters consumer tools.
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="the-line">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the line</span>
+      <h2>Polish vs generation, rule-holder by rule-holder <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The landscape looks messy until you notice every policy is answering the same question: did the AI improve your sentences, or write them? Here is where each rule-holder draws that line - and because these pages move, verify the current version of your target journal's policy before submission day.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The polish versus generation line as drawn by Springer Nature, Elsevier, Science, ICMJE and arXiv, with the safe default beneath.">
+        <style>
+          .pgT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .pgH { font: 600 12px Inter, sans-serif; fill: #22252B; }
+          .pgX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .pgK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="200" y="24" width="310" height="34" rx="8" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="pgH" x="216" y="46">Polish - your text, improved</text>
+        <rect x="526" y="24" width="330" height="34" rx="8" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="pgH" x="542" y="46" fill="#3A2A08">Generation - its text, kept: disclose</text>
+
+        <rect x="24" y="78" width="160" height="48" rx="10" fill="#101C36"/>
+        <text class="pgT" x="40" y="106">Springer Nature</text>
+        <rect x="200" y="78" width="656" height="48" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="pgX" x="216" y="98">AI-assisted copy editing of your own text needs no declaration.</text>
+        <text class="pgX" x="216" y="115">Generative use beyond that: disclosed, and never AI authorship.</text>
+
+        <rect x="24" y="140" width="160" height="48" rx="10" fill="#1B2A4A"/>
+        <text class="pgT" x="40" y="168">Elsevier</text>
+        <rect x="200" y="140" width="656" height="48" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="pgX" x="216" y="160">Basic grammar and spelling checks are exempt. Generative use in</text>
+        <text class="pgX" x="216" y="177">writing requires a disclosure statement in the manuscript.</text>
+
+        <rect x="24" y="202" width="160" height="48" rx="10" fill="#3A5488"/>
+        <text class="pgT" x="40" y="230">Science / AAAS</text>
+        <rect x="200" y="202" width="656" height="48" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="pgX" x="216" y="222">Historically the strictest of the major venues on AI-generated text.</text>
+        <text class="pgX" x="216" y="239">Verify the current version before you submit there - it has moved.</text>
+
+        <rect x="24" y="264" width="160" height="48" rx="10" fill="#3A5488"/>
+        <text class="pgT" x="40" y="292">ICMJE</text>
+        <rect x="200" y="264" width="656" height="48" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="pgX" x="216" y="284">Describe the use in the cover letter AND in the work: writing help</text>
+        <text class="pgX" x="216" y="301">in acknowledgments, AI in analysis in the methods section.</text>
+
+        <rect x="24" y="326" width="160" height="48" rx="10" fill="#101C36"/>
+        <text class="pgT" x="40" y="354">arXiv</text>
+        <rect x="200" y="326" width="656" height="48" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="pgX" x="216" y="346">Authors take full responsibility for all contents, however</text>
+        <text class="pgX" x="216" y="363">generated. No AI author. Unchecked AI content is penalized.</text>
+
+        <rect x="24" y="386" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="pgK" x="48" y="398">Safe default across all five: AI produced sentences you kept = disclose. It fixed your grammar = polish.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - five rule-holders, one line: polish passes silently, generation gets disclosed</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The disclosure gap: be the boring exception<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Here is the uncomfortable number: an arXiv analysis (2512.06705) found only about 0.1% of post-2023 papers disclosed AI use - while roughly 70% of journals had a policy asking for it. Whatever the true usage rate is, it is not 0.1%. The gap means a large share of the literature is quietly out of compliance with rules its authors could satisfy in one sentence.</p>
+        <p>Read the incentives correctly: right now, disclosure feels risky because it is rare, and it is rare because it feels risky. The way out of that loop is researchers who disclose routinely and blandly - a statement so boring it cannot be a scandal. That is the template in Part 3. An undisclosed use discovered later is a story; a disclosed one never is.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the line sits at generation, not at "any AI"<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Publishers converged on this line for a practical reason: accountability tracks provenance. When a tool tightens your sentence, the ideas, claims and phrasing decisions remain traceably yours - the same reason human copy editors never appeared in author lists. When a tool produces sentences you keep, part of the text's provenance is a system that cannot be accountable for it, so the humans must say so and own it explicitly.</p>
+        <p>This is also why no publisher grants AI authorship (b1, a2): authorship is accountability, and a model cannot be accountable. Disclosure is not confession - it is the paperwork that keeps the accountability chain unbroken.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="tools">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the tools</span>
+      <h2>The writing stack, with verified shapes only <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">The writing-tool market is loud; the verified facts are quieter. Four tools have documented shapes worth knowing - and one piece of peer-reviewed evidence turns the whole category from a guilty convenience into an equity instrument.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The writing pipeline with disclosure gates: your draft, polish pass, the diff gate, then disclosure statement and cover letter before submission.">
+        <style>
+          .wgT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .wgG { font: 700 12px Inter, sans-serif; fill: #3A2A08; }
+          .wgH { font: 600 12px Inter, sans-serif; fill: #22252B; }
+          .wgX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .wgK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="30" width="230" height="60" rx="10" fill="#101C36"/>
+        <text class="wgT" x="40" y="56">1 · Your draft</text>
+        <text class="wgX" x="40" y="76" fill="#A8B9D6">your ideas, your claims</text>
+        <path d="M 258 60 L 288 60" stroke="#C9C9D6" stroke-width="2" marker-end="url(#wgAr)"/>
+        <rect x="294" y="30" width="230" height="60" rx="10" fill="#1B2A4A"/>
+        <text class="wgT" x="310" y="56">2 · Polish pass</text>
+        <text class="wgX" x="310" y="76" fill="#A8B9D6">Writefull · Paperpal · Grammarly</text>
+        <path d="M 528 60 L 558 60" stroke="#C9C9D6" stroke-width="2" marker-end="url(#wgAr)"/>
+        <rect x="564" y="30" width="292" height="60" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="2"/>
+        <text class="wgG" x="580" y="56">GATE 1 · Read the diff</text>
+        <text class="wgX" x="580" y="76" fill="#3A2A08">accept or reject every line yourself</text>
+
+        <path d="M 710 90 L 710 118" stroke="#C9C9D6" stroke-width="2" marker-end="url(#wgAr)"/>
+
+        <rect x="564" y="124" width="292" height="60" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="2"/>
+        <text class="wgG" x="580" y="150">GATE 2 · Disclose per policy</text>
+        <text class="wgX" x="580" y="170" fill="#3A2A08">statement in the work + cover letter</text>
+        <path d="M 558 154 L 528 154" stroke="#C9C9D6" stroke-width="2" marker-end="url(#wgAr)"/>
+        <rect x="294" y="124" width="230" height="60" rx="10" fill="#3A5488"/>
+        <text class="wgT" x="310" y="150">3 · Submission</text>
+        <text class="wgX" x="310" y="170" fill="#EEF2F9">accountability chain intact</text>
+
+        <rect x="24" y="124" width="230" height="60" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="wgH" x="40" y="146" fill="#991B1B">Never in this pipeline</text>
+        <text class="wgX" x="40" y="163" fill="#991B1B">reviewer comments holding</text>
+        <text class="wgX" x="40" y="179" fill="#991B1B">unpublished detail (Part 3)</text>
+
+        <rect x="24" y="208" width="832" height="76" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="wgH" x="44" y="232">Why the diff is gate number one</text>
+        <text class="wgX" x="44" y="252">The diff is where polish stays polish: every change you accept is a decision you made, so the text stays</text>
+        <text class="wgX" x="44" y="269">yours. Accept a whole rewrite unread and you have crossed into generation without noticing - or disclosing.</text>
+
+        <rect x="24" y="304" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="wgK" x="48" y="316">Two gates, both cheap: a diff you read, a statement you write once. Skipping either is the expensive path.</text>
+        <defs><marker id="wgAr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#C9C9D6"/></marker></defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - the writing pipeline and its two disclosure gates</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Four tools, verified shapes<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Tool</th><th>Verified shape</th><th>Worth knowing</th></tr>
+          <tr><td>Overleaf AI Assist</td><td>Bundles Writefull language feedback and error assist - both are Digital Science products</td><td>Polish inside the LaTeX editor you already use; polish-side by design</td></tr>
+          <tr><td>Paperpal</td><td>Academic-trained writing assistant; free tier plus a paid Prime tier</td><td>Trained on academic prose rather than general text</td></tr>
+          <tr><td>Grammarly Authorship</td><td>Provenance, not detection: records HOW text entered the document - typed, pasted, or AI-generated</td><td>A receipt you can show, which beats any detector's guess (a3)</td></tr>
+          <tr><td>Rubriq (formerly Curie)</td><td>AJE's editing tool, renamed - AJE sits under Springer Nature</td><td>If you knew it as Curie, it is the same lineage under a new name</td></tr>
+        </table>
+        <p>Anything not in this table has an unverified shape as of the course's source check - pricing, limits and features move fast, so check the live product page before you rely on a claim.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The equity evidence: polish is not cheating, it is leveling<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Worth stating plainly, with the numbers: Amano et al. (PLOS Biology 2023) found that non-native English speakers face 2.5x the rejection rates and 12.5x the requests for English revision. That is a tax on where a scientist was born, paid at every submission, and it has nothing to do with the quality of the science.</p>
+        <p>Polish tools are a legitimate equalizer against exactly that tax - and every publisher's polish allowance in Part 1 makes them policy-safe. A researcher whose results are sound but whose article-level English costs them a desk rejection is not gaming the system by using Writefull or Paperpal; they are removing noise from the signal reviewers are supposed to judge.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The line survives even here.</strong> The equity case covers polish - your sentences, improved. It does not convert generation into polish: a fully AI-drafted introduction is disclosed regardless of the author's first language. The strength of the equity argument is precisely that it does not need the rules bent.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="section" id="paperwork">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the paperwork</span>
+      <h2>Publication admin with AI in the room <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Three pieces of paper carry your AI honesty: the disclosure statement, the cover letter, and - when the reviews come back - the response letter. All three take minutes. Here is each, with its rule attached.</p>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The one-minute disclosure statement<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Four ingredients: the tool and version, the task it did, and what the humans verified. That is the whole genre.</p>
+        <div class="prompt-box good">
+          <span class="label">★ The template - fill in and go</span>
+          <p>During the preparation of this work the authors used [tool, version] to [task: e.g. improve the language and readability of author-written text / generate candidate phrasings for the introduction, which were revised]. After using this tool, the authors reviewed and edited the content as needed and take full responsibility for the content of the publication.</p>
+        </div>
+        <div class="prompt-box bad">
+          <span class="label">What a disclosure statement is not</span>
+          <p>"AI tools may have been used in parts of this manuscript." - no tool, no task, no verification, and "may have been" is not a disclosure, it is a shrug. Vagueness reads worse than the use itself.</p>
+        </div>
+        <p>Where it goes: Elsevier wants a statement in the manuscript for generative use; ICMJE wants the use described in the cover letter AND in the work - writing assistance in the acknowledgments, AI in the analysis in the methods. Your target journal's live policy page settles placement; verify the current version the week you submit.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Response to reviewers: the rules by extension, and the one red line<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>No publisher-specific AI rules were found for rebuttal letters</strong> - a verified absence in this course's source check, not an oversight. The sensible reading: your manuscript's rules apply by extension, since the response letter is part of the same submission's record. Polish freely, disclose generation if your journal's policy would require it in the manuscript.</li>
+          <li><strong>The red line is the input, not the output:</strong> never paste reviewer comments containing unpublished detail into consumer AI tools. Reviews quote your unpublished results and sometimes the reviewer's own unpublished reasoning; a consumer chat window is not a confidential channel (b1 rule 3, and the mirror image of the b9 reviewer bans).</li>
+          <li><strong>Practical middle:</strong> draft your response points yourself, then let a polish tool tighten YOUR text - the reviewer's words never leave the journal system.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The cover letter line, ready to adapt<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>ICMJE asks for the use described in the cover letter as well as in the work. One sentence does it: "As disclosed in the acknowledgments, the authors used [tool] to [task]; all content was reviewed and verified by the authors." If your journal follows ICMJE (most medical journals do - check the current member and follower lists), the pair of sentences - one in the letter, one in the work - is full compliance. Two sentences, total.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>The diff IS the authorship <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Bring one real paragraph from your current draft - methods or introduction work best. You will run a polish pass and then do the thing most people skip: read the diff line by line and decide.</p>
+
+    <div class="steps">
+      <div class="step"><p>Paste your paragraph into a polish tool (Writefull via Overleaf, Paperpal, Grammarly, or a general assistant prompted for language-only edits). Ask for improved language with your meaning unchanged.</p></div>
+      <div class="step"><p>Put original and revision side by side. Mark every change: word choice, sentence merge, reordering, anything added.</p></div>
+      <div class="step"><p>Accept or reject each change individually, out loud, with a reason. "Tighter" is a reason. "It changed my claim" is a rejection.</p></div>
+      <div class="step"><p>Find at least one change that subtly altered your meaning - hedges dropped, a "may" hardened into "does". These are why the diff is a gate and not a formality.</p></div>
+      <div class="step"><p>Classify the session: if everything you accepted was your sentences improved, that was polish. If it wrote sentences you kept, note them - they just earned a line in your disclosure statement.</p></div>
+    </div>
+
+    <div class="prompt-box good">
+      <span class="label">★ Try it now - the polish-only instruction</span>
+      <p>Improve the language and readability of the following paragraph from my manuscript. Do not add claims, do not remove hedges or qualifiers, do not change any number or citation. Return the revision plus a list of every change you made and why. Paragraph: [paste yours]</p>
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Write your disclosure statement, check it against the live policy <span class="tag demo">★ 10 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Not hypothetical: the manuscript you are working on now, the journal you actually plan to submit it to. Ten minutes from now this piece of admin is done for the rest of the project.</p>
+
+    <div class="steps">
+      <div class="step"><p>List every AI use in the project so far, honestly: polish passes, generated candidate text, coding help (b6), analysis assistance (b7). One line each: tool, version, task.</p></div>
+      <div class="step"><p>Sort each line: polish (no statement needed under Springer Nature / Elsevier-style rules) or generation and analysis (statement needed). When torn, disclose - it costs a sentence.</p></div>
+      <div class="step"><p>Write the statement from the Part 3 template, covering the disclosure-side lines. Add what the humans verified - that clause is what makes it read as diligence rather than confession.</p></div>
+      <div class="step"><p>Open your actual target journal's live AI policy page. Check placement (acknowledgments? methods? dedicated section?), cover-letter requirements, and anything stricter than the template assumes.</p></div>
+      <div class="step"><p>File the statement with the manuscript and date it. Re-verify the policy page the week you submit - these pages have moved before and will move again.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>If your journal's policy page says nothing about AI</strong>
+      Absence of a policy is not permission to skip the thinking - it means the publisher-level policy applies (Elsevier's and Springer Nature's cover their whole portfolios), and ICMJE applies if the journal follows it. Work to the strictest applicable rule per artifact, exactly as in b1, and keep your dated statement either way: the policy that arrives next year may ask about the paper you submitted this year.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the diff exercise on two more paragraphs of your draft, including one where you suspect the writing is weakest - that is where polish helps most and where meaning-drift hides best.</li>
+      <li>Finish the disclosure statement if any AI use in your project is still unsorted, and add the matching one-line sentence to your cover-letter draft.</li>
+      <li>Bookmark the live AI policy pages for your top two target journals and put a re-check reminder in the week before your planned submission.</li>
+      <li>If English is not your first language, or a labmate's: share the Amano et al. (2023) numbers and the polish allowance with your group. The tax is real, the fix is policy-safe, and most people who need it have not been told.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every policy and tool claim on this page traces to the live policy pages, vendor documentation and peer-reviewed work catalogued in the course source map. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The polish-vs-generation line: Springer Nature, Elsevier, Science, ICMJE, arXiv</span><span class="note">Part 1 · verify the current versions before submission day</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The disclosure gap: ~0.1% disclosed vs ~70% of journals with policies (arXiv 2512.06705)</span><span class="note">Part 1 · the case for being the boring exception</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Tool shapes: Overleaf AI Assist/Writefull, Paperpal, Grammarly Authorship, Curie→Rubriq</span><span class="note">Part 2 · vendor-documented shapes only</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Equity evidence: Amano et al. PLOS Biology 2023 - 2.5x rejection, 12.5x revision requests</span><span class="note">Part 2 · the numbers that make polish an equalizer</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Rebuttal letters: no publisher-specific AI rules found - manuscript rules apply by extension</span><span class="note">Part 3 · a verified absence, stated as such</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Detector claims and provenance-vs-detection detail</span><span class="note">Named here · the detector-caution evidence lives in a3</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Where does the disclosure line sit across the major publishers?</p>
+      <button class="qopt" type="button">A · Any AI contact with the manuscript must be disclosed, including spell-checking</button>
+      <button class="qopt" type="button">B · At generation: AI-produced sentences you kept get disclosed; copy editing of your own text does not</button>
+      <button class="qopt" type="button">C · Nothing needs disclosure as long as a human is listed as author</button>
+      <p class="qwhy">Springer Nature says AI-assisted copy editing of your own text needs no declaration; Elsevier exempts basic grammar and spelling but requires a statement for generative use; ICMJE wants the use described in the cover letter and the work. The shared logic is provenance: improved sentences are still yours, produced sentences are not - so the producers get named.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · What did Amano et al. (PLOS Biology 2023) find, and what does it mean for polish tools?</p>
+      <button class="qopt" type="button">A · AI-polished papers are rejected more often, so polish tools are risky</button>
+      <button class="qopt" type="button">B · Reviewers cannot tell polished from unpolished text, so disclosure is pointless</button>
+      <button class="qopt" type="button">C · Non-native English speakers face 2.5x rejection rates and 12.5x English-revision requests - polish tools are a policy-safe equalizer</button>
+      <p class="qwhy">The study quantified the language tax on non-native speakers: 2.5x the rejections, 12.5x the revision requests, independent of the science. Every major publisher's polish allowance makes the fix legitimate. The equity case covers polish of your own sentences - it does not reclassify generation, which stays disclosed regardless of first language.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · What goes in a disclosure statement?</p>
+      <button class="qopt" type="button">A · Tool and version, the task it performed, and what the humans verified</button>
+      <button class="qopt" type="button">B · A general note that AI may have been used somewhere in the work</button>
+      <button class="qopt" type="button">C · The full prompt history and the model's training-data details</button>
+      <p class="qwhy">Specific and boring wins: name the tool and version, say what it did, and state that the authors reviewed the content and take full responsibility. "May have been used" is a shrug, not a disclosure; prompt logs are more than any policy asks. Placement follows your journal: statement in the work, one matching line in the cover letter where ICMJE applies.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 8 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The line</b><span>AI produced sentences you kept = disclose. It fixed your grammar = polish, no declaration. Every major publisher draws it near here.</span></div>
+      <div class="cheat-item"><b>Rule-holders</b><span>Springer Nature: copy editing exempt. Elsevier: statement beyond grammar. Science: historically strictest. ICMJE: cover letter AND the work. arXiv: you own it all.</span></div>
+      <div class="cheat-item"><b>The gap</b><span>~0.1% of post-2023 papers disclosed vs ~70% of journals with policies. Be the boring exception - disclosed use is never a story.</span></div>
+      <div class="cheat-item"><b>The tools</b><span>Overleaf AI Assist = Writefull (Digital Science). Paperpal: academic-trained, free + Prime. Grammarly Authorship: provenance, not detection. Curie is now Rubriq (AJE).</span></div>
+      <div class="cheat-item"><b>The equity numbers</b><span>Amano et al. (2023): non-native speakers get 2.5x rejections, 12.5x revision requests. Polish tools are the policy-safe equalizer.</span></div>
+      <div class="cheat-item"><b>The statement</b><span>Tool + version + task + what humans verified. One minute. In the work per Elsevier; acknowledgments for writing help and methods for analysis per ICMJE.</span></div>
+      <div class="cheat-item"><b>Rebuttals</b><span>No rebuttal-specific AI rules found (verified absence) - manuscript rules apply by extension. Never paste reviewer comments with unpublished detail into consumer tools.</span></div>
+      <div class="cheat-item"><b>The diff</b><span>Accept or reject every change yourself, line by line. The diff is where polish stays polish - and where your authorship lives.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 8 of 10 · learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b7-data-analysis.html">← Previous: Data analysis</a> &nbsp;·&nbsp; <a href="b9-reviewing-others.html">Next: Reviewing others →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

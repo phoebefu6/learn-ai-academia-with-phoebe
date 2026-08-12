@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 9 · Reviewing others - learn ai academia with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-academia-with-phoebe</a> / Researcher session 9 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe · Researcher track · Session 9 of 10</div>
+    <h1>Reviewing others: <span class="accent">a manuscript held in trust</span></h1>
+    <p class="sub">At some point soon an editor will hand you someone else's unpublished work and ask for your judgement. That manuscript is not yours - not to keep, not to quote, and above all not to paste into an AI tool, however convenient that would be at 11pm before the deadline. This session covers the strictest AI rules in all of academia, why they exist, how to still review well and efficiently inside them, and what changes when you are on the receiving end and drafting the rebuttal.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Researcher track</span>
+      <span class="chip audience">PhD students · postdocs · first-time reviewers</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-19 · The rules + held in trust</span>
+      <span class="a3" style="flex:5">19-41 · Build-along: the drill + the quality bar</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this sits in the track</h2>
+    </div>
+    <p class="lede">Every session so far worked on YOUR material: your search, your data, your draft. This one flips the table. When you review, the material belongs to someone else and was given to the journal in confidence - which is why the AI rules for reviewers are the tightest rules this course covers. Learn them before your first invitation, because the first breach is usually committed in good faith by someone who never read the policy.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The reviewer rulebook in three lanes (never / with permission / always fine), the held-in-trust principle that generates every rule in it, a quality bar for the reviews you write - specific, actionable, evidence-cited - and the author's-side discipline for responding to reviews without leaking anything into a consumer tool.
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="rules">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the rulebook</span>
+      <h2>The rules when the manuscript is not yours <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Four rule-holders have already spoken, and they agree more than they differ. NIH NOT-OD-23-149 prohibits generative AI in NIH peer review outright - uploading any part of an application is a confidentiality breach. Elsevier and Springer Nature both forbid reviewers from uploading manuscripts to AI tools. ICMJE says ask the journal's permission first, keep confidentiality, and disclose any AI use in the review itself. COPE publishes case guidance for editors handling suspected AI-written reviews. Verify the current version of each before your next review - these pages move - but the shape has been stable: the manuscript stays inside the circle of trust.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three lanes for reviewers: never touches an AI tool, allowed with journal permission and disclosure, always fine.">
+        <style>
+          .rvR { font: 700 13px Inter, sans-serif; fill: #991B1B; }
+          .rvW { font: 700 13px Inter, sans-serif; fill: #3A2A08; }
+          .rvH { font: 700 13px Inter, sans-serif; fill: #22252B; }
+          .rvX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .rvB { font: 600 11px Inter, sans-serif; fill: #22252B; }
+          .rvK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="264" height="270" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="rvR" x="44" y="52">Never touches an AI tool</text>
+        <text class="rvB" x="44" y="82">· The manuscript, any part of it</text>
+        <text class="rvB" x="44" y="106">· The data and supplements</text>
+        <text class="rvB" x="44" y="130">· The authors' identities</text>
+        <text class="rvB" x="44" y="154">· Your summary of its content</text>
+        <text class="rvB" x="44" y="178">· Grant applications you review</text>
+        <text class="rvX" x="44" y="210">Anything derived from the work</text>
+        <text class="rvX" x="44" y="226">counts as the work. NIH calls the</text>
+        <text class="rvX" x="44" y="242">upload itself the breach - no</text>
+        <text class="rvX" x="44" y="258">tool setting makes it safe.</text>
+
+        <rect x="308" y="24" width="264" height="270" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="rvW" x="328" y="52">With permission + disclosure</text>
+        <text class="rvB" x="328" y="82">· Polishing YOUR review prose,</text>
+        <text class="rvB" x="328" y="100">&nbsp;&nbsp;after it is written</text>
+        <text class="rvB" x="328" y="124">· General-knowledge questions</text>
+        <text class="rvB" x="328" y="142">&nbsp;&nbsp;that do not encode the paper</text>
+        <text class="rvB" x="328" y="166">· Structure checklists on</text>
+        <text class="rvB" x="328" y="184">&nbsp;&nbsp;your own text</text>
+        <text class="rvX" x="328" y="214">ICMJE order of operations: ask</text>
+        <text class="rvX" x="328" y="230">the journal FIRST, then use, then</text>
+        <text class="rvX" x="328" y="246">disclose the use in the review.</text>
+        <text class="rvX" x="328" y="262">Permission is not retroactive.</text>
+
+        <rect x="592" y="24" width="264" height="270" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="rvH" x="612" y="52">Always fine</text>
+        <text class="rvB" x="612" y="82">· Reading closely, on paper</text>
+        <text class="rvB" x="612" y="106">· Your own field expertise</text>
+        <text class="rvB" x="612" y="130">· Asking the editor what the</text>
+        <text class="rvB" x="612" y="148">&nbsp;&nbsp;journal's AI policy allows</text>
+        <text class="rvB" x="612" y="172">· Declining when conflicted</text>
+        <text class="rvB" x="612" y="196">· Citing published work you know</text>
+        <text class="rvX" x="612" y="226">Asking is always safe. The editor</text>
+        <text class="rvX" x="612" y="242">would rather answer a question</text>
+        <text class="rvX" x="612" y="258">than retract a review.</text>
+
+        <rect x="24" y="318" width="832" height="72" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="rvH" x="44" y="344">One principle generates all three lanes: held in trust</text>
+        <text class="rvX" x="44" y="364">The manuscript was given to the journal in confidence, and the journal lent it to you for one purpose: your judgement.</text>
+        <text class="rvX" x="44" y="380">Every rule above is that sentence applied. If an action shares the work beyond that circle, it is in the left lane.</text>
+
+        <rect x="24" y="410" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="rvK" x="48" y="422">When a case is not on this map, apply the principle: who else sees the work if I do this?</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the reviewer's three lanes, and the one principle that generates them</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The four rule-holders, in their own shapes<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Rule-holder</th><th>What it says for reviewers</th><th>The teeth</th></tr>
+          <tr><td>NIH NOT-OD-23-149</td><td>Generative AI is prohibited in NIH peer review, full stop</td><td>Uploading any part of an application is itself a confidentiality breach</td></tr>
+          <tr><td>Elsevier</td><td>Reviewers must not upload manuscripts to AI tools</td><td>Journal policy - a breach is grounds for removal and worse</td></tr>
+          <tr><td>Springer Nature</td><td>Reviewers must not upload manuscripts to AI tools</td><td>Same line, independently drawn</td></tr>
+          <tr><td>ICMJE</td><td>Ask the journal's permission before any AI use; keep confidentiality; disclose the use in the review</td><td>Permission-first, not forgiveness-later</td></tr>
+          <tr><td>COPE</td><td>Case guidance for editors on suspected AI-written reviews</td><td>The complaint machinery already exists</td></tr>
+        </table>
+        <p>Notice what is NOT here: a rule-holder who says "fine if the tool does not train on your data." No policy in this set carves out private modes, enterprise instances or local models for the manuscript itself. The breach is the disclosure beyond the circle of trust, not the vendor's retention setting - though your journal may have its own more detailed stance, so verify the current version before you rely on this summary.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The scale of the temptation - why the rules got written<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two measured numbers explain why every rule-holder moved at once:</p>
+        <ul>
+          <li><strong>Reviewing is enormous unpaid labour.</strong> Aczel et al. (2021) estimated reviewers worldwide spent over 100 million hours on peer review in 2020. Every one of those hours belongs to someone with a deadline of their own - the pressure to shortcut is structural, not a personal failing.</li>
+          <li><strong>And the shortcut is already being taken.</strong> Liang et al. (ICML 2024) estimated 6.5-16.9% of the text in AI-conference peer reviews was likely substantially LLM-modified. The rules are not hypothetical fences; they are a response to something already happening at scale.</li>
+        </ul>
+        <p>Hold both at once: the temptation is legitimate and the line is absolute. This session's Part 2 is about relieving the first without crossing the second.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What "derived from it" covers - the edge cases people argue<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The left lane says "anything derived from them," and that phrase does real work. A paraphrase of the methods section encodes the methods. A bullet summary of the contribution encodes the contribution. "A paper I am reviewing proposes [their idea] - is this novel?" hands the idea itself to the tool. Anonymising the authors does not help, because the confidential thing is the work, not the byline. The clean test from the figure: if the prompt would let a stranger reconstruct anything the authors have not published, it is the manuscript, and it stays in the left lane. The leader track's a5 covers the same ground from the editor's chair.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="reviewing-with-ai">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the craft</span>
+      <h2>Reviewing well WITH AI, legally <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">The rules leave a real working strip. Nothing about the paper touches the tool - but your own prose, your own structure, and general knowledge that does not encode the paper are usable, subject to the journal's rules and your disclosure. The bigger lever, though, is not AI at all: it is knowing what a good review looks like, because most weak reviews fail the quality bar long before they fail the AI policy.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The review quality bar: specific, actionable, evidence-cited - with a weak and a strong version of each.">
+        <style>
+          .qbT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .qbH { font: 600 12px Inter, sans-serif; fill: #22252B; }
+          .qbX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .qbK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="264" height="56" rx="10" fill="#101C36"/>
+        <text class="qbT" x="44" y="47">Specific</text>
+        <text class="qbX" x="44" y="66" fill="#A8B9D6">names the exact place + problem</text>
+        <rect x="308" y="24" width="264" height="56" rx="10" fill="#1B2A4A"/>
+        <text class="qbT" x="328" y="47">Actionable</text>
+        <text class="qbX" x="328" y="66" fill="#A8B9D6">names the fix, not just the flaw</text>
+        <rect x="592" y="24" width="264" height="56" rx="10" fill="#3A5488"/>
+        <text class="qbT" x="612" y="47">Evidence-cited</text>
+        <text class="qbX" x="612" y="66" fill="#EEF2F9">anchors the objection in sources</text>
+
+        <rect x="24" y="100" width="264" height="130" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="qbX" x="44" y="126">Weak: "the methods are unclear"</text>
+        <text class="qbH" x="44" y="152">Strong: "Section 3.2 never</text>
+        <text class="qbH" x="44" y="168">states how participants were</text>
+        <text class="qbH" x="44" y="184">assigned; without it the causal</text>
+        <text class="qbH" x="44" y="200">claim in 5.1 cannot be assessed"</text>
+        <rect x="308" y="100" width="264" height="130" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="qbX" x="328" y="126">Weak: "improve the analysis"</text>
+        <text class="qbH" x="328" y="152">Strong: "report the model</text>
+        <text class="qbH" x="328" y="168">specified in the protocol</text>
+        <text class="qbH" x="328" y="184">alongside the fitted one, and</text>
+        <text class="qbH" x="328" y="200">justify any divergence"</text>
+        <rect x="592" y="100" width="264" height="130" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="qbX" x="612" y="126">Weak: "this has been done"</text>
+        <text class="qbH" x="612" y="152">Strong: "name the prior study,</text>
+        <text class="qbH" x="612" y="168">year and venue, and say what</text>
+        <text class="qbH" x="612" y="184">this paper adds beyond it -</text>
+        <text class="qbH" x="612" y="200">or concede that it is new"</text>
+
+        <rect x="24" y="254" width="832" height="42" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="qbK" x="44" y="280">The bar is human work. No AI tool can meet it for you, because meeting it requires having read the paper.</text>
+
+        <rect x="24" y="312" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="qbK" x="48" y="324">Demo 2 runs this bar over a review you wrote - line by line, criticism by criticism.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the quality bar every criticism in your review should clear</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The legal working strip, precisely drawn<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>What never touches the tool: the manuscript, the data, the authors' identities, anything derived from them. What may - subject to the journal's rules and disclosed in the review:</p>
+        <ul>
+          <li><strong>Polishing your own review prose, after it is written.</strong> The judgements, the evidence, the specifics are already on the page; the tool tightens sentences you authored. The moment the tool supplies a criticism you did not have, you are past polish.</li>
+          <li><strong>General-knowledge questions that do not encode the paper.</strong> "What are the standard threats to validity in stepped-wedge trials?" is a textbook question. "Does THIS trial handle them?" is your job, answered by reading.</li>
+          <li><strong>Structure checklists on your own text.</strong> "Does my review address novelty, methods, evidence and clarity, and does every criticism name a fix?" - the checklist runs over your words, not theirs.</li>
+        </ul>
+        <p>And the ICMJE sequence is strict: permission from the journal FIRST, then the use, then disclosure of the use in the review. A perfect disclosure does not repair a use the journal never approved.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why "names the fix" is the half that matters<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Editors triage reviews by usefulness, and usefulness is almost entirely in the fixes. "The framing is weak" gives an author nothing and an editor nothing; "the contribution claimed in the abstract is broader than the evidence in section 5 - either narrow the claim or add the comparison condition" gives both a decision to make. A useful discipline: for every criticism, write the sentence the authors would need to act on it. If you cannot write that sentence, you have an impression, not yet a finding - go back to the paper. This is also your best defence against the temptation Part 1 measured: a reviewer who works fix-first is doing the one part of the job no tool can do, so there is nothing left to outsource illegally.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="section" id="authors-side">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the other chair</span>
+      <h2>The author's side of the table <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Sooner than you review, you will be reviewed - and the response-to-reviewers document has its own version of every rule in this session. The good news: your rebuttal is YOUR text about YOUR paper, so it lives under the manuscript rules you already know from b8. We searched for rebuttal-specific publisher rules and found none - a verified absence, not an oversight - so the manuscript policies govern by default. Verify the current version of your journal's policy before submitting, as always.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What holds and what changes in the rebuttal<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Organizing your response with AI assistance on your own text is manuscript-rules territory.</strong> Structuring the point-by-point, tightening your replies, checking tone - the same disclosure logic as b8 applies, under whatever policy your journal runs.</li>
+          <li><strong>But reviewer comments are held in trust too - by you, now.</strong> Reviews often quote your unpublished results, describe your unreleased methods, or reveal the reviewer's own unpublished thinking. Pasting reviewer comments containing unpublished detail into a consumer tool leaks confidential material exactly the way a reviewer uploading your manuscript would. Same principle, other chair.</li>
+          <li><strong>The point-by-point discipline:</strong> every comment gets a numbered reply; every reply says what changed and where, or why nothing changed; no comment is silently skipped. Editors read the response before they re-read the paper - the response IS the case for acceptance.</li>
+          <li><strong>Disagreeing is allowed - with evidence and respect.</strong> "We respectfully disagree: the reviewer's concern assumes X, but our design controls for it in section 3.2, and [author-year] reports the same pattern" beats capitulating to a change you believe is wrong. Reviewers are wrong sometimes; the rebuttal is where you say so, on the record, with receipts.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>A response skeleton that survives hostile reading<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>One structure covers nearly every rebuttal: (1) a short cover note thanking reviewers and summarising the major changes in three or four lines; (2) the point-by-point, with each reviewer comment quoted or faithfully paraphrased, numbered R1.1, R1.2, R2.1...; (3) each reply in three moves - acknowledge what is right in the comment, state the change with its exact location, or state the disagreement with its evidence. Write the hardest reply first while your patience is fresh. And if AI helped you organize or polish the response, apply your journal's manuscript disclosure rules to the response too - it is a submitted document like any other.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>The confidentiality drill <span class="tag demo">★ 12 min · everyone sorts</span></h2>
+    </div>
+    <p class="lede">A fictional setup: you are reviewing "Manuscript 4471" for a mid-tier journal in your field - a study with unpublished data, a novel method, and a two-week deadline you are behind on. Sort the ten actions below into never / with permission / fine. Then argue the borderline ones out loud - the arguing is the exercise.</p>
+
+    <div class="steps">
+      <div class="step"><p>Sort these ten, alone, in two minutes: (1) upload the PDF to a chatbot for a summary; (2) paste the abstract to "simplify it"; (3) ask a general tool "what are common pitfalls in diary-study designs?"; (4) paste your own finished review draft for a grammar pass; (5) paste the methods section, authors removed, to check the statistics; (6) email the editor asking what the journal's AI policy permits; (7) run a structure checklist over your own review text; (8) describe the paper's novel method from memory and ask "is this new?"; (9) look up published papers the manuscript cites; (10) ask a tool to draft the review from your bullet points about the paper.</p></div>
+      <div class="step"><p>Compare with a neighbour. Expected splits: never - 1, 2, 5, 8, 10 (all encode the manuscript or its content; anonymising in 5 changes nothing; in 10 your bullets ARE the paper's content). With permission + disclosure - 4 and 7 (your own text only). Fine - 3, 6, 9 (general knowledge, asking, and published sources).</p></div>
+      <div class="step"><p>Argue the two borderline ones. Action 3 is fine only while the question stays generic - the moment you add the paper's population, measures or twist, it becomes action 8. Action 10 feels like "my own notes" but the notes derive from the manuscript, and derived content is the manuscript.</p></div>
+      <div class="step"><p>Write your one-line rule from the drill: "before any prompt during a review, I ask - who else sees the authors' work if I send this?"</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The 11pm test</strong>
+      Every action in the never lane gets more tempting as the deadline gets closer, and the rationalisations arrive on schedule: it is anonymised, it is a private mode, it is just a summary. Decide the lanes now, while nothing is due. Reviewers who improvise the ethics under time pressure are how the Liang et al. (2024) numbers happened.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Your review, against the quality bar <span class="tag demo">★ 10 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Take a review you have written - or spend the first five minutes drafting one for a preprint in your field, which is public and therefore safe practice material. Then run the bar over it, criticism by criticism.</p>
+
+    <div class="steps">
+      <div class="step"><p>List every criticism in your review as one line each. Most reviews turn out to contain fewer distinct criticisms than their word count suggests - that is finding number one.</p></div>
+      <div class="step"><p>Mark each line S / A / E: is it Specific (names the section and the problem), Actionable (names the fix), Evidence-cited (anchors the objection in something checkable)? A line with none of the three is an impression wearing a review's clothes.</p></div>
+      <div class="step"><p>Rewrite your weakest line to clear all three. This is human work on the paper - notice that no tool could have done it, because it requires knowing what the manuscript actually says.</p></div>
+      <div class="step"><p>Only now, polish: if your journal permits it and you will disclose it, run YOUR finished text through a grammar pass. Note the disclosure line you would attach: "Language of this review was polished with [tool]; all assessments and evidence are the reviewer's own."</p></div>
+    </div>
+
+    <div class="prompt-box good">
+      <span class="label">★ The only review prompt that is safely yours - structure, on your text, nothing of theirs</span>
+      <p>Here is the full text of a peer review I have written. Do not add, remove or soften any criticism. Check only: (1) does every criticism name a specific location and a concrete fix; (2) is the summary paragraph consistent with the severity of the points below it; (3) is the tone professional throughout? List any line that fails, quoting my words back to me. The review text follows: [paste YOUR review - and only after your journal has permitted AI use]</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Look up the reviewer AI policy of the journal you are most likely to review for, plus your funder's if you might sit on a panel. Add both to the policy-check table you built in b1, with today's date.</li>
+      <li>Write a practice review of a recent preprint in your field - public material, real stakes-free practice - and run the Demo 2 quality bar over it. Keep the S/A/E tally.</li>
+      <li>Draft your two standing sentences: the disclosure line you would attach to any permitted AI polish of a review, and the one-line held-in-trust rule from Demo 1. Pin both where you write reviews.</li>
+      <li>If you have a decision letter waiting: build the point-by-point skeleton from Part 3 before touching any tool, and check your journal's manuscript policy for what a polished response would need disclosed.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">The reviewer rules on this page trace to the live policy notices and the peer-reviewed measurements catalogued in this course's source map. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">NIH NOT-OD-23-149 - generative AI prohibited in NIH peer review; upload = confidentiality breach</span><span class="note">Part 1 · the strictest rule in the set</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Elsevier + Springer Nature reviewer upload bans; ICMJE permission-first, confidentiality, disclosure; COPE case guidance</span><span class="note">Part 1 · the four rule-holders table</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The scale: Aczel et al. (2021) 100M+ reviewer hours in 2020; Liang et al. (ICML 2024) 6.5-16.9% LLM-modified review text</span><span class="note">Part 1 · why every rule-holder moved at once</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The legal working strip: own-prose polish, general-knowledge questions, structure checklists - with disclosure</span><span class="note">Part 2 + Demo 2</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Rebuttal-specific publisher rules: none found - a verified absence; manuscript rules govern responses by default</span><span class="note">Part 3 · re-check your journal's live policy before submitting</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Journal-by-journal reviewer policy detail - fast-moving territory</span><span class="note">Homework sends you to the live pages; the leader view is a5</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · A reviewer uploads a manuscript to a private AI mode that "does not train on your data." Under the rules in Part 1, where does this land?</p>
+      <button class="qopt" type="button">A · Fine - the confidentiality risk was the training data</button>
+      <button class="qopt" type="button">B · A breach - the manuscript left the circle of trust, and no policy in the set carves out private modes for reviewers</button>
+      <button class="qopt" type="button">C · Fine if the authors' names were removed first</button>
+      <p class="qwhy">NIH NOT-OD-23-149 treats the upload itself as the confidentiality breach, and Elsevier and Springer Nature ban reviewers from uploading manuscripts without a retention-setting exception. The confidential thing is the work, not the byline - anonymising changes nothing. Held in trust means it goes nowhere, whatever the vendor's settings say.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Your journal has no visible AI policy and you want a grammar pass on your finished review. What does ICMJE say the order of operations is?</p>
+      <button class="qopt" type="button">A · Use the tool, then disclose - disclosure cures everything</button>
+      <button class="qopt" type="button">B · Silence means consent - proceed without asking</button>
+      <button class="qopt" type="button">C · Ask the journal's permission first, keep confidentiality throughout, and disclose the use in the review</button>
+      <p class="qwhy">ICMJE is permission-first: ask before any AI use in reviewing, and disclose the use in the review itself. A perfect disclosure does not repair a use the journal never approved, and an absent policy is a reason to ask the editor - which is always in the fine lane - not a licence to improvise.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · You are drafting a response to reviewers and want AI help organizing it. What does held-in-trust mean on the author's side of the table?</p>
+      <button class="qopt" type="button">A · Work on your own text under manuscript rules - but never paste reviewer comments containing unpublished detail into a consumer tool</button>
+      <button class="qopt" type="button">B · Nothing - the rebuttal is your document, so anything goes</button>
+      <button class="qopt" type="button">C · AI is banned from rebuttals entirely, by every publisher</button>
+      <p class="qwhy">No rebuttal-specific publisher rules were found - a verified absence - so your journal's manuscript rules govern your own response text, disclosure included. But reviews often quote your unpublished results or the reviewer's unpublished thinking, so pasting reviewer comments into a consumer tool leaks confidential material exactly the way a reviewer uploading your manuscript would. Same principle, other chair.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 9 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The rule stack</b><span>NIH NOT-OD-23-149: no generative AI in NIH review, upload = breach. Elsevier + Springer Nature: never upload manuscripts. ICMJE: permission first, disclose in review. COPE: the case machinery exists.</span></div>
+      <div class="cheat-item"><b>Held in trust</b><span>The journal lent you the work for one purpose: your judgement. Any action that shares it beyond that circle is a breach - anonymised, private-mode or otherwise.</span></div>
+      <div class="cheat-item"><b>The never lane</b><span>The manuscript, the data, the authors' identities, and anything derived from them - summaries, paraphrases, and your bullet notes about the paper included.</span></div>
+      <div class="cheat-item"><b>The permitted strip</b><span>Own-prose polish after writing, general-knowledge questions that do not encode the paper, structure checklists on your text - journal permission + disclosure required.</span></div>
+      <div class="cheat-item"><b>The scale</b><span>Aczel et al. (2021): 100M+ reviewer hours in 2020. Liang et al. (ICML 2024): 6.5-16.9% of AI-conference review text likely LLM-modified. The temptation is structural; the line is absolute.</span></div>
+      <div class="cheat-item"><b>The quality bar</b><span>Every criticism: Specific, Actionable, Evidence-cited. A good review names the fix, not just the flaw - and meeting the bar requires having read the paper.</span></div>
+      <div class="cheat-item"><b>The rebuttal rules</b><span>Your response text follows manuscript rules (verified absence of rebuttal-specific policies). Reviewer comments with unpublished detail never enter consumer tools.</span></div>
+      <div class="cheat-item"><b>Point-by-point</b><span>Every comment numbered and answered: what changed and where, or why not with evidence. Disagree respectfully, on the record, with receipts.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 9 of 10 · learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b8-writing-and-publication.html">← Previous: Writing and publication</a> &nbsp;·&nbsp; <a href="b10-capstone.html">Next: Capstone →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

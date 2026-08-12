@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 1 · The AI-era lab - learn ai academia with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-academia-with-phoebe</a> / Leader session 1 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe · Leader track · Session 1 of 6</div>
+    <h1>The AI-era lab: <span class="accent">what changed, what broke, what you decide</span></h1>
+    <p class="sub">You do not get to decide whether AI enters your lab. It arrived through the search engines, the reference managers and your students' drafts before anyone asked you. The question you do own is under which rules it operates - and that question rewards the leader who has seen the honest capability map and read the failure catalogue with the receipts attached. This session gives you both, plus the reason the two easy answers - ban it, embrace it - both fail a lab in practice. No code today; judgement only.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Leader track</span>
+      <span class="chip audience">PIs · professors · lab heads</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-27 · Capability map + failure catalogue</span>
+      <span class="a3" style="flex:5">27-41 · Demo: reading a retraction together</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why the leader track starts here</h2>
+    </div>
+    <p class="lede">Every lab head is currently being offered two ready-made opinions: the vendor's ("your group is leaving productivity on the table") and the common room's ("this is the end of scholarship"). Both save you the trouble of thinking, and both will cost you later. This track replaces borrowed opinions with three things you can actually lead with: what the tools verifiably do, what has verifiably gone wrong when nobody owned the output, and the explicit norms that sit between a ban and a free-for-all. Session 1 is the evidence; sessions a2-a6 are the rules you will build on it.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A capability map at leader altitude (strong where text is high-volume and human-checked, weak where truth is the task), four real teaching cases with names and dates you can retell at a lab meeting, the evidence for why bans and naive embrace both fail, and a clear picture of what a3-a6 will build: norms, not vibes.
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="capability">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · what changed</span>
+      <h2>The capability map, at leader altitude <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">You do not need to know how a transformer works to run a lab well in 2026. You need one asymmetry: these tools are strong wherever the task is high-volume text work with a human check at the end, and weak - reliably, measurably weak - wherever the task is being right about the world. Every rule you will write in this track is downstream of that one sentence.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two-column capability map: verifiably strong with a human check on the left, verifiably weak or absent on the right, with citation fabrication flagged as the standing hazard.">
+        <style>
+          .cmT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .cmG { font: 700 13px Inter, sans-serif; fill: #3A2A08; }
+          .cmH { font: 600 12.5px Inter, sans-serif; fill: #22252B; }
+          .cmX { font: 400 11.5px Inter, sans-serif; fill: #6A7180; }
+          .cmR { font: 600 12px Inter, sans-serif; fill: #991B1B; }
+          .cmK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="404" height="40" rx="10" fill="#101C36"/>
+        <text class="cmT" x="44" y="49">What it verifiably does (with a human check)</text>
+        <rect x="452" y="24" width="404" height="40" rx="10" fill="#A87B2F"/>
+        <text class="cmT" x="472" y="49">What it cannot do</text>
+
+        <rect x="24" y="78" width="404" height="54" rx="10" fill="#1B2A4A"/>
+        <text class="cmT" x="44" y="100">Volume text triage</text>
+        <text class="cmX" x="44" y="119" fill="#A8B9D6">rank 3,000 abstracts for a human to decide on</text>
+        <rect x="452" y="78" width="404" height="54" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="cmG" x="472" y="100">Know what is true</text>
+        <text class="cmX" x="472" y="119" fill="#3A2A08">no reliable sense of whether a claim is right</text>
+
+        <rect x="24" y="142" width="404" height="54" rx="10" fill="#1B2A4A"/>
+        <text class="cmT" x="44" y="164">Drafting and tightening prose</text>
+        <text class="cmX" x="44" y="183" fill="#A8B9D6">summaries, structure, plain-language rewrites</text>
+        <rect x="452" y="142" width="404" height="54" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="cmR" x="472" y="164">Produce real citations on demand</text>
+        <text class="cmX" x="472" y="183" fill="#991B1B">it fabricates plausible references, confidently</text>
+
+        <rect x="24" y="206" width="404" height="54" rx="10" fill="#3A5488"/>
+        <text class="cmT" x="44" y="228">Boilerplate and glue code</text>
+        <text class="cmX" x="44" y="247" fill="#EEF2F9">scripts a human reads, runs and tests</text>
+        <rect x="452" y="206" width="404" height="54" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="cmG" x="472" y="228">Carry accountability</text>
+        <text class="cmX" x="472" y="247" fill="#3A2A08">cannot be an author, cannot answer for a paper</text>
+
+        <rect x="24" y="270" width="404" height="54" rx="10" fill="#3A5488"/>
+        <text class="cmT" x="44" y="292">Sparring over supplied content</text>
+        <text class="cmX" x="44" y="311" fill="#EEF2F9">objections to a design your student pastes in</text>
+        <rect x="452" y="270" width="404" height="54" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="cmG" x="472" y="292">Keep a confidence</text>
+        <text class="cmX" x="472" y="311" fill="#3A2A08">a consumer chat window is not a data enclave</text>
+
+        <rect x="24" y="340" width="832" height="72" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="cmH" x="44" y="364">The leader's reading of this map</text>
+        <text class="cmX" x="44" y="383">Everything in the left column is delegable labour, provided a named human checks the output. Everything in the</text>
+        <text class="cmX" x="44" y="399">right column is exactly where academic careers are made or broken - and it never delegates, to anyone or anything.</text>
+
+        <rect x="24" y="428" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="cmK" x="48" y="440">The tools shift the labour, never the accountability. Your lab's rules exist to keep that sentence true.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the two-column map every later rule is built on</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>It is already in the building<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three places AI reached your lab before you formed a policy:</p>
+        <ul>
+          <li><strong>Search.</strong> The tools your group already uses for discovery - Semantic Scholar and friends - ship AI-assisted features as defaults, not options. The researcher track (b2) walks the toolbox; you only need to know it is the water they swim in.</li>
+          <li><strong>Reference managers and writing tools.</strong> AI arrives via plugins and built-in assistants, often without anyone consciously adopting it. "We do not use AI here" is, in most labs, already factually false.</li>
+          <li><strong>Your students' drafts.</strong> Not necessarily disclosed, not necessarily misused - but present. The interesting leadership question is not whether, it is under which rules, and right now the honest answer in most groups is "none written down".</li>
+        </ul>
+        <p>That last gap is the whole reason this track exists. Drift is a policy too - just one nobody chose and nobody can defend in a misconduct hearing.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>How weak is weak? The numbers behind the right column<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The right column is not hand-waving. Published audits of fabricated citations found rates of 55% for GPT-3.5 and 18% for GPT-4 (Walters &amp; Wilder 2023), with Chelli et al. (2024) reporting similar ranges across models. Newer models and retrieval grounding cut the rate but never to zero - and a fabricated reference is visually indistinguishable from a real one until someone resolves it. The researcher track makes your students measure their own fabrication tally in b1; the deep-dive detection technique lives with our sibling course AI + Law, and claim-vs-source auditing lives with AI + Research. Your job as leader is simpler: never let "the AI found this reference" pass as a provenance statement in your lab.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="catalogue">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · what broke</span>
+      <h2>The failure catalogue, with receipts <span class="tag concept">9 min live</span></h2>
+    </div>
+    <p class="lede">Four cases, all real, all citable, all worth retelling at your next lab meeting. Notice what they have in common before the diagram tells you: in every one, the tool behaved exactly as tools behave. What failed was a human checkpoint - an author who did not read, a reviewer who did not look, an editor who waved it through.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Timeline of four documented failures: tortured phrases 2021, the Frontiers rat figure February 2024, the Certainly retraction May 2024, and Liang et al. on LLM-modified peer reviews 2024.">
+        <style>
+          .fcY { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .fcH { font: 700 12.5px Inter, sans-serif; fill: #22252B; }
+          .fcX { font: 400 11.5px Inter, sans-serif; fill: #6A7180; }
+          .fcR { font: 600 12px Inter, sans-serif; fill: #991B1B; }
+          .fcK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="120" height="58" rx="10" fill="#101C36"/>
+        <text class="fcY" x="44" y="58">2021</text>
+        <rect x="156" y="24" width="700" height="58" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="fcH" x="176" y="47">Tortured phrases (Cabanac et al. 2021)</text>
+        <text class="fcX" x="176" y="66">Mangled auto-paraphrases found in print at scale; the Problematic Paper Screener now hunts them.</text>
+
+        <rect x="24" y="96" width="120" height="58" rx="10" fill="#1B2A4A"/>
+        <text class="fcY" x="44" y="130">Feb 2024</text>
+        <rect x="156" y="96" width="700" height="58" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="fcH" x="176" y="119">The Frontiers rat figure</text>
+        <text class="fcX" x="176" y="138">An AI-generated, anatomically impossible figure was published - spotted publicly, retracted in days.</text>
+
+        <rect x="24" y="168" width="120" height="58" rx="10" fill="#3A5488"/>
+        <text class="fcY" x="44" y="202">May 2024</text>
+        <rect x="156" y="168" width="700" height="58" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="fcH" x="176" y="191">"Certainly, here is a possible introduction..."</text>
+        <text class="fcX" x="176" y="210">A chatbot reply opens a paper in Surfaces and Interfaces (Elsevier); retracted, undisclosed AI use.</text>
+
+        <rect x="24" y="240" width="120" height="58" rx="10" fill="#3A5488"/>
+        <text class="fcY" x="44" y="274">2024</text>
+        <rect x="156" y="240" width="700" height="58" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="fcH" x="176" y="263">Liang et al. (ICML 2024): the reviews too</text>
+        <text class="fcX" x="176" y="282">An estimated 6.5-16.9% of AI-conference peer-review text was LLM-modified.</text>
+
+        <rect x="24" y="316" width="832" height="46" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="fcR" x="44" y="336">The common thread</text>
+        <text class="fcX" x="44" y="353" fill="#991B1B">Not one case is a tool failure. Each is a checkpoint where no human owned the text, the figure or the review.</text>
+
+        <rect x="24" y="382" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="fcK" x="48" y="394">Four cases, one lesson: the tools did what tools do - the humans skipped the reading.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the catalogue: four documented failures, one shared root cause</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The two retractions, told properly<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>"Certainly, here is a possible introduction for your topic:"</strong> - that chatbot preamble sat as the opening line of a materials-science paper in Surfaces and Interfaces (Elsevier), published in 2024 and retracted in May 2024 for undisclosed AI use. Count the humans who had the chance to read one sentence: the authors, every co-author, the handling editor, the reviewers. All of them missed the first line of the introduction.</li>
+          <li><strong>The Frontiers rat figure (February 2024).</strong> An AI-generated anatomical figure - impossible in ways any first-year biology student would catch - made it through review and into print. The internet caught it within hours; the journal retracted within days. The speed of the retraction is the tell: the error was never hard to see. Nobody with responsibility looked.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p>Both cases are catalogued with primary links at Academ-AI, which tracks suspected undeclared AI in published papers. When you retell these at a lab meeting, the point to land is not "AI is dangerous" - it is "four humans in a row assumed someone else had read it". That failure mode predates AI; AI just industrialised the volume of unread text.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The scale evidence: this is not a few bad apples<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Tortured phrases.</strong> Cabanac et al. (2021) named the pattern - automatic paraphrases that mangle fixed terms into nonsense - and found them in published, peer-reviewed venues. The Problematic Paper Screener grew out of that work and now flags candidates across the literature continuously. The lesson for a leader: detection at the ecosystem level exists, but it works after publication, when the damage is reputational and shared.</li>
+          <li><strong>Liang et al. (ICML 2024).</strong> Between 6.5% and 16.9% of peer-review text at major AI conferences was estimated to be LLM-modified. Read that carefully: the checkpoint that is supposed to catch unowned text is itself producing unowned text. The review duty question gets a full session in a5.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What the catalogue does not prove<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Resist the tempting over-read. The catalogue does not show that AI use causes misconduct, and it does not justify treating every disclosed use as a scandal. Plenty of careful, disclosed, policy-compliant AI assistance is happening in the same literature and by definition never makes this list. What the catalogue shows is narrower and more useful: <strong>every public failure so far is a failure of human ownership at a checkpoint</strong> - unread text, unexamined figures, undisclosed use where disclosure was owed. That is excellent news for a lab head, because ownership checkpoints are exactly the thing a leader can mandate. You cannot make the tools truthful; you can make your people readers of record. Deep-dive techniques live with our sibling courses: fabricated-citation detection with AI + Law, claim-vs-source auditing with AI + Research.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="section" id="middle-path">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · what you decide</span>
+      <h2>Why "ban it" and "embrace it" both fail a lab <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Faced with the catalogue, most leaders reach for one of two levers. Both are comfortable. Both are wrong, and the evidence for why is worth having at your fingertips before a faculty meeting reaches for either.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The ban: comfortable, unenforceable, and quietly unjust<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Bans push use underground.</strong> The tools are free, invisible in output when used with minimal care, and embedded in software your group already runs. A ban does not stop use; it stops disclosure - which means you lose exactly the visibility a leader needs, while keeping all of the risk.</li>
+          <li><strong>Enforcement rests on detectors, and detectors are unreliable.</strong> Worse than unreliable: Liang et al. (Patterns 2023) showed GPT detectors are biased against non-native English writers, flagging their genuine writing at markedly higher rates. Verify the current literature before quoting any exact figure - the bias finding itself is solid. A ban enforced by detection means your international students carry the false-accusation risk for everyone. That is not a policy; it is a liability.</li>
+          <li><strong>Bans also ban the left column.</strong> The defensible uses - triage, drafting with review, sparring - are real productivity your competitors' labs are keeping.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The naive embrace: how you end up in the catalogue<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>"Use whatever makes you productive" sounds modern and trusting. Walk it forward: no disclosure norms, so you cannot answer a journal's disclosure requirement honestly. No verification norms, so fabricated citations ride into manuscripts with your name on them. No confidentiality norms, so a well-meaning student pastes an unpublished collaborator draft into a consumer chat window. Every entry in Part 2's catalogue happened inside institutions that had not written their rules yet. The naive embrace is not a policy either - it is the drift from Part 1, wearing enthusiasm as a costume.</p>
+        <div class="callout tip">
+          <strong>The middle is explicit norms - and it is the rest of this track</strong>
+          Not a mood, a document: who may use what, on which artifacts, with what disclosure, verified how, and who signs as reader of record. a3 builds the supervision and authorship rules, a4 the grant rules, a5 the peer-review rules, a6 assembles the one-page lab policy live. By a6 you will have written it, not downloaded it.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The three stances, side by side<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Stance</th><th>What actually happens</th><th>Where it fails</th></tr>
+          <tr><td>Ban</td><td>Use continues, disclosure stops, enforcement leans on detectors</td><td>Lost visibility + biased false accusations (Liang et al. Patterns 2023)</td></tr>
+          <tr><td>Naive embrace</td><td>Unverified output flows into manuscripts, reviews and prompts</td><td>Part 2's catalogue - unowned text with your lab's name on it</td></tr>
+          <tr><td>Explicit norms</td><td>Named humans own defined checkpoints per artifact</td><td>Only where left unwritten - which is what a3-a6 close</td></tr>
+        </table>
+        <p>The third row is not a compromise between the first two; it is the only stance that survives contact with a misconduct panel, a grant renewal, and your students' actual behaviour at the same time.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 1</span>
+      <h2>Reading a retraction notice together <span class="tag demo">★ 12 min · read along</span></h2>
+    </div>
+    <p class="lede">The leader-track version of a build-along: we put the "Certainly, here is" case on the projector and read it the way a misconduct panel would - checkpoint by checkpoint. By the end you can run this same exercise with your own group, which is worth more than any slide deck about AI ethics.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pull up the case: Zhang et al., Surfaces and Interfaces (Elsevier), retracted May 2024, catalogued with primary links at Academ-AI. Read the paper's first line of the introduction aloud: "Certainly, here is a possible introduction for your topic:". Let the room sit with it.</p></div>
+      <div class="step"><p>Checkpoint 1 - the drafting author. What would have caught it: reading your own manuscript once, start to finish, before circulating. Ask the room: does anyone believe this author read the introduction?</p></div>
+      <div class="step"><p>Checkpoint 2 - the co-authors. Every name on the byline certified this text. What would have caught it: a norm that co-authorship means having read the whole paper, stated out loud in your lab rather than assumed.</p></div>
+      <div class="step"><p>Checkpoint 3 - editor and reviewers. The first sentence of the introduction is arguably the most-read sentence in any manuscript. It still passed. What would have caught it: reviewers reading rather than skimming - which loops back to Liang et al.'s finding about what is happening to review text itself.</p></div>
+      <div class="step"><p>Close with the leader question: which of these checkpoints do you control in your lab, starting Monday? Write the answer in one sentence. Most rooms land on the same one: "in this group, nobody submits or signs what they have not read." That sentence is the seed of your a6 policy.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>Why read a retraction and not a success story</strong>
+      Success stories with AI are private and unverifiable; failures are public and documented. A retraction notice is the rare artifact where the whole safeguard chain is visible in one place - and reading one together makes "human ownership" concrete in a way no policy memo manages.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 30-40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the retraction-reading exercise from the demo at your next lab meeting, using the same case. Budget 15 minutes. End on the one-sentence lesson and write down what your group actually says - you will want it in a6.</li>
+      <li>Take a quiet inventory: where is AI already in your group's workflow? Ask two students informally (not as an audit - as curiosity). The gap between what you assumed and what you hear is your real starting point.</li>
+      <li>Browse the Academ-AI catalogue for ten minutes and pick one case from your own field. Having a discipline-local example doubles the impact of every conversation that follows.</li>
+      <li>Write down, without polishing, your current instinct: ban, embrace, or norms? Keep the note. You will grade it against your own a6 policy in five sessions.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every case and statistic on this page traces to a primary source - retraction notices, the Academ-AI catalogue, and peer-reviewed studies listed in this course's source map. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Capability map at leader altitude: strong on checked volume text work, weak on truth</span><span class="note">Part 1 · the researcher track walks the same map hands-on in b1</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">"Certainly, here is a possible introduction" retraction - Surfaces and Interfaces (Elsevier), May 2024</span><span class="note">Part 2 + demo · read checkpoint by checkpoint</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Frontiers AI rat-figure retraction (Feb 2024) and tortured phrases (Cabanac et al. 2021) + Problematic Paper Screener</span><span class="note">Part 2 · the scale evidence</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Liang et al. (ICML 2024): 6.5-16.9% of AI-conference peer-review text LLM-modified</span><span class="note">Part 2 · full review-duty treatment in a5</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Detector unreliability and bias against non-native writers - Liang et al. (Patterns 2023)</span><span class="note">Part 3 · bias finding verified; verify exact figures before quoting numbers</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Fabricated-citation detection technique and claim-vs-source auditing</span><span class="note">Owned by sibling courses AI + Law and AI + Research · base rates only here</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What do the four catalogue cases - the "Certainly" retraction, the rat figure, tortured phrases, the LLM-modified reviews - actually share?</p>
+      <button class="qopt" type="button">A · They all involved the same model, which has since been fixed</button>
+      <button class="qopt" type="button">B · Each is a failure of human ownership at a checkpoint - unread text, unexamined figures, unowned reviews - not a failure of the tools</button>
+      <button class="qopt" type="button">C · They prove that any AI use in a manuscript leads to retraction</button>
+      <p class="qwhy">In every case the tool behaved as tools behave; what failed was a human who was supposed to read, look or own the output and did not. That diagnosis matters because ownership checkpoints are exactly what a lab head can mandate - you cannot make models truthful, but you can make your people readers of record.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Why can't you enforce a lab-wide AI ban by running a detector over drafts?</p>
+      <button class="qopt" type="button">A · Detectors work well but are too expensive for lab budgets</button>
+      <button class="qopt" type="button">B · Detectors are prohibited by publisher policy</button>
+      <button class="qopt" type="button">C · Detectors are unreliable, and Liang et al. (Patterns 2023) showed they are biased against non-native English writers - so enforcement means false accusations, unevenly distributed</button>
+      <p class="qwhy">The bias finding is the decisive one for a leader: detector-based enforcement puts your international students at disproportionate risk of false accusation over their genuine writing. Combined with the fact that bans push use underground and kill disclosure, detection-backed prohibition costs you visibility and fairness at the same time.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · If bans fail and naive embrace fails, what does the leader track build instead?</p>
+      <button class="qopt" type="button">A · Explicit written norms per artifact - supervision and authorship rules (a3), grant rules (a4), review rules (a5), assembled into a one-page lab policy (a6)</button>
+      <button class="qopt" type="button">B · A better detector, tuned to your lab's writing style</button>
+      <button class="qopt" type="button">C · A waiting strategy: no rules until the technology stabilises</button>
+      <p class="qwhy">The middle between prohibition and drift is a document, not a mood: who may use what, on which artifacts, with what disclosure, verified how, and who signs as reader of record. That is the arc of a3-a6 - and waiting is just the naive embrace with a clearer conscience, since the tools are already in the building.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The capability asymmetry</b><span>Strong: high-volume text work with a human check. Weak: truth, real citations, accountability, confidentiality. Every rule is downstream of this.</span></div>
+      <div class="cheat-item"><b>The question you own</b><span>Not whether AI enters your lab - it already did, via search, reference managers and drafts. Under which rules is the leader's question.</span></div>
+      <div class="cheat-item"><b>The catalogue</b><span>"Certainly, here is" (Elsevier, May 2024) · Frontiers rat figure (Feb 2024, retracted in days) · tortured phrases (Cabanac et al. 2021) · LLM-modified reviews (Liang et al. ICML 2024, 6.5-16.9%).</span></div>
+      <div class="cheat-item"><b>The shared root cause</b><span>Every case is a failure of human ownership at a checkpoint, not of tools. Ownership checkpoints are mandate-able; truthful models are not.</span></div>
+      <div class="cheat-item"><b>Why bans fail</b><span>Use goes underground, disclosure dies, and detector enforcement is unreliable and biased against non-native writers (Liang et al. Patterns 2023).</span></div>
+      <div class="cheat-item"><b>Why naive embrace fails</b><span>No disclosure, verification or confidentiality norms - which is precisely the recipe for joining the catalogue.</span></div>
+      <div class="cheat-item"><b>The middle</b><span>Explicit written norms per artifact. a3 supervision + authorship · a4 grants · a5 peer review · a6 the one-page lab policy, drafted live.</span></div>
+      <div class="cheat-item"><b>The lab-meeting move</b><span>Read a retraction notice together, checkpoint by checkpoint. End on: "nobody submits or signs what they have not read."</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 1 of 6 · learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← Course home</a> &nbsp;·&nbsp; <a href="a2-policy-rails.html">Next: The policy rails →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

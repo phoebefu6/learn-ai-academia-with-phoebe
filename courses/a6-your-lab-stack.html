@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 6 · Your lab stack + the one-page policy - learn ai academia with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-academia-with-phoebe</a> / Leader session 6 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe · Leader track · Session 6 of 6</div>
+    <h1>Your lab stack + the one-page policy: <span class="accent">decisions your lab can actually follow</span></h1>
+    <p class="sub">Five sessions of rules and cases converge here into two artifacts you own by the end of the hour: a tool stack chosen by data sensitivity rather than by marketing, and a one-page lab AI policy your students can hold in their heads. The order matters - the data question decides the stack, the stack informs the policy, and the policy only works if it fits on a page. This is the leader track's capstone: you leave with both drafted.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Leader track</span>
+      <span class="chip audience">PIs · lab heads · research-office leaders</span>
+      <span class="chip audience">Capstone session</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Data tiers + the free-first stack</span>
+      <span class="a3" style="flex:5">20-40 · Build-along: draft the policy live</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where the leader track lands</h2>
+    </div>
+    <p class="lede">a1 mapped the capability landscape, a2 the policy rails, a3 supervision and authorship, a4 grants, a5 review. Every one of those sessions ended in the same implicit question: so what do we run in MY lab, and what do I write down? This session answers both - with the discipline that made the rest of the course trustworthy: every tool claim here is vendor-verified or peer-reviewed, and everything unverifiable is flagged, not asserted.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A three-tier data-sensitivity model that makes every tool decision mechanical, a free-first lab stack with the paid upgrades mapped to demonstrated needs, and a filled one-page lab AI policy skeleton - scope, three ground rules, per-stage allowances, data tiers, disclosure habit, and a quarterly re-verification date with an owner.
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="data-tiers">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the data question</span>
+      <h2>The data question decides the stack <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Most lab AI conversations start with "which tool?" and go wrong immediately. The right first question is "which data?" - because the sensitivity of what goes into the prompt determines which tools are even eligible. Three tiers cover everything a lab handles.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three data-sensitivity tiers: public material, your own unpublished work, and participant or third-party material - each with its tool rule.">
+        <style>
+          .dtT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .dtS { font: 400 11px Inter, sans-serif; fill: #A8B9D6; }
+          .dtH { font: 600 12.5px Inter, sans-serif; fill: #22252B; }
+          .dtX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .dtR { font: 700 12.5px Inter, sans-serif; fill: #991B1B; }
+          .dtW { font: 400 11px Inter, sans-serif; fill: #991B1B; }
+          .dtK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="190" height="80" rx="10" fill="#3A5488"/>
+        <text class="dtT" x="44" y="58">Tier 1 · Public</text>
+        <text class="dtS" x="44" y="78" fill="#EEF2F9">lowest sensitivity</text>
+        <rect x="228" y="24" width="628" height="80" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="dtH" x="248" y="50">Published papers, public datasets, your released code</text>
+        <text class="dtX" x="248" y="70">Any tool is eligible - the material is already public. The discipline that remains is on the</text>
+        <text class="dtX" x="248" y="87">output side: verify what the model says about it before it enters your work.</text>
+
+        <rect x="24" y="120" width="190" height="80" rx="10" fill="#1B2A4A"/>
+        <text class="dtT" x="44" y="154">Tier 2 · Yours,</text>
+        <text class="dtS" x="44" y="174">unpublished</text>
+        <rect x="228" y="120" width="628" height="80" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="dtH" x="248" y="146">Your drafts, unsubmitted ideas, unpublished results</text>
+        <text class="dtX" x="248" y="166">Only tools whose data-retention terms you have actually read. An enterprise instance with</text>
+        <text class="dtX" x="248" y="183">a no-training guarantee changes the calculus - one email to IT or the research office finds out.</text>
+
+        <rect x="24" y="216" width="190" height="80" rx="10" fill="#991B1B"/>
+        <text class="dtT" x="44" y="250">Tier 3 · Not</text>
+        <text class="dtS" x="44" y="270" fill="#FCA5A5">yours to share</text>
+        <rect x="228" y="216" width="628" height="80" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="dtR" x="248" y="242">Participant data, collaborators' drafts, manuscripts under review</text>
+        <text class="dtW" x="248" y="262">Never into consumer AI tools. Ethics approvals and confidentiality survive the AI era intact.</text>
+        <text class="dtW" x="248" y="279">For human-subjects data the IRB or ethics office is the authority - not this course.</text>
+
+        <rect x="24" y="316" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="dtK" x="48" y="328">The stack question is downstream of the data question: decide the tier before you decide the tool.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three data tiers, and the tool rule each one sets</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Consumer terms vs enterprise guarantees<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The tier model turns a values debate into a reading exercise. A consumer chat tool is a product with data-retention terms - some retain prompts, some train on them under some settings, and the terms change. Nobody in your lab should be guessing: the rule is that tier 2 material only enters tools whose current terms someone has actually read, with the date of reading recorded.</p>
+        <p>Enterprise instances are the genuine exception. If your institution runs an approved deployment with contractual no-training and retention guarantees, tier 2 work opens up substantially - drafts, unpublished results, internal documents. The leadership move costs one email: ask IT or the research office three questions. Do we have an enterprise AI instance? What are its data guarantees? Who approved it for research use? Most PIs have never asked, and the answer changes what half the researcher track's sessions can do with real material.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Tier 3 is not yours to relax<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Participant data sits under ethics approvals that were written before this tool generation and remain binding. Collaborators' drafts and manuscripts you review sit under confidentiality you accepted (a5 covered the review case in full). Neither is yours to trade for convenience, and no enterprise guarantee automatically clears it either:</p>
+        <ul>
+          <li><strong>Human-subjects data:</strong> the IRB or ethics office is the authority on whether any AI processing is compatible with the consent and the protocol. This course's honest position is to route you to them, not to rule for them.</li>
+          <li><strong>Third-party material:</strong> the default is never, and the exception is explicit permission from the person whose work it is.</li>
+          <li><strong>The de-identification trap:</strong> "I removed the names" is not a tier change. Whether a dataset is de-identified to the standard your approval requires is an ethics-office judgement, not a vibe.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where your students meet these tiers<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The researcher track plants the same boundary in b1's ground rules ("never paste what is not yours to share") and leans on it hardest in b4 (extraction from PDFs) and b7 (data analysis). Your policy's data-tier section - drafted in today's demo - is what turns that classroom rule into a lab rule with your name on it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="stack">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the stack</span>
+      <h2>Free-first, paid per demonstrated need <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">The stack below runs a whole lab at zero subscription cost, and every line of it is vendor-verified or peer-reviewed - no marketing claims. The principle is free-first, not free-only: paid tools earn their line in the budget when a specific person demonstrates a specific need the free tier cannot meet. Never stack-first.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The free-first lab stack, by job<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Job</th><th>Free tool</th><th>What is verifiably true about it</th></tr>
+          <tr><td>Search + metadata</td><td>Semantic Scholar + OpenAlex</td><td>Open infrastructure: Semantic Scholar from the non-profit Ai2 with a free API; OpenAlex publishes open scholarly metadata - the plumbing under many paid tools</td></tr>
+          <tr><td>Screening</td><td>ASReview</td><td>Open source, from Utrecht University, with a published validation study in Nature Machine Intelligence (2021) - not a vendor benchmark</td></tr>
+          <tr><td>References</td><td>Zotero</td><td>Free and open source; AI arrives only via community plugins your policy can name or ban</td></tr>
+          <tr><td>Source-grounded reading</td><td>NotebookLM free tier</td><td>Answers cite your uploaded sources; Google's own FAQ is candid that grounding reduces but does not eliminate errors</td></tr>
+          <tr><td>Coding assistant</td><td>GitHub Copilot education plans</td><td>GitHub Education: free Copilot Pro for verified teachers, a Student plan for students - most labs qualify and few have claimed it</td></tr>
+        </table>
+        <p>Two habits make this stack safe at lab scale: the verification norms from the researcher track (outputs are leads until checked), and the tier rules from Part 1 deciding what goes in. Vendor terms and plan details move - verify the current version of each plan page before you announce it to the lab; the course map carries the live URLs.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What paid buys, and the funding rule<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three paid tools come up most, and each has a legitimate trigger:</p>
+        <ul>
+          <li><strong>Elicit Pro</strong> - when someone is actually running a systematic-review workflow at scale, not merely searching. The peer-reviewed framing of its extraction is "usable with human verification", which is also the policy line to attach to it.</li>
+          <li><strong>scite</strong> - when citation-context checking (which papers support vs contrast a claim) becomes a recurring need rather than a curiosity.</li>
+          <li><strong>Covidence</strong> - when a formal systematic review with a team needs managed screening workflow and audit trail.</li>
+        </ul>
+        <p>The funding rule that keeps this honest: <strong>a named person, a named project, a demonstrated need the free tier failed to meet - then the subscription.</strong> Buying the full stack up front buys shelfware and, worse, signals to the lab that tools rather than verification habits are the point.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The stack review ritual<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Put the stack on the same quarterly cycle as the policy (Part 3): who is using what, which subscription earned its cost, which free tier changed its terms. Fifteen minutes in a lab meeting. The point is not tool churn - it is that a stack chosen once and never revisited quietly drifts out of both usefulness and compliance, and the quarterly date is the cheapest insurance available.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="section" id="policy">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the artifact</span>
+      <h2>The one-page lab AI policy <span class="tag concept">6 min live</span></h2>
+    </div>
+    <p class="lede">Everything this track taught compresses into six short sections that fit on one page. That constraint is the design: a policy your students can reconstruct from memory gets followed; a comprehensive twelve-pager gets filed. Followable beats comprehensive, every time.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The one-page lab AI policy skeleton: scope, three ground rules, per-stage allowances, data tiers, disclosure habit, and a quarterly re-verification date.">
+        <style>
+          .opN { font: 800 18px Inter, sans-serif; fill: #FFFFFF; }
+          .opH { font: 700 13px Inter, sans-serif; fill: #22252B; }
+          .opX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .opK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="44" height="46" rx="10" fill="#101C36"/>
+        <text class="opN" x="40" y="54">1</text>
+        <rect x="80" y="24" width="776" height="46" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="opH" x="100" y="44">Scope</text>
+        <text class="opX" x="100" y="61">Who this covers and which work: the lab, its members, every artifact that leaves it</text>
+
+        <rect x="24" y="78" width="44" height="46" rx="10" fill="#1B2A4A"/>
+        <text class="opN" x="40" y="108">2</text>
+        <rect x="80" y="78" width="776" height="46" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="opH" x="100" y="98">Three ground rules</text>
+        <text class="opX" x="100" y="115">Never cite unread · disclose per the policy in force · never paste what is not yours to share</text>
+
+        <rect x="24" y="132" width="44" height="46" rx="10" fill="#3A5488"/>
+        <text class="opN" x="40" y="162">3</text>
+        <rect x="80" y="132" width="776" height="46" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="opH" x="100" y="152">Per-stage allowances</text>
+        <text class="opX" x="100" y="169">What AI may touch at each stage: search freely, screening verified, review never, claims never</text>
+
+        <rect x="24" y="186" width="44" height="46" rx="10" fill="#3A5488"/>
+        <text class="opN" x="40" y="216">4</text>
+        <rect x="80" y="186" width="776" height="46" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="opH" x="100" y="206">Data tiers</text>
+        <text class="opX" x="100" y="223">Public / your own unpublished / participant + third-party - the tier decides the eligible tools</text>
+
+        <rect x="24" y="240" width="44" height="46" rx="10" fill="#1B2A4A"/>
+        <text class="opN" x="40" y="270">5</text>
+        <rect x="80" y="240" width="776" height="46" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="opH" x="100" y="260">Disclosure habit</text>
+        <text class="opX" x="100" y="277">Where lab members record AI use - one line per artifact, kept without stigma</text>
+
+        <rect x="24" y="294" width="44" height="46" rx="10" fill="#A87B2F"/>
+        <text class="opN" x="40" y="324">6</text>
+        <rect x="80" y="294" width="776" height="46" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="opH" x="100" y="314">Quarterly re-verification date</text>
+        <text class="opX" x="100" y="331">Policies move faster than course pages - name an owner and a date, and keep the appointment</text>
+
+        <rect x="24" y="366" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="opK" x="48" y="378">Followable beats comprehensive: a policy nobody can remember is a policy nobody follows.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the six-section skeleton the demo fills in live</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why one page, argued properly<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The one-page constraint is not minimalism for its own sake. Three reasons it wins:</p>
+        <ul>
+          <li><strong>Recall is the compliance mechanism.</strong> Your students make AI decisions at midnight, alone, with no document open. The only policy operating at that moment is the one they can remember - which is why the three ground rules are three, and short.</li>
+          <li><strong>A page can be re-verified quarterly in fifteen minutes.</strong> A twelve-pager cannot, so it silently goes stale, and a stale policy is worse than none - it teaches people that the written rules and the real rules differ.</li>
+          <li><strong>A page fits in an onboarding conversation.</strong> New lab member, week one, ten minutes: here is what we do and why. That conversation, not the document, is where the norm actually transfers - the a3 supervision session makes the same point about authorship norms.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What the policy deliberately does not decide<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three boundaries keep the page honest. It does not overrule external rule-holders - funder notices, journal policies and university guidance always win, which is why section 2's middle rule says "the policy in force", not "this policy". It does not rule on human-subjects data - section 4 routes tier 3 questions to the IRB or ethics office, the actual authority. And it does not freeze the tool list - tools live in an appendix or a lab wiki, so the page survives the stack changing under it.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo</span>
+      <h2>Draft the policy live, section by section <span class="tag demo">★ 18 min · every leader drafts</span></h2>
+    </div>
+    <p class="lede">Not a template handout - a working session. Six sections, a few minutes each, your lab's real answers. Leaders leave with a filled skeleton, and the homework turns it into the signed page on the wall.</p>
+
+    <div class="steps">
+      <div class="step"><p>Section 1 - scope: write one sentence naming who is covered (everyone in the lab, including visiting students and RAs) and what is covered (every research artifact that leaves the lab under its name).</p></div>
+      <div class="step"><p>Section 2 - the three ground rules: copy them verbatim, then read them aloud once. Never cite what you have not read. Disclose what the policy in force asks you to disclose. Never paste what is not yours to share. They are the researcher track's contract (b1) - your policy and their training now say the same words.</p></div>
+      <div class="step"><p>Section 3 - per-stage allowances: one line per lifecycle stage. Where is AI welcome (search, screening with verification, code with tests, polish per journal rules), where is it conditional, where never (peer review material, final claims). Steal the a1 capability map's shape.</p></div>
+      <div class="step"><p>Section 4 - data tiers: copy the three tiers from Part 1, then localise tier 2: does your institution have an enterprise instance? If you do not know, write "UNKNOWN - email sent [date]" and actually send the email today.</p></div>
+      <div class="step"><p>Section 5 - disclosure habit: decide where the one-line-per-artifact record lives (lab notebook, repo readme, shared doc) and say explicitly that disclosure carries no stigma - a4 and a3 both showed why the no-stigma clause is what makes disclosure real.</p></div>
+      <div class="step"><p>Section 6 - the date: pick the quarterly re-verification day, name its owner, and put it in the calendar before the session ends. A policy without a re-verification date is a snapshot; the date is what makes it a policy.</p></div>
+    </div>
+
+    <div class="prompt-box good">
+      <span class="label">★ Section 2, as it should read on your page</span>
+      <p>Ground rules (all members, all artifacts): 1. Never cite what you have not read - every AI-suggested reference is resolved and read before it enters our work. 2. Disclose per the policy in force - funder, journal and university rules win, and the strictest applicable rule is our default. 3. Never paste what is not yours to share - participant data, collaborators' drafts and manuscripts under review do not enter AI tools. Questions about human-subjects data go to the ethics office, not to this page.</p>
+    </div>
+
+    <div class="callout tip">
+      <strong>If the room stalls on section 3</strong>
+      Do not litigate every stage today. Write the two easy "never" lines (review material, final claims), the two easy "yes" lines (search, code with tests), and mark the rest "decide by [next lab meeting]". A policy that ships with two open items beats a perfect draft that never leaves this room.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Ship it - this week <span class="tag exercise">◐ 40-50 min total</span></h2>
+    </div>
+    <ul>
+      <li>Send the enterprise-instance email if you did not in session: does the institution run an approved AI instance, what are its data guarantees, who approved it for research use. The answer rewrites your tier 2 line.</li>
+      <li>Finish the two open items in section 3, format the page, and put it where the lab actually looks - wiki front page, wet-lab door, repo readme. One page, one location, no PDF graveyard.</li>
+      <li>Run the ten-minute onboarding conversation with your current members, not just future ones - walk the page once, invite pushback, and adjust anything that would not survive contact with real work.</li>
+      <li>Claim the free stack: verified-teacher Copilot via GitHub Education, ASReview and Zotero installed, a NotebookLM trial on a paper you know well - and check each plan page's current terms as you go, since these move.</li>
+      <li>Put the quarterly date in your calendar with a fifteen-minute agenda: policies still current? Terms still as read? Stack still earning its place?</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every tool claim on this page is vendor-verified or peer-reviewed, per this course's no-bluff contract - the live documentation URLs are catalogued in the course source map. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Three-tier data-sensitivity model: public / own unpublished / participant + third-party</span><span class="note">Part 1 · the tier decides the tool</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Consumer retention terms vs enterprise no-training guarantees - and the one email that finds out</span><span class="note">Part 1 · tier 2 hinges on it</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Free-first stack: Semantic Scholar, OpenAlex, ASReview (Nat Mach Intell 2021), Zotero, NotebookLM free tier, Copilot education plans</span><span class="note">Part 2 · each line vendor-verified or peer-reviewed</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Paid triggers (Elicit Pro, scite, Covidence) and the fund-per-demonstrated-need rule</span><span class="note">Part 2 · never stack-first</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The one-page policy skeleton: scope, three ground rules, allowances, tiers, disclosure, quarterly date</span><span class="note">Part 3 + demo · drafted live</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Human-subjects data and AI processing under existing ethics approvals</span><span class="note">Routed honestly: your IRB/ethics office is the authority, not this course</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Current plan quotas and retention terms for named tools</span><span class="note">Vendor terms move · verify the current version at each quarterly date</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · A student has "anonymised" interview transcripts and wants to paste them into a consumer chatbot for thematic coding. What does the tier model say?</p>
+      <button class="qopt" type="button">A · Fine - anonymised data is tier 1, and tier 1 goes anywhere</button>
+      <button class="qopt" type="button">B · Fine if the chatbot's retention terms have been read and recorded</button>
+      <button class="qopt" type="button">C · Stop - participant data is tier 3, whether the de-identification meets the approval's standard is the ethics office's call, and consumer tools are out regardless</button>
+      <p class="qwhy">"I removed the names" is not a tier change - whether de-identification meets the standard the ethics approval requires is an IRB/ethics-office judgement, not the student's or yours. Participant data sits in tier 3, where consumer tools are never eligible and the authority is the ethics office. Option B applies the tier 2 rule to tier 3 material - the exact confusion the written tiers exist to prevent.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Why does the stack start free-first instead of buying the recommended tools up front?</p>
+      <button class="qopt" type="button">A · Because subscriptions should follow a named person's demonstrated need the free tier failed to meet - and the free tier here is genuinely strong and verifiable</button>
+      <button class="qopt" type="button">B · Because paid research tools are not worth their price in general</button>
+      <button class="qopt" type="button">C · Because free tools carry no data-sensitivity concerns</button>
+      <p class="qwhy">The free layer is not a compromise: open infrastructure (Semantic Scholar, OpenAlex), a peer-review-validated screener (ASReview, Nature Machine Intelligence 2021), Zotero, NotebookLM's free tier, and education-plan Copilot. Paid tools have real triggers - Elicit Pro for systematic-review workflow, scite for citation contexts, Covidence for team reviews - and buying them before the need exists produces shelfware. Option C is false: free consumer tools have retention terms too, which is why the tiers apply to everything.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · What makes a lab AI policy one that people actually follow?</p>
+      <button class="qopt" type="button">A · Comprehensiveness - every tool and edge case ruled on explicitly, so nothing is left to judgement</button>
+      <button class="qopt" type="button">B · It fits on one page, its three ground rules can be recalled from memory at midnight, and it carries a quarterly re-verification date with a named owner</button>
+      <button class="qopt" type="button">C · Strong enforcement language and named penalties for violations</button>
+      <p class="qwhy">The compliance mechanism is recall: AI decisions happen alone, at odd hours, with no document open, so the operating policy is whatever fits in memory. One page keeps it re-verifiable in fifteen minutes a quarter; the dated owner keeps it current; comprehensive twelve-pagers go stale and teach the lab that written rules and real rules differ. Followable beats comprehensive.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The order of operations</b><span>Data question → stack → policy. The tier of what enters the prompt decides which tools are even eligible.</span></div>
+      <div class="cheat-item"><b>Three data tiers</b><span>Tier 1 public: any tool, verify outputs. Tier 2 your unpublished: terms-read tools or enterprise instance. Tier 3 participant + third-party: never consumer tools; ethics office rules.</span></div>
+      <div class="cheat-item"><b>The one email</b><span>Ask IT/research office: do we have an enterprise AI instance, what are its data guarantees, who approved it for research? The answer rewrites tier 2.</span></div>
+      <div class="cheat-item"><b>Free-first stack</b><span>Semantic Scholar + OpenAlex · ASReview (NMI 2021 validated) · Zotero · NotebookLM free tier (grounding reduces, not eliminates, errors) · Copilot education plans.</span></div>
+      <div class="cheat-item"><b>Paid triggers</b><span>Elicit Pro: systematic-review workflow at scale. scite: recurring citation-context checks. Covidence: team reviews. Fund per demonstrated need, never stack-first.</span></div>
+      <div class="cheat-item"><b>The six sections</b><span>Scope · three ground rules · per-stage allowances · data tiers · disclosure habit · quarterly re-verification date with an owner.</span></div>
+      <div class="cheat-item"><b>Three ground rules</b><span>Never cite unread. Disclose per the policy in force. Never paste what is not yours to share. Same words as the researcher track's b1 contract.</span></div>
+      <div class="cheat-item"><b>The design principle</b><span>Followable beats comprehensive. One page, memorable at midnight, re-verified quarterly - a policy nobody can remember is a policy nobody follows.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 6 of 6 · learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a5-peer-review-duty.html">← Previous: Peer review duty</a> &nbsp;·&nbsp; <a href="../index.html">Course home →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

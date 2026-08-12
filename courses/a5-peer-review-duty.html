@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 5 · Peer review duty - learn ai academia with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-academia-with-phoebe</a> / Leader session 5 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe · Leader track · Session 5 of 6</div>
+    <h1>Peer review duty: <span class="accent">the strictest room in the building</span></h1>
+    <p class="sub">You review for journals, sit on editorial boards, score grant panels - and every one of those roles now comes with the tightest AI rules in the entire research landscape. This session lays out why: the workload numbers that create the temptation, the detection numbers that prove people are giving in to it, and the red lines that every rule-holder - NIH, Elsevier, Springer Nature, ICMJE, COPE - has drawn in almost identical ink. Then we do the work the honest way, live.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Leader track</span>
+      <span class="chip audience">Professors · reviewers · editorial boards · panel members</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Pressure, detection, red lines</span>
+      <span class="a3" style="flex:5">20-40 · Demo: the rigorous review, AI-free</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why review gets its own session</h2>
+    </div>
+    <p class="lede">Every other stage of research has a negotiation in it - how much AI, disclosed how, allowed where. Review does not. It is the one stage where the funder, the publishers and the ethics bodies all converge on the same short word, and the reason is structural: everything you review is someone else's unpublished work, handed to you in trust. This session is the leader-side treatment; your PhD students get the hands-on version in researcher session b9.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The exact text of the rules that bind you as a reviewer (NIH NOT-OD-23-149, Elsevier, Springer Nature, ICMJE), a clean mental model of why those rules are the strictest anywhere, a demonstrated workflow for writing a rigorous review with zero AI contact with the manuscript, and the short list of AI uses that remain legitimately open to you.
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="pressure">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the collision</span>
+      <h2>The workload that tempts, the detection that answers <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Peer review runs on unpaid, uncredited hours squeezed between everything else, and the volume is staggering. That pressure is real - and so is the evidence that some reviewers have started quietly outsourcing the job. Hold both facts at once, because the rules in Part 2 only make sense against this backdrop.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The pressure versus rules diagram: workload statistics create a temptation, detection studies show reviewers giving in, and the rule stands regardless.">
+        <style>
+          .pvT { font: 800 20px Inter, sans-serif; fill: #FFFFFF; }
+          .pvS { font: 400 11px Inter, sans-serif; fill: #A8B9D6; }
+          .pvH { font: 600 12.5px Inter, sans-serif; fill: #22252B; }
+          .pvX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .pvR { font: 700 12.5px Inter, sans-serif; fill: #991B1B; }
+          .pvW { font: 400 11px Inter, sans-serif; fill: #991B1B; }
+          .pvK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="268" height="76" rx="10" fill="#101C36"/>
+        <text class="pvT" x="44" y="55">100M+ hours</text>
+        <text class="pvS" x="44" y="74">global reviewer time in 2020</text>
+        <text class="pvS" x="44" y="90">Aczel et al. 2021</text>
+        <rect x="306" y="24" width="268" height="76" rx="10" fill="#1B2A4A"/>
+        <text class="pvT" x="326" y="55">15,000+ years</text>
+        <text class="pvS" x="326" y="74">full-time working years, same total</text>
+        <text class="pvS" x="326" y="90">Aczel et al. 2021</text>
+        <rect x="588" y="24" width="268" height="76" rx="10" fill="#3A5488"/>
+        <text class="pvT" x="608" y="55">19.1 days</text>
+        <text class="pvS" x="608" y="74" fill="#EEF2F9">average per review · 68.5M hrs/yr</text>
+        <text class="pvS" x="608" y="90" fill="#EEF2F9">Publons 2018</text>
+
+        <path d="M 440 106 L 440 128" stroke="#C9C9D6" stroke-width="2" marker-end="url(#pvAr)"/>
+
+        <rect x="24" y="134" width="832" height="60" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="pvH" x="44" y="158">The temptation this workload creates</text>
+        <text class="pvX" x="44" y="178">A model drafts a fluent, confident-sounding review in seconds. Under deadline, unpaid, uncredited - someone will be tempted.</text>
+
+        <path d="M 440 200 L 440 222" stroke="#C9C9D6" stroke-width="2" marker-end="url(#pvAr)"/>
+
+        <rect x="24" y="228" width="832" height="76" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="pvR" x="44" y="252">The detection reality - Liang et al. (ICML 2024)</text>
+        <text class="pvW" x="44" y="272">6.5-16.9% of review text at ICLR, NeurIPS, CoRL and EMNLP was likely substantially LLM-modified -</text>
+        <text class="pvW" x="44" y="289">and the rate correlated with reviews filed close to deadline and with low self-reported confidence.</text>
+
+        <rect x="24" y="326" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="pvK" x="48" y="338">Pressure explains the temptation. It never excuses it - review is the strictest stage in the landscape.</text>
+        <defs><marker id="pvAr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#C9C9D6"/></marker></defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - the pressure that creates the temptation, and the numbers showing people give in</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The workload numbers, and why they matter to a leader<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Aczel et al. (2021) estimated that reviewers worldwide spent over 100 million hours on peer review in 2020 - more than 15,000 full-time working years, donated. The Publons Global State of Peer Review (2018) put the annual figure around 68.5 million hours, with an average of 19.1 days per review. These are not trivia: they are the honest explanation of why a tired reviewer with three overdue reports reaches for a shortcut.</p>
+        <p>As a leader you sit on both sides of this. You feel the load yourself, and you set the norms for the early-career researchers who feel it worse - the ones Liang et al. found most represented in the low-confidence, close-to-deadline reviews. The fix is never "review faster with AI". It is declining invitations you cannot serve honestly, and teaching your group to do the same.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What Liang et al. (ICML 2024) actually measured<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The study estimated the fraction of review text at four AI conferences - ICLR, NeurIPS, CoRL, EMNLP - that was likely substantially modified by an LLM: between 6.5% and 16.9%, depending on venue. Two correlations are the leadership signal:</p>
+        <ul>
+          <li><strong>Deadline pressure:</strong> the estimated rate rose in reviews submitted close to the deadline.</li>
+          <li><strong>Low confidence:</strong> it rose in reviews where the reviewer reported low confidence - exactly the reviews that most needed a careful human.</li>
+        </ul>
+        <p>Note the careful phrasing: the method estimates LLM-modified text at the corpus level; it does not convict any individual review. That distinction matters when you sit in the editor's chair - Part 3 covers what to do with a suspicion.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where the researcher track picks this up<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Researcher session b9 walks your students through the same rules from the reviewer's desk - what they may do with their own review text, how to respond as authors when they suspect an AI-written review of their paper, and the disclosure mechanics. If you supervise anyone who reviews, point them there; this session gives you the policy spine, b9 gives them the workflow.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="redlines">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the red lines</span>
+      <h2>What each rule-holder says, verbatim in spirit <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Four rule-holders govern your reviewing life, and on this stage they barely disagree. Read the lanes below, then the per-holder detail - and verify the current version of each policy before you next rely on it, because these pages move faster than course pages.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three lanes: what stays legal with care, what needs the journal's permission first, and what crosses the line everywhere.">
+        <style>
+          .rdT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .rdS { font: 400 11px Inter, sans-serif; fill: #A8B9D6; }
+          .rdH { font: 600 12.5px Inter, sans-serif; fill: #22252B; }
+          .rdX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .rdR { font: 700 12.5px Inter, sans-serif; fill: #991B1B; }
+          .rdW { font: 400 11px Inter, sans-serif; fill: #991B1B; }
+          .rdK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="190" height="88" rx="10" fill="#1B2A4A"/>
+        <text class="rdT" x="44" y="60">Yours to use</text>
+        <text class="rdS" x="44" y="80">with disclosure</text>
+        <rect x="228" y="24" width="628" height="88" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="rdH" x="248" y="50">Your own words, your own questions</text>
+        <text class="rdX" x="248" y="70">AI polishing the clarity of YOUR drafted review text - where journal rules allow it, and disclosed.</text>
+        <text class="rdX" x="248" y="87">General-knowledge questions that carry zero content from the manuscript. Detail in Part 3.</text>
+
+        <rect x="24" y="128" width="190" height="88" rx="10" fill="#A87B2F"/>
+        <text class="rdT" x="44" y="164">Ask first</text>
+        <text class="rdS" x="44" y="184" fill="#F7EFDF">ICMJE</text>
+        <rect x="228" y="128" width="628" height="88" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="rdH" x="248" y="154">Permission, confidentiality, disclosure - in that order</text>
+        <text class="rdX" x="248" y="174">ICMJE: reviewers must ask the journal's permission before using AI in review, must maintain</text>
+        <text class="rdX" x="248" y="191">confidentiality throughout, and must disclose in the review what AI was used for.</text>
+
+        <rect x="24" y="232" width="190" height="88" rx="10" fill="#991B1B"/>
+        <text class="rdT" x="44" y="268">Never</text>
+        <text class="rdS" x="44" y="288" fill="#FCA5A5">all rule-holders</text>
+        <rect x="228" y="232" width="628" height="88" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="rdR" x="248" y="258">The manuscript never enters a prompt</text>
+        <text class="rdW" x="248" y="278">Elsevier and Springer Nature: reviewers must not upload manuscripts to AI tools.</text>
+        <text class="rdW" x="248" y="295">NIH NOT-OD-23-149: generative AI in NIH review prohibited - uploading = confidentiality breach.</text>
+
+        <rect x="24" y="344" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="rdK" x="48" y="356">One principle under all three lanes: what you review is someone else's unpublished work, held in trust.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the three lanes of reviewer AI use, from open-with-disclosure to never</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>NIH NOT-OD-23-149: the sharpest line anywhere<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The 2023 NIH notice prohibits the use of generative AI in NIH peer review, full stop. The reasoning it gives is the one to internalise: uploading any part of a grant application to an AI tool discloses confidential material to a third party - a breach of the confidentiality every panel member signs up to. It is not a quality argument ("AI reviews badly"); it is a custody argument ("this material was never yours to share").</p>
+        <p>Three practical consequences for anyone on a study section or panel:</p>
+        <ul>
+          <li>No pasting aims, abstracts, biosketches or any application text into any AI tool, however anonymised you believe it to be.</li>
+          <li>No asking a model to "summarise this proposal" or "draft critique bullets from this section" - both require uploading the material.</li>
+          <li>The prohibition covers the review process, not just the final critique - notes, triage, scoring rationale included.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Publishers, ICMJE and COPE - the same wall, four builders<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Rule-holder</th><th>The reviewer rule</th><th>The mechanism</th></tr>
+          <tr><td>NIH (NOT-OD-23-149)</td><td>Generative AI prohibited in NIH peer review</td><td>Uploading application material = confidentiality breach</td></tr>
+          <tr><td>Elsevier</td><td>Reviewers must not upload manuscripts to AI tools</td><td>Confidentiality + authors' rights over unpublished work</td></tr>
+          <tr><td>Springer Nature</td><td>Reviewers must not upload manuscripts to AI tools</td><td>Same custody logic, publisher-wide</td></tr>
+          <tr><td>ICMJE</td><td>Journal permission first; confidentiality; disclose AI use in the review</td><td>Puts the decision with the journal, the accountability with you</td></tr>
+          <tr><td>COPE</td><td>Case guidance for editors who suspect an AI-generated review</td><td>A process for suspicion - not a detector verdict</td></tr>
+        </table>
+        <p>Notice what the wall is made of. None of these bodies argues that models write useless critiques. Every one of them argues custody: a manuscript under review is unpublished work that the authors handed over in trust, and a reviewer has no right to hand it onward - to a colleague, to a student, or to a model's servers. Verify the current version of each policy page before your next review round; the appendix in the course map carries the live URLs.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The held-in-trust principle, stated once and properly<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Everything in this session compresses to one sentence: <strong>the manuscript is someone else's unpublished work, held in trust, and trust does not have an API.</strong> The same principle explains the whole pattern - why the rules bind hardest here, why "but the model helped me review faster" is not a defence, and why the legitimate uses in Part 3 all share one property: they never let the trusted material leave your hands. If your students remember nothing else from your norms conversation, make it this sentence.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="section" id="legit">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the open lane</span>
+      <h2>What a reviewer and an editor may still do <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The strictest room in the building is not a sealed one. Two uses remain legitimately open to a reviewer - both defined by never touching the manuscript's content - and the editor's chair has its own toolkit for the day a suspicious review lands on the desk.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Open lane 1: AI on your OWN review text<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Once you have read the paper and drafted your critique in your own words, polishing the clarity of that draft is your text, not theirs - provided two conditions hold: the journal's rules allow it (ICMJE journals expect you to have asked permission first), and you disclose the use in the review. The manuscript's content still never enters the prompt: you polish sentences like "the statistical treatment of the second experiment is underpowered", not passages quoted from the paper.</p>
+        <div class="prompt-box good">
+          <span class="label">★ The shape of a legal polish prompt</span>
+          <p>Below is my drafted peer-review text, written by me. Improve clarity and tone only: keep every technical judgement exactly as stated, do not add points, do not soften criticisms, do not invent references. My draft: [your own sentences only - nothing quoted or paraphrased from the manuscript].</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Open lane 2: general knowledge, zero manuscript content<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Asking a model "what are the standard threats to validity in a stepped-wedge trial design?" leaks nothing - it is a textbook question. Asking "does THIS stepped-wedge design have validity threats?" while pasting the methods section leaks everything. The test is mechanical: could this exact prompt have been written by someone who never saw the manuscript? If yes, you are in the open lane.</p>
+        <div class="prompt-box bad">
+          <span class="label">The line, crossed in one paste</span>
+          <p>Here is the methods section of a paper I am reviewing: [pasted manuscript text]. What weaknesses should I raise? - This uploads confidential material to a third party. Under NIH rules it is a named confidentiality breach; under Elsevier and Springer Nature rules it is exactly the prohibited act.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The editor's chair: when a review smells generated<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>COPE publishes case guidance for editors handling suspected AI-generated reviews. The working posture it supports:</p>
+        <ul>
+          <li><strong>Suspicion is a process trigger, not a verdict.</strong> Generic praise, absent specifics, confident errors about the paper's actual content - these justify a conversation with the reviewer, not an accusation. Detector scores alone convict nobody (the leader track covered detector limits in a3).</li>
+          <li><strong>The remedy is editorial:</strong> query the reviewer, weigh the review accordingly, commission a replacement report if confidence is gone, and document the decision.</li>
+          <li><strong>Prevention beats detection:</strong> reviewer invitations and journal instructions that state the AI rules explicitly - most breaches in this territory are ignorance, not malice, and a one-line reminder at invitation time is the cheapest fix in publishing.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo</span>
+      <h2>Rewrite the sloppy review - no AI near the manuscript <span class="tag demo">★ 18 min · everyone works</span></h2>
+    </div>
+    <p class="lede">A fictional review of a fictional paper - written for this exercise, resembling far too many real ones. We rebuild it into a review an editor can act on, entirely by hand, then audit which steps could have used AI without breaking a single rule.</p>
+
+    <div class="prompt-box bad">
+      <span class="label">The sloppy review - fictional, for this exercise</span>
+      <p>This paper studies an interesting and timely topic. The writing is generally clear and the methodology seems appropriate. However, the contribution feels somewhat incremental and the related work could be more comprehensive. The experiments are reasonable but more datasets would strengthen the claims. I lean toward rejection but could be convinced otherwise. Minor: some typos.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><p>Diagnose it together: not one sentence refers to anything specific in the paper. Every clause could attach to any manuscript in any field - which is exactly the signature editors now associate with generated reviews, and why vague reviewing has become more expensive than it used to be.</p></div>
+      <div class="step"><p>Rebuild the summary: two sentences stating what the paper claims and how it supports the claim - specific enough that the authors would recognise their own work. This is the part only someone who read the paper can write.</p></div>
+      <div class="step"><p>Rebuild the criticisms: each vague clause becomes a specific, evidenced point. "Incremental" becomes which prior result it overlaps and where the delta is too small. "More datasets" becomes which population the current data cannot speak for, and why that matters for the central claim.</p></div>
+      <div class="step"><p>Separate the verdicts: what must change for acceptance, what would merely be nice, and what is a matter of taste - labelled as such. An actionable review is a sorted review.</p></div>
+      <div class="step"><p>Now the audit: which steps could AI have joined legally? Steps 2-4: none - they all require the manuscript. The final clarity pass on YOUR drafted text: yes, with the journal's permission and a disclosure line (Part 3, lane 1). A background question like "what is the standard baseline for this task family?" asked without manuscript content: yes (lane 2). Everything else stays human.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>The uncomfortable symmetry to name in the room</strong>
+      The sloppy review needed no AI to be worthless - a human wrote its like long before 2023. The rules do not protect us from bad reviews; they protect authors' unpublished work from disclosure. Rigour and confidentiality are two separate duties, and this demo trains both at once.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before your next review lands <span class="tag exercise">◐ 25-35 min total</span></h2>
+    </div>
+    <ul>
+      <li>Look up the reviewer AI policy of the two journals you review for most, and the current text of NIH NOT-OD-23-149 if you sit on panels. Record the URLs and the date checked - and verify the current version each round, because this territory moves.</li>
+      <li>Write your personal reviewer rule in one sentence and put it where you draft reviews. A workable default: "Nothing from the manuscript enters any tool; AI touches only my own drafted words, with permission and disclosure."</li>
+      <li>Audit your last submitted review against the demo's standard: does every criticism name something specific in the paper? If not, that is your rigour homework - no AI required or allowed.</li>
+      <li>If you edit or chair: add one line about AI rules to your reviewer invitation template, and bookmark COPE's case guidance for the day a generated-looking review arrives.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every policy and number on this page traces to a primary source - the live notices, publisher policy pages and peer-reviewed studies catalogued in this course's source map. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Reviewer workload: Aczel et al. 2021 (100M+ hours, 15,000+ FTE years) · Publons 2018 (~68.5M hrs/yr, 19.1 days)</span><span class="note">Part 1 · the honest explanation of the temptation</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Liang et al. (ICML 2024): 6.5-16.9% of review text likely LLM-modified; deadline + low-confidence correlations</span><span class="note">Part 1 · corpus-level estimate, not individual verdicts</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">NIH NOT-OD-23-149: generative AI prohibited in NIH peer review; uploading = confidentiality breach</span><span class="note">Part 2 · the sharpest line anywhere</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Elsevier + Springer Nature reviewer upload bans · ICMJE permission-first + disclosure · COPE editor case guidance</span><span class="note">Part 2 and Part 3 · the same custody principle, four builders</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Per-journal reviewer policy specifics beyond the publishers named here</span><span class="note">Check the journal's live page each round - verify the current version</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The reviewer's hands-on workflow and the author-side response strategy</span><span class="note">Researcher session b9 owns the desk-level version</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What exactly does NIH NOT-OD-23-149 prohibit?</p>
+      <button class="qopt" type="button">A · Using AI anywhere in the grant lifecycle, including by applicants writing proposals</button>
+      <button class="qopt" type="button">B · Generative AI in NIH peer review - uploading any application material to an AI tool is a breach of the confidentiality reviewers agree to</button>
+      <button class="qopt" type="button">C · Only sharing complete applications; summaries and excerpts are permitted if anonymised</button>
+      <p class="qwhy">The notice governs peer review, not applicants (applicant-side rules live in NOT-OD-25-132, covered in a4). And it draws no excerpt-sized exception: uploading application material - any of it - discloses confidential material to a third party. The logic is custody, not quality: the application was never the reviewer's to share.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Under ICMJE recommendations, what is the correct order of operations for a reviewer considering any AI use?</p>
+      <button class="qopt" type="button">A · Use AI freely on your own text, then disclose if the journal asks about it later</button>
+      <button class="qopt" type="button">B · Disclose in the review first; permission is only needed for uploading the manuscript</button>
+      <button class="qopt" type="button">C · Ask the journal's permission first, maintain confidentiality throughout, and disclose in the review what AI was used for</button>
+      <p class="qwhy">ICMJE puts the decision with the journal before any use happens - permission-first - then layers confidentiality and disclosure on top. Option A reverses the order and option B invents a distinction the recommendations do not make. The pattern to teach your group: ask, protect, disclose.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Why is review the strictest stage in the whole AI-and-research landscape?</p>
+      <button class="qopt" type="button">A · Because the material under review is someone else's unpublished work, held in trust - and no efficiency gain gives a reviewer the right to disclose it</button>
+      <button class="qopt" type="button">B · Because AI models write measurably worse critiques than humans in every published comparison</button>
+      <button class="qopt" type="button">C · Because journals fear reviewers will be replaced and are protecting the role</button>
+      <p class="qwhy">Every rule-holder - NIH, Elsevier, Springer Nature, ICMJE - grounds its rule in confidentiality and custody, not in output quality. That is why the open lanes in Part 3 all share one property: they never let the trusted material leave your hands. The manuscript is held in trust, and trust does not have an API.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The workload reality</b><span>Aczel et al. 2021: 100M+ reviewer hours in 2020, 15,000+ full-time years. Publons 2018: ~68.5M hrs/yr, 19.1 days per review.</span></div>
+      <div class="cheat-item"><b>The detection reality</b><span>Liang et al. (ICML 2024): 6.5-16.9% of review text at ICLR/NeurIPS/CoRL/EMNLP likely LLM-modified - worse near deadlines and at low confidence.</span></div>
+      <div class="cheat-item"><b>NIH NOT-OD-23-149</b><span>Generative AI prohibited in NIH peer review. Uploading any application material = confidentiality breach. No excerpt exception.</span></div>
+      <div class="cheat-item"><b>Publisher wall</b><span>Elsevier and Springer Nature: reviewers must not upload manuscripts to AI tools. Verify the current version each round.</span></div>
+      <div class="cheat-item"><b>ICMJE trio</b><span>Ask the journal's permission first · maintain confidentiality · disclose AI use in the review. Ask, protect, disclose.</span></div>
+      <div class="cheat-item"><b>Editor's toolkit</b><span>COPE case guidance for suspected AI reviews: query, weigh, replace if needed, document. Suspicion is a process, not a verdict.</span></div>
+      <div class="cheat-item"><b>The open lanes</b><span>AI on your OWN drafted review text (permission + disclosure) and general-knowledge questions with zero manuscript content. Nothing else.</span></div>
+      <div class="cheat-item"><b>The principle</b><span>The manuscript is someone else's unpublished work, held in trust. Rigour and confidentiality are two separate duties - train both.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 5 of 6 · learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a4-grants-with-ai.html">← Previous: Grants with AI</a> &nbsp;·&nbsp; <a href="a6-your-lab-stack.html">Next: Your lab stack →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

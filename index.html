@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn ai academia with phoebe - AI for researchers, PhDs and professors</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(27,42,74,.12); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#EEF2F9); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-edge { transition: opacity .15s ease; }
+</style>
+</head><body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe</div>
+    <h1>AI for the people who cannot afford to be wrong in print</h1>
+    <p class="sub">Researchers, PhD students and professors are handed the boldest claims about AI - it will do your literature review, write your grant, analyse your data - and carry the highest cost when those claims fail: a fabricated citation with your name above it, a silently biased screen, a funder ruling your ideas were not yours. This course is the no-bluff version. A leader track gives PIs, professors and lab heads the policy landscape as it actually stands - the NIH notices, the publisher rules, ICMJE and COPE, authorship, supervision and the lab AI policy worth writing. A researcher track runs the full cycle hands-on: search, screening, extraction, hypothesis discipline, research code with tests, analysis, writing with honest disclosure, and peer review. At its centre, a live screening lab: 40 records, 12 truly relevant, recall computed before your eyes - climbing 4 to 11 of 12 as real practices come on, and falling back the moment you let AI screen unverified. Every policy claim on these pages traces to a primary source, and everything a tool is said to do traces to its documentation or a peer-reviewed evaluation.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="2">2</b><span>tracks</span></div>
+      <div class="stat"><b data-count="16">16</b><span>sessions</span></div>
+      <div class="stat"><b data-count="40">40</b><span>records in the live lab</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The leader track 🎓 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for PIs, professors, lab heads &amp; research-office leaders · 6 x 45 min · no tools required</span></h2>
+      <p class="plede">Judgement mode: what actually changed in research work, the policy rails as primary sources rather than rumours, authorship and supervision in the AI era, what is allowed in grants, the peer-review lockdown, and the lab stack decision - ending with a one-page lab AI policy you ship.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/a1-the-ai-era-lab.html" style="--diff:#34D399">
+        <span class="cicon">🔬</span>
+        <span class="cnum">Leader 1 · easy</span>
+        <h3>The AI-era lab</h3>
+        <p>What AI verifiably does to research work, the failure catalogue with retraction notices attached, and why "ban it" and "embrace it" are both abdications.</p>
+        <span class="meta"><span class="pill amber">▶ Leaders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/a2-policy-rails.html" style="--diff:#34D399">
+        <span class="cicon">📜</span>
+        <span class="cnum">Leader 2 · easy</span>
+        <h3>The policy rails, from primary sources</h3>
+        <p>NIH's two notices, NSF's stance, Nature, Science, Elsevier, ICMJE's dedicated AI section, COPE - what each actually says, with the URLs, not the folklore.</p>
+        <span class="meta"><span class="pill light">The ground truth</span></span>
+      </a>
+      <a class="course-card" href="courses/a3-supervision-and-authorship.html" style="--diff:#FBBF24">
+        <span class="cicon">🧑‍🏫</span>
+        <span class="cnum">Leader 3 · medium</span>
+        <h3>Supervision and authorship</h3>
+        <p>Students are already using AI. Norms for your group that are followable rather than performative, the authorship consensus, and disclosure without stigma.</p>
+        <span class="meta"><span class="pill light">The lab conversation</span></span>
+      </a>
+      <a class="course-card" href="courses/a4-grants-with-ai.html" style="--diff:#FBBF24">
+        <span class="cicon">💰</span>
+        <span class="cnum">Leader 4 · medium</span>
+        <h3>Grants with AI</h3>
+        <p>What NIH's originality policy means practically, where assistance ends and substitution begins, and the grant-office workflow that keeps applications yours.</p>
+        <span class="meta"><span class="pill light">The funding line</span></span>
+      </a>
+      <a class="course-card" href="courses/a5-peer-review-duty.html" style="--diff:#FB923C">
+        <span class="cicon">⚖️</span>
+        <span class="cnum">Leader 5 · deciding</span>
+        <h3>Peer review duty</h3>
+        <p>The strictest rules in the whole landscape: confidentiality, the reviewer bans, ICMJE's permission-first rule - and what 100 million review hours a year means for the temptation.</p>
+        <span class="meta"><span class="pill light">The red lines</span></span>
+      </a>
+      <a class="course-card" href="courses/a6-your-lab-stack.html" style="--diff:#FB923C">
+        <span class="cicon">🏛️</span>
+        <span class="cnum">Leader 6 · deciding</span>
+        <h3>Your lab stack + the one-page policy</h3>
+        <p>Data privacy, enterprise vs consumer tools, what to fund, and the capstone: a lab AI policy your group will actually follow, drafted in session.</p>
+        <span class="meta"><span class="pill light">Ship the policy</span></span>
+      </a>
+    </div>
+
+    <div class="paths">
+      <h2>The researcher track 🧪 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for PhD students, postdocs &amp; hands-on researchers · 10 x 45 min · free tools throughout</span></h2>
+      <p class="plede">Craft mode: one full research cycle with AI in its honest place at every stage - and the receipts. Search wider, screen defensibly, extract with verification, spar without HARKing, code with tests, analyse without forking paths, write with clean disclosure, review within the rules, and finish with a capstone pipeline on your own project.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/b1-setup-and-ground-rules.html" style="--diff:#34D399">
+        <span class="cicon">🧭</span>
+        <span class="cnum">Researcher 1 · easy</span>
+        <h3>Setup and ground rules</h3>
+        <p>The lifecycle leverage map, the policy check on your real university, funder and journals, a free starting stack, and the three rules the whole track stands on.</p>
+        <span class="meta"><span class="pill amber">▶ Researchers start here</span></span>
+      </a>
+      <a class="course-card" href="courses/b2-search-and-discovery.html" style="--diff:#34D399">
+        <span class="cicon">🔎</span>
+        <span class="cnum">Researcher 2 · easy</span>
+        <h3>Search and discovery</h3>
+        <p>Semantic Scholar, OpenAlex, citation-graph explorers, boolean craft and snowballing - finding the evidence that does not share your vocabulary.</p>
+        <span class="meta"><span class="pill light">Cast the net</span></span>
+      </a>
+      <a class="course-card" href="courses/b3-screening-lab.html" style="--diff:#FBBF24">
+        <span class="cicon">🧮</span>
+        <span class="cnum">Researcher 3 · medium</span>
+        <h3>The screening lab</h3>
+        <p>The signature session: 40 records, live recall and precision meters, five practices, one trap button - and the honest ceiling every real review has.</p>
+        <span class="meta"><span class="pill peach">▶ Live screening lab</span></span>
+      </a>
+      <a class="course-card" href="courses/b4-extraction-and-synthesis.html" style="--diff:#FBBF24">
+        <span class="cicon">🗂️</span>
+        <span class="cnum">Researcher 4 · medium</span>
+        <h3>Extraction and synthesis</h3>
+        <p>Structured extraction tables, the verify-every-cell discipline, citation-context tools, and synthesis that argues rather than summarises.</p>
+        <span class="meta"><span class="pill light">Own every cell</span></span>
+      </a>
+      <a class="course-card" href="courses/b5-hypothesis-engine.html" style="--diff:#FBBF24">
+        <span class="cicon">💡</span>
+        <span class="cnum">Researcher 5 · medium</span>
+        <h3>The hypothesis engine</h3>
+        <p>AI as sparring partner for ideas - with the falsifiability discipline, novelty checking against the literature, and preregistration as the HARKing antidote.</p>
+        <span class="meta"><span class="pill light">Spar, then commit</span></span>
+      </a>
+      <a class="course-card" href="courses/b6-research-code.html" style="--diff:#FB923C">
+        <span class="cicon">🧑‍💻</span>
+        <span class="cnum">Researcher 6 · hands-on</span>
+        <h3>Research code that survives review</h3>
+        <p>AI-assisted coding with tests as the contract: pytest on your analysis pipeline, seeds and environments, and the code-versus-methods audit.</p>
+        <span class="meta"><span class="pill light">Tests are the truth</span></span>
+      </a>
+      <a class="course-card" href="courses/b7-data-analysis.html" style="--diff:#FB923C">
+        <span class="cicon">📊</span>
+        <span class="cnum">Researcher 7 · hands-on</span>
+        <h3>Data analysis without forking paths</h3>
+        <p>AI-assisted EDA and stats with the verify loop - and why a tool that tries a hundred analyses in a minute makes the garden of forking paths a highway.</p>
+        <span class="meta"><span class="pill light">The verify loop</span></span>
+      </a>
+      <a class="course-card" href="courses/b8-writing-and-publication.html" style="--diff:#FB923C">
+        <span class="cicon">✍️</span>
+        <span class="cnum">Researcher 8 · hands-on</span>
+        <h3>Writing and publication assistance</h3>
+        <p>The polish-versus-generation line by publisher, disclosure statements that take one minute, the non-native-speaker equalizer, and cover letters within the rules.</p>
+        <span class="meta"><span class="pill light">Disclose and ship</span></span>
+      </a>
+      <a class="course-card" href="courses/b9-reviewing-others.html" style="--diff:#F87171">
+        <span class="cicon">🔍</span>
+        <span class="cnum">Researcher 9 · hardest</span>
+        <h3>Reviewing others</h3>
+        <p>What you may and may not do as a reviewer - the confidentiality bans, permission-first rules, and using AI on your own review without touching their manuscript.</p>
+        <span class="meta"><span class="pill light">The other chair</span></span>
+      </a>
+      <a class="course-card" href="courses/b10-capstone.html" style="--diff:#F87171">
+        <span class="cicon">🎓</span>
+        <span class="cnum">Researcher 10 · hardest</span>
+        <h3>Capstone: one project, full pipeline</h3>
+        <p>Your own research question through the whole cycle - search, screen, extract, code, analyse, write - with the audit trail and disclosure statement to show for it.</p>
+        <span class="meta"><span class="pill light">Prove the practice</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on / deciding</span>
+      <span><i style="background:#F87171"></i>hardest</span>
+    </div>
+
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Three doors into the same conviction: the tools shift the labour, never the accountability.</p>
+      <div class="path"><b>🎓 PI / professor (set the rules)</b>
+        <a class="pstep" href="courses/a1-the-ai-era-lab.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-policy-rails.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-supervision-and-authorship.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-grants-with-ai.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a5-peer-review-duty.html">a5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-your-lab-stack.html">a6</a>
+      </div>
+      <div class="path"><b>🧪 PhD / postdoc (full craft)</b>
+        <a class="pstep" href="courses/b1-setup-and-ground-rules.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-search-and-discovery.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-screening-lab.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-extraction-and-synthesis.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-hypothesis-engine.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-research-code.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-data-analysis.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-writing-and-publication.html">b8</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b9-reviewing-others.html">b9</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b10-capstone.html">b10</a>
+      </div>
+      <div class="path"><b>⚡ The literature review, fast</b>
+        <a class="pstep" href="courses/b2-search-and-discovery.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-screening-lab.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-extraction-and-synthesis.html">b4</a>
+      </div>
+      <div class="path"><b>🚀 Full journey (research AND lead)</b>
+        <a class="pstep" href="courses/a1-the-ai-era-lab.html">a1-a6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-setup-and-ground-rules.html">b1-b10</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">Both tracks at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> · Neighbours, deliberately not duplicated: AI + Research owns the claim-versus-source evidence audit, AI + Law owns fabricated-citation detection, AI + Education owns the teaching side. This course owns the research production cycle and its academic rulebook.</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "Learn\nAI Academia",
+  centerColor: "#101C36",
+  sessions: [
+    { label: "AI-era\nlab", href: "courses/a1-the-ai-era-lab.html", color: "#34D399",
+      concepts: [
+        { label: "Failure catalogue", href: "courses/a1-the-ai-era-lab.html" },
+        { label: "Neither ban nor embrace", href: "courses/a1-the-ai-era-lab.html" } ] },
+    { label: "Policy\nrails", href: "courses/a2-policy-rails.html", color: "#34D399",
+      concepts: [
+        { label: "NIH two notices", href: "courses/a2-policy-rails.html" },
+        { label: "ICMJE + COPE", href: "courses/a2-policy-rails.html" } ] },
+    { label: "Supervision\n& authorship", href: "courses/a3-supervision-and-authorship.html", color: "#FBBF24",
+      concepts: [
+        { label: "No AI authors", href: "courses/a3-supervision-and-authorship.html" },
+        { label: "Followable norms", href: "courses/a3-supervision-and-authorship.html" } ] },
+    { label: "Grants\nwith AI", href: "courses/a4-grants-with-ai.html", color: "#FBBF24",
+      concepts: [
+        { label: "Originality line", href: "courses/a4-grants-with-ai.html" },
+        { label: "Assist vs substitute", href: "courses/a4-grants-with-ai.html" } ] },
+    { label: "Peer review\nduty", href: "courses/a5-peer-review-duty.html", color: "#FB923C",
+      concepts: [
+        { label: "Confidentiality bans", href: "courses/a5-peer-review-duty.html" },
+        { label: "Permission first", href: "courses/a5-peer-review-duty.html" } ] },
+    { label: "Lab stack\n+ policy", href: "courses/a6-your-lab-stack.html", color: "#FB923C",
+      concepts: [
+        { label: "Data privacy", href: "courses/a6-your-lab-stack.html" },
+        { label: "One-page policy", href: "courses/a6-your-lab-stack.html" } ] },
+    { label: "Setup &\nground rules", href: "courses/b1-setup-and-ground-rules.html", color: "#34D399",
+      concepts: [
+        { label: "Lifecycle map", href: "courses/b1-setup-and-ground-rules.html" },
+        { label: "Three rules", href: "courses/b1-setup-and-ground-rules.html" } ] },
+    { label: "Search &\ndiscovery", href: "courses/b2-search-and-discovery.html", color: "#34D399",
+      concepts: [
+        { label: "Boolean craft", href: "courses/b2-search-and-discovery.html" },
+        { label: "Snowballing", href: "courses/b2-search-and-discovery.html" } ] },
+    { label: "Screening\nlab", href: "courses/b3-screening-lab.html", color: "#FBBF24",
+      concepts: [
+        { label: "Recall + precision", href: "courses/b3-screening-lab.html" },
+        { label: "The trap button", href: "courses/b3-screening-lab.html" },
+        { label: "4 → 11 of 12", href: "courses/b3-screening-lab.html" } ] },
+    { label: "Extraction &\nsynthesis", href: "courses/b4-extraction-and-synthesis.html", color: "#FBBF24",
+      concepts: [
+        { label: "Verify every cell", href: "courses/b4-extraction-and-synthesis.html" },
+        { label: "Citation context", href: "courses/b4-extraction-and-synthesis.html" } ] },
+    { label: "Hypothesis\nengine", href: "courses/b5-hypothesis-engine.html", color: "#FBBF24",
+      concepts: [
+        { label: "Falsifiability", href: "courses/b5-hypothesis-engine.html" },
+        { label: "Preregister", href: "courses/b5-hypothesis-engine.html" } ] },
+    { label: "Research\ncode", href: "courses/b6-research-code.html", color: "#FB923C",
+      concepts: [
+        { label: "Tests as contract", href: "courses/b6-research-code.html" },
+        { label: "Code vs methods", href: "courses/b6-research-code.html" } ] },
+    { label: "Data\nanalysis", href: "courses/b7-data-analysis.html", color: "#FB923C",
+      concepts: [
+        { label: "Forking paths", href: "courses/b7-data-analysis.html" },
+        { label: "Verify loop", href: "courses/b7-data-analysis.html" } ] },
+    { label: "Writing &\npublication", href: "courses/b8-writing-and-publication.html", color: "#FB923C",
+      concepts: [
+        { label: "Polish vs generate", href: "courses/b8-writing-and-publication.html" },
+        { label: "Disclosure", href: "courses/b8-writing-and-publication.html" } ] },
+    { label: "Reviewing\nothers", href: "courses/b9-reviewing-others.html", color: "#F87171",
+      concepts: [
+        { label: "Never upload", href: "courses/b9-reviewing-others.html" },
+        { label: "Declare AI use", href: "courses/b9-reviewing-others.html" } ] },
+    { label: "Capstone", href: "courses/b10-capstone.html", color: "#F87171",
+      concepts: [
+        { label: "Full pipeline", href: "courses/b10-capstone.html" },
+        { label: "Audit trail", href: "courses/b10-capstone.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

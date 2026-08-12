@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 5 · The hypothesis engine - learn ai academia with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-academia-with-phoebe</a> / Researcher session 5 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe · Researcher track · Session 5 of 10</div>
+    <h1>The hypothesis engine: <span class="accent">infinite ideas, and what still counts</span></h1>
+    <p class="sub">A language model will hand you ten plausible hypotheses before your coffee cools, and every one of them will sound like it belongs in a grant. That is the new problem, not the new superpower: plausibility just stopped being evidence of anything. This session teaches the sparring patterns that make AI genuinely useful at the idea stage, the falsifiability discipline that separates a hypothesis from a vibe, and the commit-before-data move - preregistration - that keeps industrial-scale idea generation from becoming industrial-scale self-deception.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Researcher track</span>
+      <span class="chip audience">PhD students · postdocs · anyone designing a study</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-19 · Sparring, falsifiability, novelty</span>
+      <span class="a3" style="flex:5">19-41 · Build-along: your idea, on the anvil</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this sits in the track</h2>
+    </div>
+    <p class="lede">b2 through b4 were about the literature: finding it, screening it, extracting from it at an auditable standard. This session turns forward: what should you study next? It is the stage where AI assistance feels most magical and is most dangerous, because the failure mode is not a fabricated citation you can catch - it is a research programme quietly optimised for what sounds good rather than what can be tested.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A reusable sparring ladder run on YOUR current research idea (five objections, three alternative explanations, one kill condition), a drafted AsPredicted-style preregistration skeleton with your design gaps circled, and a working rule for what an AI's "this seems novel" verdict is worth: nothing, until your own search says so.
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="sparring">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the sparring partner</span>
+      <h2>The patterns that work, and the asymmetry underneath <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">b1's calibration demo showed the split: ask a model for facts and it fabricates; ask it to reason over content you supplied and it earns its keep. At the hypothesis stage that split becomes a small set of named patterns. Every one of them has the same shape - your material in, structured pressure out, zero requests for facts from model memory.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four sparring patterns that work - objection generation, mechanism brainstorming, falsification prompts, alternative-explanation hunts - above the never-works list and the generation asymmetry.">
+        <style>
+          .hsT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .hsH { font: 600 12.5px Inter, sans-serif; fill: #22252B; }
+          .hsX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .hsR { font: 600 12px Inter, sans-serif; fill: #991B1B; }
+          .hsK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="196" height="66" rx="10" fill="#101C36"/>
+        <text class="hsT" x="40" y="49">Objection generation</text>
+        <text class="hsX" x="40" y="68" fill="#A8B9D6">on YOUR draft design</text>
+        <rect x="234" y="24" width="196" height="66" rx="10" fill="#1B2A4A"/>
+        <text class="hsT" x="250" y="49">Mechanism brainstorm</text>
+        <text class="hsX" x="250" y="68" fill="#A8B9D6">your supplied papers only</text>
+        <rect x="444" y="24" width="196" height="66" rx="10" fill="#3A5488"/>
+        <text class="hsT" x="460" y="49">Falsification prompts</text>
+        <text class="hsX" x="460" y="68" fill="#EEF2F9">"what would kill this?"</text>
+        <rect x="654" y="24" width="202" height="66" rx="10" fill="#3A5488"/>
+        <text class="hsT" x="670" y="49">Alternative hunts</text>
+        <text class="hsX" x="670" y="68" fill="#EEF2F9">rival explanations listed</text>
+
+        <rect x="24" y="114" width="832" height="54" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="hsH" x="44" y="137">The common shape</text>
+        <text class="hsX" x="44" y="156">You supply the design, the draft, the papers. The model supplies pressure and recombination - never facts.</text>
+
+        <rect x="24" y="192" width="832" height="54" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="hsR" x="44" y="215">What never works at this stage</text>
+        <text class="hsX" x="44" y="234" fill="#991B1B">Asking for facts, novelty verdicts, or citations from model memory - all three route through fabrication.</text>
+
+        <rect x="24" y="270" width="832" height="76" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="hsH" x="44" y="294">The generation asymmetry</text>
+        <text class="hsX" x="44" y="313">AI can produce effectively infinite plausible hypotheses. So plausibility - the old first filter - just stopped</text>
+        <text class="hsX" x="44" y="330">being evidence of anything. The scarce goods now: falsifiability, genuine novelty, and data that could say no.</text>
+
+        <rect x="24" y="374" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="hsK" x="48" y="386">Use the model to attack ideas, not to certify them. Certification needs the literature and the data.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - four patterns that work, the three requests that never do, and the asymmetry underneath</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The four patterns, one by one<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Objection generation.</strong> Paste your draft design; ask for the strongest specific objections a hostile reviewer would raise, ranked by how likely each is to sink the study. This is b1's sparring prompt grown up - it works because no fact is requested, only structured criticism of material in front of the model.</li>
+          <li><strong>Mechanism brainstorming, constrained to your literature.</strong> Paste the key passages from papers YOU have read and verified, then ask what mechanisms could connect the findings. The constraint is the whole trick: "using only the excerpts above" turns a fabrication engine into a recombination engine.</li>
+          <li><strong>The falsification prompt.</strong> "What observation, if I made it, would prove this hypothesis wrong?" A model is genuinely good at enumerating disconfirming patterns - and if neither you nor it can name one, you have learned that your hypothesis is not yet a hypothesis.</li>
+          <li><strong>The alternative-explanation hunt.</strong> "Assume my predicted result appears. List every explanation OTHER than my hypothesis that produces the same pattern." Confounds, selection effects, measurement artifacts - cheaper to enumerate now than to have a reviewer enumerate them later.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why "sounds promising" got devalued<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Before cheap generation, a plausible hypothesis carried weak evidence of quality, because producing one took a person who knew the field. That filter is gone: fluency is now free, and it reads exactly like insight. Nothing about the scientific method changed - a hypothesis was always worth only what its tests are worth. What changed is that the pre-test signals you used to lean on (coherence, confidence, elegant framing) are now manufactured at zero cost, so leaning on them selects for nothing.</p>
+        <p>Practical consequence: never rank AI-generated hypotheses by how convincing they sound. Rank them by testability with the data you can actually get, and by whether your own literature search (Part 3) says the question is still open.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="falsifiability">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the discipline</span>
+      <h2>Kill conditions, HARKing, and committing before data <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">A hypothesis worth keeping names its own kill condition: the specific observable outcome that would make you abandon it. That was always good practice. In the AI era it hardens into survival gear, because the temptation it guards against just industrialised.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Commit-before-data timeline: idea, sparring, preregistration, data collection, report - with the HARKing shortcut marked as the failure path.">
+        <style>
+          .cbT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .cbH { font: 600 12.5px Inter, sans-serif; fill: #22252B; }
+          .cbX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .cbR { font: 600 12px Inter, sans-serif; fill: #991B1B; }
+          .cbK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="140" height="62" rx="10" fill="#101C36"/>
+        <text class="cbT" x="38" y="49">1 · Idea</text>
+        <text class="cbX" x="38" y="68" fill="#A8B9D6">from your reading</text>
+        <path d="M 168 55 L 186 55" stroke="#C9C9D6" stroke-width="2" marker-end="url(#cbAr)"/>
+        <rect x="192" y="24" width="140" height="62" rx="10" fill="#1B2A4A"/>
+        <text class="cbT" x="206" y="49">2 · Spar</text>
+        <text class="cbX" x="206" y="68" fill="#A8B9D6">objections + kills</text>
+        <path d="M 336 55 L 354 55" stroke="#C9C9D6" stroke-width="2" marker-end="url(#cbAr)"/>
+        <rect x="360" y="24" width="160" height="62" rx="10" fill="#A87B2F"/>
+        <text class="cbT" x="374" y="49">3 · Preregister</text>
+        <text class="cbX" x="374" y="68" fill="#F7EFDF">before any data</text>
+        <path d="M 524 55 L 542 55" stroke="#C9C9D6" stroke-width="2" marker-end="url(#cbAr)"/>
+        <rect x="548" y="24" width="140" height="62" rx="10" fill="#3A5488"/>
+        <text class="cbT" x="562" y="49">4 · Collect</text>
+        <text class="cbX" x="562" y="68" fill="#EEF2F9">data arrives now</text>
+        <path d="M 692 55 L 710 55" stroke="#C9C9D6" stroke-width="2" marker-end="url(#cbAr)"/>
+        <rect x="716" y="24" width="140" height="62" rx="10" fill="#3A5488"/>
+        <text class="cbT" x="730" y="49">5 · Report</text>
+        <text class="cbX" x="730" y="68" fill="#EEF2F9">confirm vs explore</text>
+
+        <rect x="24" y="112" width="404" height="80" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="cbH" x="44" y="136">OSF preregistration</text>
+        <text class="cbX" x="44" y="155">A time-stamped, read-only study plan filed before</text>
+        <text class="cbX" x="44" y="171">data. It separates confirmatory tests from</text>
+        <text class="cbX" x="44" y="187">exploratory finds - both stay publishable, labelled.</text>
+        <rect x="452" y="112" width="404" height="80" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="cbH" x="472" y="136">AsPredicted</text>
+        <text class="cbX" x="472" y="155">From Wharton's Credibility Lab: a deliberately</text>
+        <text class="cbX" x="472" y="171">minimal format - a short fixed questionnaire you</text>
+        <text class="cbX" x="472" y="187">can complete in one sitting. Demo 2 drafts yours.</text>
+
+        <rect x="24" y="216" width="832" height="76" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+        <text class="cbR" x="44" y="240">The shortcut this timeline forbids: HARKing</text>
+        <text class="cbX" x="44" y="259" fill="#991B1B">Hypothesising After the Results are Known: collect data first, then present a hypothesis that fits it as if</text>
+        <text class="cbX" x="44" y="276" fill="#991B1B">it came first. AI makes fitting stories nearly free, which makes the time-stamp nearly mandatory.</text>
+
+        <rect x="24" y="316" width="832" height="0" fill="none"/>
+        <rect x="24" y="350" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="cbK" x="48" y="362">The gold box is the ratchet: after step 3, the story of what you predicted can no longer quietly move.</text>
+        <defs><marker id="cbAr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#C9C9D6"/></marker></defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - the commit-before-data timeline, and the shortcut it exists to forbid</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why the HARKing risk is now industrial<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>HARKing and p-hacking are old sins with a large pre-AI literature. What is new is the cost curve. Published commentary on AI-assisted research (arXiv 2502.05151 and 2507.04491 in this course's source map) warns specifically that cheap hypothesis generation raises researcher degrees of freedom: when a model can produce a fluent post-hoc rationale for ANY pattern in your data, the temptation to find the story after the fact scales with the tooling.</p>
+        <p>Note what the warning is not: it is not "AI causes misconduct". The degrees of freedom were always there - Gelman and Loken's garden of forking paths predates all of this and returns in b7. The claim is narrower and harder to dodge: the friction that used to slow down post-hoc storytelling is gone, so the discipline has to come from structure, not willpower. A time-stamped preregistration is that structure.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Preregistration without fear<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>It does not lock you out of discovery.</strong> Exploratory analysis stays legal and valuable - preregistration only requires you to label it as exploratory rather than dress it as a confirmed prediction. b3 already made this promise when it told you to register review protocols before screening; this is the same move for studies.</li>
+          <li><strong>It is allowed to be short.</strong> AsPredicted's format is intentionally minimal; an OSF registration can start from a simple template. A rough plan filed before data beats a beautiful plan reconstructed after.</li>
+          <li><strong>AI can help you write it - carefully.</strong> Having a model tighten the wording of YOUR planned analysis is polish. Having it propose which analyses to run after peeking at pilot data is the exact failure the time-stamp exists to catch. Check your field's norms and verify the current version of your target journal's preregistration language before submitting.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="section" id="novelty">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the novelty check</span>
+      <h2>Is it actually new? Ask the literature, not the model <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Every AI-sparred idea eventually meets the question that decides whether it is worth a year of your life: has someone already done this? The tool for that question is not a chat window. It is the b2 search discipline you already own.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The novelty protocol<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Your b2 skills ARE the novelty check.</strong> Boolean strings with the field's synonyms, Semantic Scholar and OpenAlex, backward and forward snowballing from the nearest papers. Novelty is a claim about the literature, so only a literature search can support it.</li>
+          <li><strong>AI summaries of "what exists" are leads, not verdicts.</strong> A model saying "no one has combined X with Y" is a hypothesis about the literature from a system that fabricates citations at documented rates (b1 carried the numbers). Use the summary to seed search terms, then run the search.</li>
+          <li><strong>The near-neighbour reading.</strong> When your search surfaces the paper closest to your idea, that paper gets read fully - methods, limitations, future-work section - not abstract-skimmed. The abstract tells you the topic overlaps; only the full read tells you whether the remaining gap is real, and the future-work section often hands you its exact shape.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The most expensive skim in research</strong> is the near-neighbour abstract. "They studied retrieval practice too, but in a different setting" - and eight months later a reviewer points out that their Study 3, on page 14, already ran your design. The abstract never mentioned Study 3. Abstracts advertise; methods sections testify.</p>
+        </div>
+      </div>
+    </details>
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Turning an AI lead into a verified answer<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The disciplined way to use an AI's "here is what exists on this" summary:</p>
+        <ul>
+          <li><strong>Harvest the vocabulary, discard the claims.</strong> The summary's real value is the terms you did not know the field used - feed them into your boolean string. Its assertions about who found what stay unverified until you hold the papers.</li>
+          <li><strong>Resolve everything to a DOI before it enters your notes.</strong> b1's ground rule 1, applied at the idea stage: an unresolved reference in your novelty notes today becomes a citation in your introduction next month.</li>
+          <li><strong>Let absence stay silent.</strong> "The model did not mention any prior work on X" is evidence of nothing. Only your own search coming back empty - with a string you have spot-checked against known papers - supports a gap claim.</li>
+        </ul>
+        <p>Deeper claim-vs-source auditing - checking whether a paper actually supports the statement attached to it - is owned by the AI + Research course (learn-ai-research-with-phoebe); this session only needs the entry-level version.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>The sparring ladder, on your real idea <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Bring the research idea you are actually developing - a paragraph is enough. Everything the model does in this demo happens against content you supply; the moment you catch yourself asking it for a fact, stop and route that question to b2 tools instead.</p>
+
+    <div class="steps">
+      <div class="step"><p>Write your hypothesis in one to three sentences, plus a short paragraph of design: population, manipulation or exposure, outcome, comparison. This paragraph is the raw material for every step below.</p></div>
+      <div class="step"><p>Objections: run the sparring prompt and demand the five strongest specific objections, ranked by lethality. Sort each into: fixable by design, fixable by framing, or fatal-if-true.</p></div>
+      <div class="step"><p>Alternatives: assume your predicted result appears; ask for three explanations other than your hypothesis that produce the same pattern. For each, note what design change or extra measure would discriminate.</p></div>
+      <div class="step"><p>Kill condition: ask "what observation would prove this wrong?" - then write the kill condition in YOUR words. If neither of you can produce one, the idea goes back to the bench, not into a proposal.</p></div>
+      <div class="step"><p>Close the loop: revise the design paragraph using what survived. That revised paragraph is the input to Demo 2.</p></div>
+    </div>
+
+    <div class="prompt-box good">
+      <span class="label">★ Try it now - the full sparring ladder in one prompt</span>
+      <p>Here is my draft hypothesis and study design: [paste yours]. Do three things, using ONLY the material above - do not introduce outside facts or citations. (1) List the five strongest specific objections a hostile reviewer would raise, ranked by how likely each is to sink the study. (2) Assuming my predicted result appears, list three alternative explanations that would produce the same pattern. (3) State the single observation that would most decisively falsify my hypothesis. Do not compliment the work.</p>
+    </div>
+
+    <div class="prompt-box bad">
+      <span class="label">The request that poisons the session</span>
+      <p>"...and confirm whether this idea is novel, and give me the key citations showing the gap." - Novelty verdicts and citations from model memory are the two requests Part 1 banned. The model will answer fluently either way; that is exactly the problem.</p>
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Your preregistration skeleton, and the gaps it exposes <span class="tag demo">★ 10 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Draft an AsPredicted-style skeleton for your next study - the deliberately minimal eight-question shape. The goal today is not to file it; it is to discover which questions you cannot yet answer, because those blanks are your design gaps, found for free. Check the live AsPredicted form for its current wording before you actually register.</p>
+
+    <div class="steps">
+      <div class="step"><p>Open a note with eight headings, in AsPredicted's spirit: existing data? · main question or hypothesis · key dependent variable · conditions or comparisons · planned analysis · outlier and exclusion rules · sample size and its rationale · anything else.</p></div>
+      <div class="step"><p>Fill in what you can from your Demo 1 output, in plain sentences. Precision beats polish - "retention at 7 days, scored 0-100" is a better answer than a paragraph.</p></div>
+      <div class="step"><p>Mark every question you cannot answer yet. No sample-size rationale? No exclusion rules? Each blank is a decision you would otherwise have made after seeing the data - which is exactly where forking paths live.</p></div>
+      <div class="step"><p>For each blank, write the next concrete action: a power analysis, a pilot, a supervisor conversation. That short list is this week's homework, personalised.</p></div>
+      <div class="step"><p>When the skeleton is complete and sparred, file it for real: OSF for a full time-stamped plan, AsPredicted for the minimal version. Filed before data, it becomes the ratchet from Part 2.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>Where AI belongs in this demo</strong>
+      Tightening the wording of answers you wrote: fine. Spotting an inconsistency between your hypothesis and your planned analysis: excellent - that is sparring on supplied content. Proposing your hypotheses, analyses or exclusion rules from scratch after you describe the data you already have: that is the HARKing engine with a friendly interface. The line is who is doing the deciding.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 40-50 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the novelty check on your Demo 1 idea with b2 tools: a proper boolean search plus snowballing from the three nearest papers. Write one honest sentence on what gap remains, if any.</li>
+      <li>Do the near-neighbour reading: the single closest paper gets a full read, and you write down what its methods and future-work sections change about your design.</li>
+      <li>Close one blank from your Demo 2 skeleton - run the power analysis, define the exclusion rules, or book the conversation that resolves it.</li>
+      <li>Look up whether your field's journals offer registered reports or expect preregistration - verify the current version of your target journal's policy rather than assuming either way.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session's claims trace to the preregistration platforms' own documentation and to published commentary on AI-era researcher degrees of freedom, all catalogued in this course's source map. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The four sparring patterns and the supplied-content rule they share</span><span class="note">Part 1 + Demo 1 · grown from b1's calibration demo</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The generation asymmetry: plausibility is no longer evidence</span><span class="note">Part 1 · the session's organising idea</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">HARKing risk industrialised by cheap generation - published commentary (arXiv 2502.05151, 2507.04491)</span><span class="note">Part 2 · the forking-paths statistics return in b7</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">OSF preregistration (time-stamped, read-only) and AsPredicted (Wharton Credibility Lab, minimal format)</span><span class="note">Part 2 + Demo 2 · check the live forms for current wording</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Novelty checking - the search craft itself</span><span class="note">Owned by b2 · this session only routes the question there</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Registered reports and field-specific preregistration norms</span><span class="note">Flagged here · your target journal's live policy is the authority</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · A model generates ten fluent, plausible hypotheses for your phenomenon. What did you just learn about the phenomenon?</p>
+      <button class="qopt" type="button">A · That at least one of the ten is probably correct</button>
+      <button class="qopt" type="button">B · Nothing yet - plausibility is free now, so it no longer carries evidence; testability and the literature decide</button>
+      <button class="qopt" type="button">C · That the field is under-theorised and needs all ten tested</button>
+      <p class="qwhy">Generation is the cheap step; that is the asymmetry. Ten plausible stories are worth what their tests are worth - rank them by falsifiability with data you can get and by whether your own search says the question is open, never by how convincing they sound. Convincing is now manufactured at zero cost.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Why does this session treat preregistration as the specific antidote to AI-era HARKing?</p>
+      <button class="qopt" type="button">A · Because journals reject non-preregistered studies</button>
+      <button class="qopt" type="button">B · Because preregistration prevents exploratory analysis</button>
+      <button class="qopt" type="button">C · Because a time-stamped, read-only plan makes "what was predicted" a matter of record, exactly when fitting stories became free</button>
+      <p class="qwhy">HARKing works by letting the hypothesis quietly move after the data arrives - and AI made fluent post-hoc rationales nearly free, which is the warning in the commentary this course cites. A commit-before-data record removes the wiggle room structurally. Exploration stays legal; it just gets labelled as exploration.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Your search surfaces one paper very close to your idea. What does the near-neighbour rule require?</p>
+      <button class="qopt" type="button">A · Read it in full - methods, limitations, future work - because abstracts advertise and methods sections testify</button>
+      <button class="qopt" type="button">B · Skim the abstract and cite it as related work</button>
+      <button class="qopt" type="button">C · Ask an AI to summarise it and confirm your gap still exists</button>
+      <p class="qwhy">The nearest paper is the one that can kill or sharpen your contribution, and the evidence for either lives below the abstract - a Study 3 on page 14, a limitation that is exactly your opening. An AI summary of it is a lead for your reading, not a substitute; novelty verdicts were banned in Part 1 for the same reason.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Four sparring patterns</b><span>Objections on your draft · mechanisms from your supplied papers · "what would falsify this?" · alternative-explanation hunts. All pressure, no facts.</span></div>
+      <div class="cheat-item"><b>Three banned requests</b><span>Facts, novelty verdicts, citations from model memory - all route through fabrication. Route them to b2 tools instead.</span></div>
+      <div class="cheat-item"><b>The asymmetry</b><span>Infinite plausible hypotheses on tap means plausibility is no longer evidence. Scarce goods: falsifiability, novelty, data that could say no.</span></div>
+      <div class="cheat-item"><b>Kill condition</b><span>A hypothesis worth keeping names the observation that would make you drop it. No kill condition, no hypothesis - back to the bench.</span></div>
+      <div class="cheat-item"><b>HARKing, industrialised</b><span>Cheap generation raises researcher degrees of freedom (arXiv 2502.05151, 2507.04491). Structure beats willpower: commit before data.</span></div>
+      <div class="cheat-item"><b>Preregistration tools</b><span>OSF: time-stamped read-only plan, confirmatory vs exploratory separated. AsPredicted (Wharton Credibility Lab): minimal eight-question form.</span></div>
+      <div class="cheat-item"><b>Novelty = search, not chat</b><span>AI's "what exists" summaries are leads to verify. Your boolean + snowballing skills from b2 are the actual novelty check.</span></div>
+      <div class="cheat-item"><b>Near-neighbour rule</b><span>The closest paper gets read fully - methods, limitations, future work. The most expensive skim in research is that abstract.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 5 of 10 · learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b4-extraction-and-synthesis.html">← Previous: Extraction and synthesis</a> &nbsp;·&nbsp; <a href="b6-research-code.html">Next: Research code →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

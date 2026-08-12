@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 2 · The policy rails, from primary sources - learn ai academia with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-academia-with-phoebe</a> / Leader session 2 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe · Leader track · Session 2 of 6</div>
+    <h1>The policy rails: <span class="accent">what the notices actually say</span></h1>
+    <p class="sub">Session 1 showed you what broke; this session shows you what is already written. Your funder, your target journals and the ethics bodies have all published their AI rules - short documents, mostly readable in minutes, mostly unread. We go to the primary sources: two NIH notices by number, the NSF stance, the publisher matrix from Springer Nature to arXiv, and the two bodies (ICMJE, COPE) whose recommendations quietly become everyone's rules. Then the leader move: one principle and one ritual that turn this pile into something your lab can actually run.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Leader track</span>
+      <span class="chip audience">PIs · professors · lab heads</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Recap</span>
+      <span class="a2" style="flex:4">3-26 · Funders + the publisher matrix</span>
+      <span class="a3" style="flex:5">26-41 · Build-along: your rules-that-bind-us table</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why primary sources, not summaries</h2>
+    </div>
+    <p class="lede">Every policy claim in this session cites a notice number or a named policy page, because in a dispute the notice is what counts - not a blog post about it, not a colleague's memory of it, and certainly not a chatbot's summary of it. One honesty rule up front: these pages date their claims (verified August 2026, this course's source map carries the dates). Policies in this territory move fast, so where this page cannot verify, it says so, and Part 3 gives you the ritual that keeps your lab's version current.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The two NIH notices by number and what each one binds, the NSF stance, a one-screen publisher matrix (Springer Nature, Elsevier, Science, ICMJE, COPE, arXiv), the strictest-applicable-rule-per-artifact principle, and a started rules-that-bind-us table for YOUR lab's funder and top journals - plus the quarterly ritual that stops it going stale.
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="funders">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the funders</span>
+      <h2>Two NIH notices, one NSF stance, and an honest gap <span class="tag concept">9 min live</span></h2>
+    </div>
+    <p class="lede">Funder rules come first because they carry the heaviest consequences - misconduct territory, not desk rejection. The two NIH notices are the clearest-written AI policies in academia, and they bind different people: one binds reviewers, the other binds applicants. Confusing the two is the most common policy error we see, so the diagram keeps them on separate rails.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Funder rails: NIH NOT-OD-23-149 binds reviewers, NIH NOT-OD-25-132 binds applicants, NSF PAPPG binds proposers, and ERC and bioRxiv stances are unverified in this build.">
+        <style>
+          .frT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .frS { font: 400 11px Inter, sans-serif; fill: #A8B9D6; }
+          .frH { font: 700 12.5px Inter, sans-serif; fill: #22252B; }
+          .frX { font: 400 11.5px Inter, sans-serif; fill: #6A7180; }
+          .frK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="210" height="64" rx="10" fill="#101C36"/>
+        <text class="frT" x="44" y="50">NOT-OD-23-149</text>
+        <text class="frS" x="44" y="70">NIH · 2023 · binds reviewers</text>
+        <rect x="250" y="24" width="606" height="64" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="frH" x="270" y="46">Peer review: generative AI is prohibited</text>
+        <text class="frX" x="270" y="64">A reviewer who pastes any part of an application into an AI tool has breached</text>
+        <text class="frX" x="270" y="80">confidentiality. This notice protects applicants' unpublished ideas.</text>
+
+        <rect x="24" y="102" width="210" height="80" rx="10" fill="#1B2A4A"/>
+        <text class="frT" x="44" y="130">NOT-OD-25-132</text>
+        <text class="frS" x="44" y="150">NIH · 2025 · binds applicants</text>
+        <rect x="250" y="102" width="606" height="80" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="frH" x="270" y="124">Applications: substitution is not originality</text>
+        <text class="frX" x="270" y="142">Applications substantially developed by AI are not the applicant's original ideas.</text>
+        <text class="frX" x="270" y="158">AI may assist limited aspects · cap of six applications per year · post-award</text>
+        <text class="frX" x="270" y="174">discovery of substantial AI development can escalate toward misconduct.</text>
+
+        <rect x="24" y="196" width="210" height="64" rx="10" fill="#3A5488"/>
+        <text class="frT" x="44" y="222">NSF</text>
+        <text class="frS" x="44" y="242" fill="#EEF2F9">PAPPG · binds proposers</text>
+        <rect x="250" y="196" width="606" height="64" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="frH" x="270" y="218">Proposals: accuracy and authenticity are yours</text>
+        <text class="frX" x="270" y="236">The proposer is responsible for everything submitted, including AI-assisted</text>
+        <text class="frX" x="270" y="252">content. Check the current PAPPG for the year you submit.</text>
+
+        <rect x="24" y="274" width="210" height="64" rx="10" fill="#FFFFFF" stroke="#C9CFD9" stroke-width="1.5"/>
+        <text class="frH" x="44" y="300">ERC · bioRxiv</text>
+        <text class="frX" x="44" y="320">and any funder not named</text>
+        <rect x="250" y="274" width="606" height="64" rx="10" fill="#FFFFFF" stroke="#C9CFD9" stroke-width="1.5"/>
+        <text class="frH" x="270" y="296">Not verified in this build - check the live policy</text>
+        <text class="frX" x="270" y="314">This course states only what it verified (August 2026). For these, read the</text>
+        <text class="frX" x="270" y="330">live page before relying on anything - honesty beats coverage.</text>
+
+        <rect x="24" y="360" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="frK" x="48" y="372">The shared logic: assistance tolerated, substitution not, and unpublished ideas never leak through a prompt.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - four rails, and who each one binds</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Reading the NIH pair like a leader<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>NOT-OD-23-149 (2023) is about other people's ideas.</strong> Generative AI is prohibited in NIH peer review because pasting an application into a tool discloses it - full stop. As a lab head you sit on both sides of this rail: your own proposals are protected by it, and every review you or your senior people write is bound by it. a5 turns this into your lab's review rules.</li>
+          <li><strong>NOT-OD-25-132 (2025) is about your ideas being yours.</strong> Applications substantially developed by AI will not be treated as the applicant's original ideas. AI may assist limited aspects - the aims, rationale, design and claims must remain the team's intellectual work. Two teeth worth quoting exactly: a cap of six applications per applicant per year, and post-award discovery of substantial AI development can escalate toward research misconduct. Post-award means this risk never expires at submission.</li>
+          <li><strong>NSF puts it on the proposer.</strong> You are responsible for the accuracy and authenticity of your submission, including anything AI-assisted. The PAPPG is revised on a cycle - verify the current version for the year you submit, and say so in your lab's table.</li>
+        </ul>
+        <p>Grants get their own working session in a4; today's job is only to know which notice binds whom.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the honest gap row matters more than it looks<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The white row in the diagram - ERC, bioRxiv, and every funder this course did not verify - is doing deliberate work. A policy course that asserts confidently about everything is exactly as trustworthy as a chatbot that never says "I do not know". This course's contract is that every claim traces to a primary source checked on a stated date; where that check did not happen, the page says "check the live policy" instead of guessing. Steal the pattern for your lab: a rules table with an honest "unverified" row and a check date beats a confident table nobody can defend. It is also, not coincidentally, the same ownership discipline session a1 asked of manuscripts - applied to policy claims.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="publishers">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · publishers + bodies</span>
+      <h2>The publisher matrix, one screen <span class="tag concept">9 min live</span></h2>
+    </div>
+    <p class="lede">Journal policies look like a jungle until you see the two patterns: everyone agrees on authorship (no AI authors, anywhere, because authorship carries accountability and a model cannot be accountable), and everyone draws the disclosure line at roughly the same altitude - generation needs declaring, polish mostly does not. The matrix below compresses the six rule-setters your lab most likely meets; the cards carry the exact wording that matters.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 390" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Publisher matrix: Springer Nature, Elsevier, Science, ICMJE, COPE and arXiv compared on authorship, disclosure line and reviewer rules.">
+        <style>
+          .pmT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .pmN { font: 700 12px Inter, sans-serif; fill: #22252B; }
+          .pmX { font: 400 11.5px Inter, sans-serif; fill: #6A7180; }
+          .pmK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="832" height="36" rx="8" fill="#101C36"/>
+        <text class="pmT" x="40" y="47">Publisher / body</text>
+        <text class="pmT" x="190" y="47">Authorship</text>
+        <text class="pmT" x="330" y="47">Disclosure line</text>
+        <text class="pmT" x="650" y="47">Reviewers</text>
+
+        <rect x="24" y="60" width="832" height="44" rx="8" fill="#EEF2F9"/>
+        <text class="pmN" x="40" y="87">Springer Nature</text>
+        <text class="pmX" x="190" y="87">No AI author</text>
+        <text class="pmX" x="330" y="87">Copy-editing: no declaration</text>
+        <text class="pmX" x="650" y="87">No manuscript uploads</text>
+
+        <rect x="24" y="104" width="832" height="44" rx="8" fill="#FFFFFF" stroke="#C9CFD9" stroke-width="1"/>
+        <text class="pmN" x="40" y="131">Elsevier</text>
+        <text class="pmX" x="190" y="131">No AI author</text>
+        <text class="pmX" x="330" y="131">Disclose beyond grammar · no AI images</text>
+        <text class="pmX" x="650" y="131">Must not upload</text>
+
+        <rect x="24" y="148" width="832" height="44" rx="8" fill="#EEF2F9"/>
+        <text class="pmN" x="40" y="175">Science / AAAS</text>
+        <text class="pmX" x="190" y="175">No AI author</text>
+        <text class="pmX" x="330" y="175">Historically the strictest of the set</text>
+        <text class="pmX" x="650" y="175">Check the live policy</text>
+
+        <rect x="24" y="192" width="832" height="44" rx="8" fill="#FFFFFF" stroke="#C9CFD9" stroke-width="1"/>
+        <text class="pmN" x="40" y="219">ICMJE</text>
+        <text class="pmX" x="190" y="219">Not an author</text>
+        <text class="pmX" x="330" y="219">Cover letter AND in the work</text>
+        <text class="pmX" x="650" y="219">Ask permission + disclose</text>
+
+        <rect x="24" y="236" width="832" height="44" rx="8" fill="#EEF2F9"/>
+        <text class="pmN" x="40" y="263">COPE</text>
+        <text class="pmX" x="190" y="263">Cannot be author</text>
+        <text class="pmX" x="330" y="263">Accountability sits with humans</text>
+        <text class="pmX" x="650" y="263">Disclose AI use in review</text>
+
+        <rect x="24" y="280" width="832" height="44" rx="8" fill="#FFFFFF" stroke="#C9CFD9" stroke-width="1"/>
+        <text class="pmN" x="40" y="307">arXiv</text>
+        <text class="pmX" x="190" y="307">Authors liable</text>
+        <text class="pmX" x="330" y="307">Not prohibited · full responsibility</text>
+        <text class="pmX" x="650" y="307">CS: up to 1-year ban</text>
+
+        <rect x="24" y="352" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="pmK" x="48" y="364">One consensus, many details: authorship = accountability everywhere; everything else varies - verify the current version.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - six rule-setters, three questions, one screen</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The disclosure line, in the publishers' own terms<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Springer Nature:</strong> AI-assisted copy editing of your own text needs no declaration. That is the polish end of the line, stated explicitly.</li>
+          <li><strong>Elsevier:</strong> a disclosure statement is required for generative use beyond basic grammar and spelling checks; no AI-generated or AI-altered images; and reviewers must not upload manuscripts to AI tools. Three rules, one publisher - note how the image rule would have caught the Frontiers rat figure from a1 at the policy level.</li>
+          <li><strong>Science:</strong> historically the strictest of the major venues on generative AI. If your lab targets it, read its current policy rather than assuming the Springer Nature norms travel.</li>
+          <li><strong>The working summary for your lab:</strong> if AI produced sentences or images you kept, disclose; if it fixed your grammar, you are in polish territory. When a case sits on the line, disclose - a one-line statement costs nothing.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>ICMJE, COPE, arXiv: the bodies that set everyone else's defaults<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>ICMJE</strong> (the recommendations most medical journals adopt wholesale): describe AI use in the cover letter AND in the submitted work itself - two places, not one. Reviewers must ask the journal's permission before any AI use and disclose it in the review. If your field publishes in ICMJE-following journals, this is effectively your law.</li>
+          <li><strong>COPE:</strong> AI cannot be an author because it cannot take responsibility; accountability for the whole work sits with the humans. COPE also expects disclosure of AI use in peer review - and its case guidance is where editors turn when they suspect an AI-written review, which makes it worth a leader's ten minutes.</li>
+          <li><strong>arXiv</strong> is the instructive outlier: LLM use is not prohibited, and authors take full responsibility for all contents however generated. The CS section adds teeth - unchecked AI content such as hallucinated citations or residual prompts can draw penalties up to a one-year ban. Permissive on use, ruthless on ownership: the same diagnosis a1 reached from the failure catalogue, arrived at independently by a moderation team.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the consensus landed on accountability<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>It is worth noticing how unusual this is: publishers who agree on almost nothing - open access, embargoes, data mandates - converged within months on "no AI authorship", and for the same stated reason. Authorship is not a byline; it is a liability signature. An author can be asked to produce data, defend a method, correct the record, or face a misconduct panel. A model can do none of those things, so putting one on a byline would create work with no accountable owner - which is precisely the failure mode behind every case in a1's catalogue. The consensus is not really about AI at all; it is the accountability definition of authorship, restated under pressure. That is also why it is the one row of the matrix you never need to re-verify.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="section" id="running-policy">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the operating system</span>
+      <h2>Running the rails in a real lab <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">A pile of policies is not a policy. Two moves turn the pile into something your group can run without you in the room: a principle that resolves every apparent conflict, and a ritual that keeps the whole thing true.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The principle: strictest applicable rule, per artifact<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Policies do not conflict by contradiction; they conflict by strictness, and they attach to artifacts. A proposal is governed by the funder's notice, a manuscript by the target journal's policy, a review by the venue's reviewer rules - and everything by your university's guidance, which in a misconduct proceeding is the document that counts. Within one artifact, when rules overlap, the strictest applicable one is the operative default.</p>
+        <p>Worked example: your student drafts a manuscript with disclosed AI assistance (fine at the target journal), then recycles two paragraphs into your NIH renewal. The artifact changed, so the rail changed - NOT-OD-25-132 now governs, and "substantially developed by AI" is the test, not the journal's disclosure line. The principle catches this automatically; vibes do not.</p>
+        <table class="clean">
+          <tr><th>Artifact</th><th>Governing rail</th><th>The line that binds it</th></tr>
+          <tr><td>Grant proposal</td><td>Funder notice</td><td>NIH: NOT-OD-25-132 · NSF: current PAPPG · others: the live page</td></tr>
+          <tr><td>Manuscript</td><td>Target journal's publisher policy</td><td>Disclosure at generation, not polish; no AI authorship or images where stated</td></tr>
+          <tr><td>Peer review</td><td>Venue's reviewer rules</td><td>NIH: prohibited (NOT-OD-23-149) · Elsevier / Springer Nature: no uploads · ICMJE: permission first</td></tr>
+          <tr><td>Everything</td><td>Your university's guidance</td><td>The document a misconduct panel reads first - it may outrank all of the above</td></tr>
+        </table>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The ritual: quarterly re-verification, fifteen minutes<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every policy named on this page has moved at least once since 2023, and this page itself dates its claims (verified August 2026). So the lab table you build in the demo gets a fourth column - "last checked" - and a recurring calendar slot: once a quarter, one person opens each live policy page, confirms or updates the row, and refreshes the date. Fifteen minutes, rotated among senior members so the knowledge does not live in one head.</p>
+        <div class="callout tip">
+          <strong>Assign the rows, not the job</strong>
+          "Someone should keep an eye on policies" produces nobody doing it. "Priya owns the NIH rows, Marco owns the Elsevier and ICMJE rows, dates refreshed by the first Friday of the quarter" produces a table you can trust. Named ownership of specific rows - the same medicine this course prescribes for text, applied to rules.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 1</span>
+      <h2>Your rules-that-bind-us table, built live <span class="tag demo">★ 13 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">The leader-altitude version of the researcher track's b1 policy check: not "which rules bind me" but "which rules bind my lab" - one table, one page, real sources only. Bring your laptop; leave with the skeleton filled for your actual funder and top journals.</p>
+
+    <div class="steps">
+      <div class="step"><p>Open a blank doc titled "Rules that bind us - [lab name] - checked [today's date]". Four columns: rule-setter, what it prohibits, what it requires disclosed, last checked.</p></div>
+      <div class="step"><p>Row 1 - your funder. NIH labs: NOT-OD-23-149 and NOT-OD-25-132, from the live notices. NSF labs: the current PAPPG. Others (ERC included): find the live page - this course verified neither ERC nor bioRxiv, so your own check is the source of truth here.</p></div>
+      <div class="step"><p>Rows 2-3 - your lab's top two target journals. Pull the publisher's generative-AI policy page and record three things: authorship (always no), the disclosure line and where the statement goes, and the reviewer rule.</p></div>
+      <div class="step"><p>Row 4 - your university's research-office AI guidance. It may be stricter than everything above, and it is the document a misconduct panel reads first.</p></div>
+      <div class="step"><p>Bottom line: write the strictest-applicable-rule-per-artifact sentence in your own words, assign row owners, and put the quarterly check in the calendar before you close the laptop. Unassigned tables die by Christmas.</p></div>
+    </div>
+
+    <div class="prompt-box bad">
+      <span class="label">The shortcut that poisons the table</span>
+      <p>What is Elsevier's AI policy? What does NIH notice NOT-OD-25-132 say? [asked to a chatbot, answer pasted into the table unchecked]</p>
+    </div>
+    <div class="prompt-box good">
+      <span class="label">★ The right division of labour</span>
+      <p>Here is the full text of NIH notice NOT-OD-25-132, copied from the live page at grants.nih.gov: [paste]. Summarise in plain language what it prohibits and what it requires disclosed, for a lab rules table. Quote the notice's own wording for anything that carries consequences. I will verify your summary against the text before using it.</p>
+    </div>
+    <div class="callout tip">
+      <strong>The teaching point inside the two boxes</strong>
+      A policy table built from a chatbot's memory is a rumour with formatting. The same tool working over the pasted primary text, with a named human verifying, is legitimate assistance - the left column of a1's capability map, applied to policy work. Model the difference in front of your group once and the norm sets itself.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 35-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the rules-that-bind-us table for every funder and journal your lab actually touches, from the live pages. Blank cells marked "unverified - check before relying" are honest; guessed cells are not.</li>
+      <li>Read both NIH notices in full, from grants.nih.gov - they are short. Note the one sentence in each you would quote to your lab, and which people each notice binds.</li>
+      <li>Assign row owners and put the quarterly re-verification slot in the shared calendar. First rotation: you, so the group sees the ritual done once.</li>
+      <li>Run the two-box exercise from the demo on one policy your table needs: chatbot-from-memory versus summarise-the-pasted-notice. Keep both outputs side by side - it is the best five-minute norms lesson you will ever have on file for a3.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every policy claim on this page cites its notice number or named policy page, all verified against the live sources in August 2026 and catalogued in this course's source map. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">NIH NOT-OD-23-149 (2023): generative AI prohibited in NIH peer review - confidentiality</span><span class="note">Part 1 · binds reviewers · full review duty in a5</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">NIH NOT-OD-25-132 (2025): substantially-AI-developed applications not original ideas; six-per-year cap; post-award escalation</span><span class="note">Part 1 · binds applicants · grants practice in a4</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">NSF: proposer responsible for accuracy and authenticity including AI-assisted content (current PAPPG)</span><span class="note">Part 1 · verify the PAPPG for your submission year</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Publisher matrix: Springer Nature, Elsevier, Science - no AI authorship; disclosure line at generation</span><span class="note">Part 2 · researcher-side writing practice in b8</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">ICMJE (cover letter + in-work disclosure; reviewer permission-first), COPE, arXiv (responsibility + CS penalties up to one-year ban)</span><span class="note">Part 2 · the bodies that set everyone's defaults</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">ERC and bioRxiv AI stances</span><span class="note">Not verified in this build · the page says "check the live policy" rather than asserting</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">1 · The two NIH notices are easily confused. Who does each one bind?</p>
+      <button class="qopt" type="button">A · NOT-OD-23-149 binds reviewers (no generative AI in peer review - confidentiality); NOT-OD-25-132 binds applicants (substantially-AI-developed applications are not your original ideas)</button>
+      <button class="qopt" type="button">B · Both bind applicants - the second notice simply raised the penalties</button>
+      <button class="qopt" type="button">C · NOT-OD-23-149 binds applicants; NOT-OD-25-132 binds reviewers</button>
+      <p class="qwhy">Separate rails, separate people. The 2023 notice protects unpublished ideas from leaking through a reviewer's prompt; the 2025 notice protects the originality of the ideas NIH funds, adds the six-application-per-year cap, and keeps the risk alive post-award. A lab head sits on both rails at once - protected by one, bound by both.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Where does the publisher consensus draw the disclosure line?</p>
+      <button class="qopt" type="button">A · Any AI contact with the manuscript, including spellcheck, must be declared</button>
+      <button class="qopt" type="button">B · Nothing needs declaring as long as a human is listed as author</button>
+      <button class="qopt" type="button">C · At generation, not polish - Springer Nature exempts AI copy-editing, Elsevier requires a statement beyond basic grammar checks, and kept AI sentences or images need disclosing</button>
+      <p class="qwhy">The line sits at roughly the same altitude across publishers: if AI produced content you kept, disclose; if it fixed your grammar, you are in polish territory. Elsevier adds no-AI-images and no reviewer uploads; ICMJE wants the disclosure in two places. When a case sits on the line, disclose - the one-line statement is free, the discovery is not.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Your target journal permits disclosed AI drafting, so your lab adopts that as its blanket rule - proposals included. What went wrong?</p>
+      <button class="qopt" type="button">A · Nothing - the journal policy is the most recent, so it wins</button>
+      <button class="qopt" type="button">B · Rules attach to artifacts: the proposal is governed by the funder's rail (for NIH, NOT-OD-25-132), and the strictest applicable rule per artifact is the operative one - a journal's permission never transfers to a grant</button>
+      <button class="qopt" type="button">C · The mistake was disclosing at all - disclosure invites scrutiny</button>
+      <p class="qwhy">This is the exact failure the strictest-applicable-rule-per-artifact principle exists to catch. Text that is compliant in a manuscript can put a renewal into "not your original ideas" territory the moment it moves artifacts. Manuscripts follow the journal, proposals follow the funder, reviews follow the venue, everything follows your university - per artifact, strictest wins.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The NIH pair</b><span>NOT-OD-23-149 (2023): no generative AI in peer review - binds reviewers. NOT-OD-25-132 (2025): substantially-AI-developed applications are not your original ideas - binds applicants.</span></div>
+      <div class="cheat-item"><b>25-132's teeth</b><span>AI may assist limited aspects only · cap of six applications per year · post-award discovery can escalate toward misconduct. The risk survives the award letter.</span></div>
+      <div class="cheat-item"><b>NSF</b><span>Proposer is responsible for accuracy and authenticity, including AI-assisted content. Check the current PAPPG for your submission year.</span></div>
+      <div class="cheat-item"><b>The one universal</b><span>No AI authorship anywhere - authorship is a liability signature and a model cannot be accountable. The only matrix row that never needs re-verifying.</span></div>
+      <div class="cheat-item"><b>The disclosure line</b><span>Generation, not polish. Springer Nature: copy-editing needs no declaration. Elsevier: statement beyond grammar checks, no AI images, reviewers never upload. Science: strictest.</span></div>
+      <div class="cheat-item"><b>The bodies</b><span>ICMJE: disclose in cover letter AND the work; reviewers ask permission first. COPE: humans hold accountability. arXiv: use allowed, full responsibility, CS penalties up to a one-year ban.</span></div>
+      <div class="cheat-item"><b>The principle</b><span>Strictest applicable rule, per artifact: proposal → funder, manuscript → journal, review → venue, everything → university. Permission never transfers between artifacts.</span></div>
+      <div class="cheat-item"><b>The ritual</b><span>Rules table with a "last checked" column, named row owners, fifteen minutes quarterly against the live pages. Unverified rows say so honestly - including ERC and bioRxiv here.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 2 of 6 · learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="a1-the-ai-era-lab.html">← Previous: The AI-era lab</a> &nbsp;·&nbsp; <a href="a3-supervision-and-authorship.html">Next: Supervision and authorship →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

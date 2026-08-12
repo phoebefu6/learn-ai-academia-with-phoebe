@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 10 · Capstone: one project, full pipeline - learn ai academia with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-academia-with-phoebe</a> / Researcher session 10 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe · Researcher track · Session 10 of 10</div>
+    <h1>Capstone: <span class="accent">one project, full pipeline</span></h1>
+    <p class="sub">Nine sessions taught the pieces; this one makes you run them end to end on the only project that matters - your own. One real research question through search, screen, extract, code, analyse, write, with an audit trail a hostile reviewer could walk without your help. Nothing new gets taught today. What gets built is proof: seven artifacts, one honest unknown, and a 15-minute walk-through where a peer pulls any thread they like and it holds.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Researcher track</span>
+      <span class="chip audience">PhD students · postdocs · your real project</span>
+      <span class="chip time">45 min + capstone week</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-20 · The contract + why each artifact exists</span>
+      <span class="a3" style="flex:5">20-41 · Plan your week + the walk-through ritual</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this sits in the track</h2>
+    </div>
+    <p class="lede">Every session ended with "try it on your own project this week." The capstone is where those homeworks stop being optional. b2 through b8 each own one artifact of a defensible AI-assisted study; this session assembles them into a single trail on a single question, then makes you defend it out loud. If a session's artifact is missing from your project, this week is where you find out - which is the cheapest possible place to find out.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A signed capstone contract on your real research question, the seven-artifact deliverable set with a done-definition for each, a five-day run order with time boxes, and a walk-through ritual that turns "trust me" into "check for yourself" - the sentence this whole track was building toward.
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="contract">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the contract</span>
+      <h2>One question, the whole cycle, receipts attached <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The capstone contract has three clauses. First: the question is real - your thesis chapter, your next paper, your grant aim - never a toy. Second: it runs the whole cycle, even the stages you would normally rush. Third: every stage leaves an artifact, so the finished trail can be audited by someone who was not there. The map below is b1's lifecycle map grown up: same stages, now with the deliverable each one owes.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The full pipeline with artifact checkpoints: search and screen, extract and synthesize, code and analyse, write and disclose, defend - each stage owing a named deliverable.">
+        <style>
+          .cpT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .cpS { font: 400 11px Inter, sans-serif; }
+          .cpH { font: 600 12px Inter, sans-serif; fill: #22252B; }
+          .cpX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .cpK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="152" height="60" rx="10" fill="#101C36"/>
+        <text class="cpT" x="38" y="48">1 · Search +</text>
+        <text class="cpT" x="38" y="66">screen</text>
+        <path d="M 180 54 L 198 54" stroke="#C9C9D6" stroke-width="2" marker-end="url(#cpAr)"/>
+        <rect x="204" y="24" width="152" height="60" rx="10" fill="#1B2A4A"/>
+        <text class="cpT" x="218" y="48">2 · Extract +</text>
+        <text class="cpT" x="218" y="66">synthesize</text>
+        <path d="M 360 54 L 378 54" stroke="#C9C9D6" stroke-width="2" marker-end="url(#cpAr)"/>
+        <rect x="384" y="24" width="152" height="60" rx="10" fill="#3A5488"/>
+        <text class="cpT" x="398" y="48">3 · Code +</text>
+        <text class="cpT" x="398" y="66">analyse</text>
+        <path d="M 540 54 L 558 54" stroke="#C9C9D6" stroke-width="2" marker-end="url(#cpAr)"/>
+        <rect x="564" y="24" width="152" height="60" rx="10" fill="#1B2A4A"/>
+        <text class="cpT" x="578" y="48">4 · Write +</text>
+        <text class="cpT" x="578" y="66">disclose</text>
+        <path d="M 720 54 L 738 54" stroke="#C9C9D6" stroke-width="2" marker-end="url(#cpAr)"/>
+        <rect x="744" y="24" width="112" height="60" rx="10" fill="#A87B2F"/>
+        <text class="cpT" x="758" y="48">5 · Defend</text>
+        <text class="cpS" x="758" y="66" fill="#F7EFDF">day 5 ritual</text>
+
+        <path d="M 100 84 L 100 108" stroke="#C9C9D6" stroke-width="2" stroke-dasharray="4 3"/>
+        <path d="M 280 84 L 280 108" stroke="#C9C9D6" stroke-width="2" stroke-dasharray="4 3"/>
+        <path d="M 460 84 L 460 108" stroke="#C9C9D6" stroke-width="2" stroke-dasharray="4 3"/>
+        <path d="M 640 84 L 640 108" stroke="#C9C9D6" stroke-width="2" stroke-dasharray="4 3"/>
+        <path d="M 800 84 L 800 108" stroke="#C9C9D6" stroke-width="2" stroke-dasharray="4 3"/>
+
+        <rect x="24" y="112" width="152" height="120" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="cpH" x="38" y="136">Search log +</text>
+        <text class="cpH" x="38" y="152">screening record</text>
+        <text class="cpX" x="38" y="174">strings, databases,</text>
+        <text class="cpX" x="38" y="190">dates, known-set check,</text>
+        <text class="cpX" x="38" y="206">criteria BEFORE, counts</text>
+        <text class="cpX" x="38" y="222">at each PRISMA stage</text>
+        <rect x="204" y="112" width="152" height="120" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="cpH" x="218" y="136">Extraction table</text>
+        <text class="cpX" x="218" y="158">every cell verified</text>
+        <text class="cpX" x="218" y="174">against its source -</text>
+        <text class="cpX" x="218" y="190">any AI assistance +</text>
+        <text class="cpX" x="218" y="206">the verification</text>
+        <text class="cpX" x="218" y="222">protocol, logged</text>
+        <rect x="384" y="112" width="152" height="120" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="cpH" x="398" y="136">Analysis plan +</text>
+        <text class="cpH" x="398" y="152">repro package</text>
+        <text class="cpX" x="398" y="174">confirmatory vs</text>
+        <text class="cpX" x="398" y="190">exploratory marked;</text>
+        <text class="cpX" x="398" y="206">code + tests + seeds +</text>
+        <text class="cpX" x="398" y="222">environment + README</text>
+        <rect x="564" y="112" width="152" height="120" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="cpH" x="578" y="136">Draft section +</text>
+        <text class="cpH" x="578" y="152">disclosure</text>
+        <text class="cpX" x="578" y="174">what AI did, what it</text>
+        <text class="cpX" x="578" y="190">did not do, and who</text>
+        <text class="cpX" x="578" y="206">verified - per your</text>
+        <text class="cpX" x="578" y="222">journal's policy</text>
+        <rect x="744" y="112" width="112" height="120" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="cpK" x="758" y="136">One honest</text>
+        <text class="cpK" x="758" y="152">unknown</text>
+        <text class="cpX" x="758" y="174" fill="#3A2A08">stated, not</text>
+        <text class="cpX" x="758" y="190" fill="#3A2A08">hidden - the</text>
+        <text class="cpX" x="758" y="206" fill="#3A2A08">credibility</text>
+        <text class="cpX" x="758" y="222" fill="#3A2A08">move</text>
+
+        <rect x="24" y="256" width="832" height="88" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="cpH" x="44" y="282">Same map as b1 - one difference</text>
+        <text class="cpX" x="44" y="302">In session 1 this map showed where AI helps. Now every stage owes a deliverable, because the capstone's thesis is</text>
+        <text class="cpX" x="44" y="318">that assistance without artifacts is indistinguishable from carelessness. The trail is what makes the AI use - and</text>
+        <text class="cpX" x="44" y="334">the science - defensible to someone who was not in the room.</text>
+
+        <rect x="24" y="384" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="cpK" x="48" y="396">Seven artifacts, one question, five days. The gold boxes are the two only you can produce: judgement and honesty.</text>
+        <defs><marker id="cpAr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#C9C9D6"/></marker></defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - b1's lifecycle map, now with the deliverable each stage owes</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The deliverable set, with done-definitions<span class="mini">6 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Artifact</th><th>Built in</th><th>Done means</th></tr>
+          <tr><td>Search log</td><td>b2</td><td>Strings, databases and dates recorded; the 5-paper known-set check run and passed</td></tr>
+          <tr><td>Screening record</td><td>b3</td><td>Criteria written BEFORE screening; counts at each PRISMA stage; any AI assistance logged with its verification protocol</td></tr>
+          <tr><td>Extraction table</td><td>b4</td><td>Every cell verified against its source - AI-suggested cells marked and checked, none taken on trust</td></tr>
+          <tr><td>Analysis plan</td><td>b5 + b7</td><td>Confirmatory vs exploratory marked per analysis, before the analysis runs</td></tr>
+          <tr><td>Repro package</td><td>b6 + b7</td><td>Code + tests + seeds + environment + README - a stranger can rerun it and get your numbers</td></tr>
+          <tr><td>Draft section + disclosure</td><td>b8</td><td>One section written, with a disclosure statement that fits your target journal's current policy</td></tr>
+          <tr><td>One honest unknown</td><td>b10</td><td>The limit you cannot close, stated in one sentence in the draft - not buried, not spun</td></tr>
+        </table>
+        <p>Scope honestly: this is a capstone-sized slice, not a finished systematic review or a submission-ready paper. One question, one draft section, one week. The artifacts are full-strength; the scope is deliberately small enough to finish.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Choosing the question - the three-part fitness test<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The right capstone question passes three tests. It is <strong>yours</strong> - a live thesis chapter, paper or aim, so the artifacts you build this week are work you needed to do anyway. It is <strong>answerable at slice scale</strong> - a question whose literature you can search and screen in a day, not a field survey; narrow beats grand here. And it <strong>touches data or code somewhere</strong> - if your project is purely theoretical, pick the empirical corner of it, because days 2 and 3 need something to extract and something to run. If no current project fits, use your last completed analysis and rebuild its trail; the artifacts are just as real in retrospect, and the gaps you find are just as instructive.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="audit-trail">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the why</span>
+      <h2>The audit-trail discipline - why each artifact exists <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">None of the seven artifacts is paperwork for its own sake. Each one answers a specific challenge that a reviewer, a supervisor, or in the worst case a misconduct panel can put to you - and the whole design goal is that any of them could walk your trail without you in the room. That is what defensible means. Not "I was careful" but "check for yourself."</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Artifact-to-defensibility mapping: each artifact on the left answers a specific hostile challenge on the right.">
+        <style>
+          .adH { font: 600 12px Inter, sans-serif; fill: #FFFFFF; }
+          .adC { font: 600 12px Inter, sans-serif; fill: #22252B; }
+          .adX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .adK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="300" height="46" rx="10" fill="#101C36"/>
+        <text class="adH" x="40" y="52">Search log + known-set check</text>
+        <path d="M 328 47 L 452 47" stroke="#C9C9D6" stroke-width="2" marker-end="url(#adAr)"/>
+        <rect x="458" y="24" width="398" height="46" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="adC" x="474" y="43">"How do you know you did not miss half the field?"</text>
+        <text class="adX" x="474" y="60">Recall becomes arguable: strings, databases, dates, the check</text>
+
+        <rect x="24" y="86" width="300" height="46" rx="10" fill="#1B2A4A"/>
+        <text class="adH" x="40" y="114">Criteria + PRISMA counts</text>
+        <path d="M 328 109 L 452 109" stroke="#C9C9D6" stroke-width="2" marker-end="url(#adAr)"/>
+        <rect x="458" y="86" width="398" height="46" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="adC" x="474" y="105">"Why is this study out and that one in?"</text>
+        <text class="adX" x="474" y="122">Screening becomes defensible: rules written before, counts kept</text>
+
+        <rect x="24" y="148" width="300" height="46" rx="10" fill="#3A5488"/>
+        <text class="adH" x="40" y="176">Verified extraction table</text>
+        <path d="M 328 171 L 452 171" stroke="#C9C9D6" stroke-width="2" marker-end="url(#adAr)"/>
+        <rect x="458" y="148" width="398" height="46" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="adC" x="474" y="167">"Where does this number come from?"</text>
+        <text class="adX" x="474" y="184">Claims become traceable: every cell points at its source</text>
+
+        <rect x="24" y="210" width="300" height="46" rx="10" fill="#1B2A4A"/>
+        <text class="adH" x="40" y="238">Repro package (code, tests, seeds)</text>
+        <path d="M 328 233 L 452 233" stroke="#C9C9D6" stroke-width="2" marker-end="url(#adAr)"/>
+        <rect x="458" y="210" width="398" height="46" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="adC" x="474" y="229">"Can anyone rerun this and get your result?"</text>
+        <text class="adX" x="474" y="246">Results become reproducible: environment, seeds, README, tests</text>
+
+        <rect x="24" y="272" width="300" height="46" rx="10" fill="#101C36"/>
+        <text class="adH" x="40" y="300">Disclosure statement</text>
+        <path d="M 328 295 L 452 295" stroke="#C9C9D6" stroke-width="2" marker-end="url(#adAr)"/>
+        <rect x="458" y="272" width="398" height="46" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="adC" x="474" y="291">"What exactly did the AI do here?"</text>
+        <text class="adX" x="474" y="308">The AI role becomes inspectable: assistance named, verification named</text>
+
+        <rect x="24" y="334" width="300" height="46" rx="10" fill="#A87B2F"/>
+        <text class="adH" x="40" y="362">One honest unknown</text>
+        <path d="M 328 357 L 452 357" stroke="#C9C9D6" stroke-width="2" marker-end="url(#adAr)"/>
+        <rect x="458" y="334" width="398" height="46" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="adC" x="474" y="353" fill="#3A2A08">"What are the limits of this work?"</text>
+        <text class="adX" x="474" y="370" fill="#3A2A08">You answer before they ask - stated limits read as competence</text>
+
+        <rect x="24" y="404" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="adK" x="48" y="416">The trail's purpose in one line: a stranger can walk it without you in the room. That is the point.</text>
+        <defs><marker id="adAr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#C9C9D6"/></marker></defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - which artifact answers which hostile question</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Every session left you one piece - the callback tour<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>b2</strong> gave you the search log: strings, synonym harvesting, snowballing, and the known-set spot check that measures your string for free.</li>
+          <li><strong>b3</strong> gave you the screening record: criteria written before screening, PRISMA-style counts, and the verified-AI protocol whose trap you sprang in the lab.</li>
+          <li><strong>b4</strong> gave you the extraction table and its iron rule: every cell verified, AI suggestions marked, nothing on trust.</li>
+          <li><strong>b5</strong> gave you the analysis plan's spine: hypotheses before data, confirmatory vs exploratory marked before anything runs.</li>
+          <li><strong>b6</strong> gave you tests, seeds and CI on research code; <strong>b7</strong> added the forking-paths discipline - Gelman &amp; Loken (2013) is why the plan is written first - and together they produce the repro package.</li>
+          <li><strong>b8</strong> gave you the disclosure statement matched to your journal's current policy - which you verify against the live page, since these move.</li>
+          <li><strong>b9</strong> gave you the reviewer's eye - which day 5 turns on your own trail.</li>
+        </ul>
+        <p>If any bullet feels unfamiliar, reread that session before capstone week - the capstone assumes them all.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why disclosure is the artifact most worth over-doing<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A 2025 arXiv analysis found only about 0.1% of post-2023 papers disclosed AI use, while roughly 70% of journals had policies asking for it - the widest gap between rule and practice anywhere in this course. That gap is an opportunity: a clear disclosure statement currently signals more care than almost any other sentence in a manuscript, precisely because so few write one. The capstone's disclosure names three things: what the AI did (tasks, not vibes), what it did not do (the analysis choices, the claims, the conclusions stayed human), and who verified each assisted step. Write it as you go during the week, not from memory on day 4 - retrospective disclosure is how honest people end up writing fiction.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="section" id="run-order">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the week</span>
+      <h2>The five-day run order, time-boxed <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">The week is designed against the two standard failure modes: day 1 perfectionism (still refining the search on Wednesday) and day 4 collapse (no time left to write or disclose). The time boxes are hard stops - when the box ends, you ship the artifact as it stands and note what is missing. An honest gap in the log beats a polished half-trail.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Day by day, box by box<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Day</th><th>Work</th><th>Box</th><th>Ships</th></tr>
+          <tr><td>Day 1</td><td>Search + screen: string, known-set check, criteria BEFORE, screen with the b3 protocol</td><td>2-3 h</td><td>Search log + screening record</td></tr>
+          <tr><td>Day 2</td><td>Extract + synthesize: build the table, verify every cell, log any AI assistance</td><td>2-3 h</td><td>Extraction table, verified</td></tr>
+          <tr><td>Day 3</td><td>Code + analyse: mark confirmatory vs exploratory FIRST, then run; tests, seeds, README</td><td>2-3 h</td><td>Analysis plan + repro package</td></tr>
+          <tr><td>Day 4</td><td>Write + disclose: one draft section, disclosure statement, the one honest unknown stated</td><td>2 h</td><td>Draft + disclosure + unknown</td></tr>
+          <tr><td>Day 5</td><td>The walk-through: 15 minutes presenting, a peer playing hostile reviewer pulling threads</td><td>1 h</td><td>A defended trail - or a gap list</td></tr>
+        </table>
+        <p>What done looks like: all seven artifacts exist, each meets its done-definition from Part 1, and the day 5 walk-through surfaced no thread you could not follow to its source. Gaps found on day 5 are wins - every one is a gap a real reviewer will now never find first.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The done checklist - print this half<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li>Search log: strings + databases + dates recorded; known-set check passed.</li>
+          <li>Screening record: criteria dated BEFORE the first screen; counts at every stage; AI assistance + verification protocol logged.</li>
+          <li>Extraction table: zero unverified cells; AI-suggested cells marked.</li>
+          <li>Analysis plan: every analysis carries a confirmatory or exploratory tag, dated before it ran.</li>
+          <li>Repro package: fresh-environment rerun reproduces your numbers; tests pass; README explains the one command.</li>
+          <li>Draft section: disclosure statement present and matched to the target journal's live policy.</li>
+          <li>The one honest unknown: stated in the draft in one plain sentence.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo · the ritual</span>
+      <h2>The capstone walk-through <span class="tag demo">★ 15 min · everyone defends</span></h2>
+    </div>
+    <p class="lede">Day 5, rehearsed today so the format is familiar. You present your trail to a partner in 15 minutes; the partner's job is to be politely hostile - they pull threads, you follow each one to its source in the artifacts, live. No slides, no narrative arc. Just the trail and the threads.</p>
+
+    <div class="steps">
+      <div class="step"><p>Minutes 0-3: state the question, the answer you currently believe, and the one honest unknown. Leading with the unknown sets the tone - this is an audit, not a pitch.</p></div>
+      <div class="step"><p>Minutes 3-6: the search-and-screen thread. Expect: "Show me the search string." "Run the known-set check in front of me." "This study looks relevant - why is it excluded?" Every answer is a pointer into the log or the record, not a recollection.</p></div>
+      <div class="step"><p>Minutes 6-9: the evidence thread. Expect: "Show me why this cell says N=48." You open the extraction table, follow the cell to its source, and the source agrees. If AI extracted it, the verification note is right there.</p></div>
+      <div class="step"><p>Minutes 9-12: the analysis thread. Expect: "Show me the seed." "Was this analysis confirmatory or exploratory - and when was it marked?" "Rerun it." The repro package answers all three or the gap goes on the list.</p></div>
+      <div class="step"><p>Minutes 12-15: the disclosure thread. The partner reads your statement and asks the only question that matters: "Is there any AI assistance in this project not named here?" Answer, on the record. Then swap chairs - playing the hostile reviewer teaches you as much as surviving one.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>This ritual is a rehearsal for conversations that actually happen.</strong> A reviewer asking "how was this screened?", a supervisor asking "where did this number come from?", a panel asking "what did the AI do?" - the difference between an uncomfortable afternoon and a career problem is usually whether a trail exists. You are building the trail while it is cheap.</p>
+    </div>
+
+    <div class="prompt-box good">
+      <span class="label">★ The one legal AI assist for day 5 - rehearse against your own disclosure</span>
+      <p>Here is my capstone disclosure statement and my list of artifacts (no unpublished data or manuscript text included): [paste the statement + the artifact list]. Act as a hostile methods reviewer. Generate the ten hardest questions you would ask in a 15-minute audit of this trail, ordered by damage potential. Do not answer them. Do not soften them.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>The homework IS the capstone <span class="tag exercise">◐ one week, time-boxed</span></h2>
+    </div>
+    <ul>
+      <li>Run the five-day plan on your real project. Book the boxes in your calendar now - day 5 first, because the walk-through needs a partner and a time, and a booked audience is what makes the week real.</li>
+      <li>Recruit your hostile reviewer: a labmate, ideally someone from this course, with this session's demo script as their brief. Offer to return the favour on their trail.</li>
+      <li>Keep a gap list all week: every artifact you could not finish, every cell you could not verify, every policy you still need to check against the live page. The list is a deliverable, not a confession.</li>
+      <li>After day 5: write the one-paragraph debrief - what held, what did not, and which single session of this track you will rerun on your next project. That paragraph is your personal syllabus from here.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">The capstone invents nothing new: every artifact and standard it assembles was sourced in its home session, and those pages carry the primary citations. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The seven-artifact deliverable set with done-definitions, mapped to sessions b2-b8</span><span class="note">Part 1 · each artifact's standards live in its home session</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Artifact-to-defensibility mapping: which record answers which challenge</span><span class="note">Part 2 · the trail a stranger can walk</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Confirmatory vs exploratory marking before analysis - the forking-paths rationale (Gelman &amp; Loken 2013)</span><span class="note">Part 2 + day 3 · sourced fully in b5 and b7</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Repro-package standard: code + tests + seeds + environment + README</span><span class="note">Day 3 · the JOSS/NeurIPS-grade criteria live in b6</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The disclosure gap: ~0.1% of post-2023 papers disclosed AI use vs ~70% of journals with policies (arXiv, 2025)</span><span class="note">Part 2 · why the statement is worth over-doing</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Formal systematic-review accreditation and full meta-analytic method</span><span class="note">Beyond scope by design - Cochrane and JBI are the authorities there</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · A reviewer asks: "How do I know your review of the literature did not simply miss the studies that disagree with you?" Which artifact answers, and how?</p>
+      <button class="qopt" type="button">A · The repro package - they can rerun the analysis</button>
+      <button class="qopt" type="button">B · The disclosure statement - it lists the tools used to search</button>
+      <button class="qopt" type="button">C · The search log - strings, databases, dates and the known-set check make recall arguable instead of asserted</button>
+      <p class="qwhy">Each artifact defends one challenge, and coverage belongs to the search log. With the strings, databases, dates and the known-set check on the table, the reviewer can critique your actual coverage - and you can defend it - instead of trading assertions. The repro package defends the analysis; the disclosure defends the AI role; neither speaks to recall.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Why must the confirmatory vs exploratory tag be applied BEFORE each analysis runs, rather than when writing up?</p>
+      <button class="qopt" type="button">A · After seeing results, the labels drift - the forking-paths problem means post-hoc tagging quietly converts exploration into fake confirmation</button>
+      <button class="qopt" type="button">B · Journals require the tags in the methods section</button>
+      <button class="qopt" type="button">C · Exploratory analyses are not allowed in a capstone</button>
+      <p class="qwhy">Gelman &amp; Loken (2013) named the mechanism: with many defensible analysis paths, results-first labelling lets the path that worked get remembered as the plan. Dating the tag before the run is what makes "confirmatory" mean something. Exploration is welcome - the capstone only requires it be labelled as what it is, when it is.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · What is the one honest unknown FOR, in the deliverable set?</p>
+      <button class="qopt" type="button">A · Humility theatre - reviewers like a little self-criticism</button>
+      <button class="qopt" type="button">B · It answers the limits question before it is asked, and proves the trail was built to inform rather than to persuade</button>
+      <button class="qopt" type="button">C · It reserves a gap for the follow-up paper</button>
+      <p class="qwhy">Every real project has a limit you cannot close - an unindexed corner of the literature, an unverifiable cell, a fragile assumption. Stating it plainly does two jobs: the hostile question arrives pre-answered, and the rest of the trail gains credibility, because a trail that admits its weakest point has visibly not been curated to hide it. b3's honest ceiling - the 12th study you cannot reach - was the same lesson in miniature.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 10 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The contract</b><span>One real question, the whole cycle, an artifact per stage. Capstone-sized slice, full-strength artifacts, one week.</span></div>
+      <div class="cheat-item"><b>The seven artifacts</b><span>Search log · screening record · verified extraction table · analysis plan · repro package · draft + disclosure · one honest unknown.</span></div>
+      <div class="cheat-item"><b>Artifact → defence</b><span>Log → recall arguable. Criteria → screening defensible. Table → claims traceable. Package → results reproducible. Disclosure → AI role inspectable.</span></div>
+      <div class="cheat-item"><b>The week</b><span>Day 1 search + screen · day 2 extract · day 3 code + analyse · day 4 write + disclose · day 5 walk-through. Hard boxes; ship at the bell.</span></div>
+      <div class="cheat-item"><b>Mark before you run</b><span>Confirmatory vs exploratory, tagged and dated before each analysis - Gelman &amp; Loken (2013) is why post-hoc labels lie.</span></div>
+      <div class="cheat-item"><b>The disclosure</b><span>What AI did, what it did not do, who verified. Written as you go. ~0.1% of papers disclose vs ~70% of journals asking - the statement is a differentiator.</span></div>
+      <div class="cheat-item"><b>The walk-through</b><span>15 minutes, a peer playing hostile reviewer, any thread pullable: the string, the cell, the seed. Gaps found on day 5 are wins.</span></div>
+      <div class="cheat-item"><b>The point</b><span>Not "trust me" but "check for yourself." A stranger can walk the trail without you in the room - that is what defensible means.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 10 of 10 · learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b9-reviewing-others.html">← Previous: Reviewing others</a> &nbsp;·&nbsp; <a href="../index.html">Course home →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

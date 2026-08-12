@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 3 · The screening lab - learn ai academia with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-academia-with-phoebe</a> / Researcher session 3 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe · Researcher track · Session 3 of 10</div>
+    <h1>The screening lab: <span class="accent">recall you can defend</span></h1>
+    <p class="sub">Your literature review has two numbers nobody writes down: how much of the relevant evidence you actually found, and how much of what you included actually belongs. This session makes both visible. You will run a 40-record screen with your own hands, watch recall climb from 4 of 12 to 11 of 12 as five practices come on - and then press the tempting button, the one that lets AI screen everything unverified, and watch two relevant studies vanish with perfectly reasonable-sounding excuses.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Researcher track</span>
+      <span class="chip audience">PhD students · postdocs · anyone reviewing literature</span>
+      <span class="chip audience">Signature session</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-17 · Recall, precision, PRISMA</span>
+      <span class="a3" style="flex:5">17-41 · Build-along: climb the ladder, spring the trap</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this sits in the track</h2>
+    </div>
+    <p class="lede">b2 gave you the search toolbox - Semantic Scholar, OpenAlex, boolean strings, snowballing. This session is about what happens after the search returns 300 results: deciding what is in and what is out, at a standard a reviewer could audit. It is also the session where AI screening earns its honest place - which is real, useful, and smaller than the marketing says.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">▶ Live screening lab - toggle levers, watch real recall</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A screening workflow with written inclusion criteria, the two numbers that make your review defensible (recall against a known set, precision of what you included), a calibrated sense of what AI screening buys (time) and what it cannot buy (truth), and a PRISMA flow you can fill in honestly.
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="pipeline">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the standard</span>
+      <h2>The screening pipeline, and its two honest numbers <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Every serious evidence synthesis - and the PRISMA 2020 statement makes this explicit for systematic reviews - reports a flow: how many records were identified, how many survived deduplication, how many were screened, how many were included. That flow is not bureaucracy. It is the audit trail that lets someone else judge whether your review can be trusted. Two quantities hide inside it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The screening pipeline: identify, deduplicate, screen, include - with recall and precision defined beneath.">
+        <style>
+          .spT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .spH { font: 600 12.5px Inter, sans-serif; fill: #22252B; }
+          .spX { font: 400 11.5px Inter, sans-serif; fill: #6A7180; }
+          .spK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="30" width="180" height="66" rx="10" fill="#101C36"/>
+        <text class="spT" x="44" y="58">1 · Identify</text>
+        <text class="spX" x="44" y="80" fill="#A8B9D6">databases + snowballing</text>
+        <path d="M 208 63 L 232 63" stroke="#C9C9D6" stroke-width="2" marker-end="url(#spAr)"/>
+        <rect x="238" y="30" width="180" height="66" rx="10" fill="#1B2A4A"/>
+        <text class="spT" x="258" y="58">2 · Deduplicate</text>
+        <text class="spX" x="258" y="80" fill="#A8B9D6">one study, counted once</text>
+        <path d="M 422 63 L 446 63" stroke="#C9C9D6" stroke-width="2" marker-end="url(#spAr)"/>
+        <rect x="452" y="30" width="180" height="66" rx="10" fill="#3A5488"/>
+        <text class="spT" x="472" y="58">3 · Screen</text>
+        <text class="spX" x="472" y="80" fill="#EEF2F9">against written criteria</text>
+        <path d="M 636 63 L 660 63" stroke="#C9C9D6" stroke-width="2" marker-end="url(#spAr)"/>
+        <rect x="666" y="30" width="190" height="66" rx="10" fill="#A87B2F"/>
+        <text class="spT" x="686" y="58">4 · Include</text>
+        <text class="spX" x="686" y="80" fill="#F7EFDF">what your claims stand on</text>
+
+        <rect x="24" y="130" width="400" height="88" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="spH" x="44" y="156">Recall - did you find it?</text>
+        <text class="spX" x="44" y="176">Of the studies that genuinely answer your question,</text>
+        <text class="spX" x="44" y="192">how many made it into your included set? Misses here</text>
+        <text class="spX" x="44" y="208">bias your conclusion and you never see them.</text>
+        <rect x="452" y="130" width="404" height="88" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="spH" x="472" y="156">Precision - does it belong?</text>
+        <text class="spX" x="472" y="176">Of what you included, how much is actually evidence?</text>
+        <text class="spX" x="472" y="192">Opinion pieces, uncontrolled case studies and duplicate</text>
+        <text class="spX" x="472" y="208">preprints inflate your review from the inside.</text>
+
+        <rect x="24" y="248" width="832" height="58" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="spH" x="44" y="272">The asymmetry worth memorising</text>
+        <text class="spX" x="44" y="292">Low precision embarrasses you when a reviewer finds it. Low recall is worse: it changes your answer, silently.</text>
+
+        <rect x="24" y="326" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="spK" x="48" y="338">The lab below computes both numbers live from a 40-record corpus as you toggle practices on and off.</text>
+        <defs><marker id="spAr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#C9C9D6"/></marker></defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - the pipeline every review runs, and the two numbers hiding inside it</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why "I searched thoroughly" is not a number<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>In the lab you know the ground truth: exactly 12 of the 40 records genuinely answer the question. Real life never hands you that answer key - which is exactly why the practices matter. You cannot measure your real recall directly, so the discipline is to stack the moves that are known to raise it:</p>
+        <ul>
+          <li><strong>A structured search string</strong> with the field's synonyms. A naive keyword search finds only papers that share your vocabulary. In the lab, this single lever takes recall from 4/12 to 7/12.</li>
+          <li><strong>Citation snowballing</strong> - backward through reference lists, forward through citing papers. It is how you find the paper that says "successive relearning" when you searched "retrieval practice". Lab effect: 7/12 to 9/12.</li>
+          <li><strong>A known-set spot check.</strong> Before screening, write down 5 papers you already know must be in scope. If your search did not return all 5, your string is broken and you have learned it for free.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The vocabulary problem is not hypothetical.</strong> The same intervention appears in the literature as retrieval practice, the testing effect, practice testing, test-enhanced learning, low-stakes quizzing and successive relearning - six names, decades apart, different subfields. A reviewer who searched one term found one slice and honestly believed it was the field.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Written criteria: the unglamorous lever that beats the AI<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Inclusion criteria written down before screening - population, intervention, comparison, outcome - are what stop a Tuesday-you and a Friday-you disagreeing about the same abstract. In the lab they are worth two recovered studies AND all three ejected near-misses, the biggest combined jump on the board.</p>
+        <div class="prompt-box bad">
+          <span class="label">Criteria in your head</span>
+          <p>"Studies about retrieval practice in university courses" - so is a quasi-experiment in? A lab study with undergraduates but word lists instead of course content? Retention at one week? You will answer differently on different days, and never notice.</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">Criteria on paper (and in every AI prompt)</span>
+          <p>Include if ALL hold: (1) undergraduate students in a STEM course context; (2) retrieval practice vs a re-study or business-as-usual comparison; (3) an objective retention outcome measured at a delay; (4) experimental or quasi-experimental design with a comparison group. Exclude: K-12, lab-only word-list tasks, self-report outcomes, no comparison group, opinion or review without new data.</p>
+        </div>
+        <p>Notice the last line of the good version quietly handles four of the lab's traps. That is not luck - the traps are the standard failure modes, and written criteria are the standard defence.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What PRISMA 2020 actually asks of you<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>PRISMA 2020 is a 27-item reporting checklist plus the flow diagram, for systematic reviews. You are not required to run a full systematic review to borrow its spine - even a thesis literature review gets more defensible when you can state your sources, your search string, your criteria, and your counts at each stage. What PRISMA cannot do is make the judgement calls for you: it standardises the reporting of your screen, not the quality of it.</p>
+        <p>If you are doing the real thing: the statement and its explanation paper are open access at prisma-statement.org, and your discipline may have its own variant (PRISMA-ScR for scoping reviews). Register the protocol (PROSPERO for health, OSF elsewhere) before you screen, not after - b5 returns to why the "before" matters.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="ai-screening">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the AI question</span>
+      <h2>What AI screening buys, exactly <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Screening is the most automatable-looking task in research: thousands of abstracts, one yes/no each. Tools have earned real results here - ASReview's active-learning screener is open source with published validation studies, Elicit reports high agreement on structured extraction, and Covidence and Rayyan ship AI-assist features. The published evaluations share one condition: the workload savings hold when a human stays in the loop. The lab's trap button shows you why that condition is not negotiable.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Recall ladder: 4, 7, 9, 9, 11, 11 of 12 across the five practices, with the unverified-AI trap falling back to 9 of 12.">
+        <style>
+          .rlA { font: 600 11px Inter, sans-serif; fill: #6A7180; }
+          .rlS { font: 700 12px Inter, sans-serif; fill: #1B2A4A; }
+          .rlT { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+          .rlL { font: 600 11px Inter, sans-serif; fill: #22252B; }
+          .rlK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <line x1="80" y1="30" x2="80" y2="230" stroke="#C9CFD9" stroke-width="1.5"/>
+        <line x1="80" y1="230" x2="850" y2="230" stroke="#C9CFD9" stroke-width="1.5"/>
+        <text class="rlA" x="34" y="46">12/12</text>
+        <text class="rlA" x="46" y="234">0</text>
+
+        <!-- recall: 4 7 9 9 11 11 mapped y = 230 - v*16.6 -->
+        <polyline points="140,164 276,114 412,81 548,81 684,47 820,47" fill="none" stroke="#1B2A4A" stroke-width="3"/>
+        <circle cx="140" cy="164" r="5" fill="#1B2A4A"/><circle cx="276" cy="114" r="5" fill="#1B2A4A"/>
+        <circle cx="412" cy="81" r="5" fill="#1B2A4A"/><circle cx="548" cy="81" r="5" fill="#1B2A4A"/>
+        <circle cx="684" cy="47" r="5" fill="#1B2A4A"/><circle cx="820" cy="47" r="6" fill="#1B2A4A"/>
+        <text class="rlS" x="126" y="155">4/12</text><text class="rlS" x="262" y="105">7/12</text>
+        <text class="rlS" x="398" y="72">9/12</text><text class="rlS" x="534" y="105">9/12</text>
+        <text class="rlS" x="670" y="38">11/12</text><text class="rlS" x="806" y="38">11/12</text>
+
+        <!-- trap point -->
+        <circle cx="820" cy="81" r="6" fill="#991B1B"/>
+        <path d="M 820 53 L 820 73" stroke="#991B1B" stroke-width="2" stroke-dasharray="4 3"/>
+        <text class="rlT" x="770" y="100">trap: 9/12</text>
+
+        <text class="rlL" x="106" y="250">keyword only</text>
+        <text class="rlL" x="248" y="250">+ boolean</text>
+        <text class="rlL" x="384" y="250">+ snowball</text>
+        <text class="rlL" x="524" y="250">+ dedup</text>
+        <text class="rlL" x="660" y="250">+ criteria</text>
+        <text class="rlL" x="782" y="250">+ AI, verified</text>
+
+        <rect x="80" y="272" width="14" height="14" rx="3" fill="#1B2A4A"/>
+        <text class="rlK" x="104" y="284">Recall climbs on search practices and criteria. The verified-AI rung keeps 11/12 and cuts reading by two thirds.</text>
+        <rect x="80" y="302" width="14" height="14" rx="3" fill="#991B1B"/>
+        <text class="rlK" x="104" y="314">Skip the verification and recall falls back to 9/12 - silently, with plausible reasons attached.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the ladder the lab walks, including the rung that goes down</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The failure mode: plausibly wrong, invisibly wrong<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>When the trap button is on, the lab excludes two genuinely relevant studies with these reasons:</p>
+        <ul>
+          <li>"Excluded - retention interval unclear from abstract."</li>
+          <li>"Excluded - appears to concern assessment policy rather than a learning intervention."</li>
+        </ul>
+        <p>Read them again. Neither is stupid. Each is the kind of call a tired human screener might also make - which is exactly the problem. A wrong AI exclusion does not look wrong; it looks like a decision. You only catch it by checking, and if you never check, your review is missing evidence and reporting confidence.</p>
+        <p>The symmetric failure is quieter still: three records that are not evidence - an opinion piece, a narrative overview with no data, an uncontrolled vendor case study - come back marked include with confident reasons. Nothing crashes. The meters just get worse.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The verification protocol that keeps the savings<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The workable middle - and the shape behind tools like ASReview's active learning - is triage, not delegation:</p>
+        <ul>
+          <li><strong>Give the AI your written criteria verbatim.</strong> Its screen is only as good as the rules you hand it. No criteria, same wobble as you on a bad day - the lab demonstrates this if you turn AI on without the criteria lever.</li>
+          <li><strong>Ask for a confidence-ranked sort, not a verdict.</strong> Screen the "likely include" and "uncertain" bands yourself; spot-check a sample of the "likely exclude" band. Most of the reading you save was always in the confident-exclude tail.</li>
+          <li><strong>Log every AI exclusion with its reason.</strong> An auditable screen means someone can disagree with a specific decision, not with a black box.</li>
+          <li><strong>Dual-screen a calibration sample first.</strong> Run 50 records yourself and compare. If you and the tool disagree on more than a few, your criteria are ambiguous - fix the criteria, not the tool.</li>
+        </ul>
+        <p>If you are running a formal systematic review, check the journal's and Cochrane's current stance on automation in screening before you rely on it, and report the tool, version and protocol in your methods. Norms here are moving; your methods section is where honesty about that lives.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Climb the ladder <span class="tag demo">★ 12 min · everyone runs it</span></h2>
+    </div>
+    <p class="lede">Six steps, one practice at a time. At every step, say out loud what the recall meter will do before you click - being wrong here is the useful part.</p>
+
+    <div class="steps">
+      <div class="step"><p>Step 0: naive keyword search, no written criteria. 27 records, recall 4/12, precision 44%. Look inside the corpus table: a borderline quasi-experiment wobbled out, three near-misses wobbled in, and a preprint twin is being counted twice.</p></div>
+      <div class="step"><p>Step 1: add the boolean string. Recall 7/12 - three studies you were simply never seeing. Nothing about your screening got smarter; your net got wider.</p></div>
+      <div class="step"><p>Step 2: add snowballing. 9/12. The two new finds use vocabulary no search string guessed.</p></div>
+      <div class="step"><p>Step 3: dedup. Recall holds, precision jumps to 75% - the twins are gone. Cheap, mechanical, skipped surprisingly often.</p></div>
+      <div class="step"><p>Step 4: written criteria. 11/12 and precision 100%. The borderline studies come back, the near-misses leave. Paperwork beat the algorithm - remember this rung.</p></div>
+      <div class="step"><p>Step 5: AI screening with human verification. Same 11/12, same 100% - and hand-screened abstracts drop from 35 to 11. That is the honest offer: time, not truth.</p></div>
+    </div>
+
+    <div class="albox" data-mode="ladder"></div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Spring the trap <span class="tag demo">★ 10 min · explore</span></h2>
+    </div>
+    <p class="lede">Free play. Build the full stack, then press the red button and read the damage report. Then try the subtler experiments: AI verification WITHOUT written criteria (the wobble comes back - the AI is screening against rules that do not exist), or the trap with a weak search (the failures compound).</p>
+
+    <div class="albox" data-mode="lab" data-levers=""></div>
+
+    <div class="callout tip">
+      <strong>What is constructed and what is computed</strong>
+      The 40 records are constructed for this exercise - realistic-shaped titles around a real research question, not real citations, never to be cited. The meters are not scripted: recall, precision, the PRISMA counts and the workload figure are computed live from the record set and your lever state, every click. The real literature on retrieval practice is real and rich - start with Roediger &amp; Karpicke (2006), Dunlosky et al. (2013), and the Adesope et al. (2017) meta-analysis.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it on your own review - this week <span class="tag exercise">◐ 40-50 min total</span></h2>
+    </div>
+    <ul>
+      <li>Write inclusion criteria for your current project in the four-part form (population, intervention/exposure, comparison, outcome) plus explicit exclusions. If you cannot, that is a finding about your research question, not about your writing.</li>
+      <li>Run the known-set spot check: list 5 papers your review must include, run your actual search string, and count how many it returns. Fix the string until it finds all 5.</li>
+      <li>Take 20 abstracts you have already screened and re-screen them against your now-written criteria. Count the decisions that changed. That number is your personal wobble rate.</li>
+      <li>If you use an AI screening tool, run the calibration protocol from Part 2 on 50 records and write down the disagreement rate before trusting it with the rest.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session teaches the screening core of the evidence-synthesis tradition, with the AI question answered by published evaluations rather than vendor claims. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">PRISMA 2020 flow logic - identified, deduplicated, screened, included</span><span class="note">Part 1 · computed live in the lab's flow strip</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Recall and precision as the two defensibility numbers of a review</span><span class="note">Part 1 · the lab's meters</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Written inclusion criteria (PICO-style) and the known-set spot check</span><span class="note">Part 1 · homework applies both to your project</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Human-verified AI screening: triage protocol, calibration sample, logged exclusions</span><span class="note">Part 2 · the trap demo shows the unverified failure mode</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">ASReview, Elicit, Covidence, Rayyan - tool specifics and current features</span><span class="note">Named here · tool-by-tool detail lives in b2 and the course map</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Full systematic-review method (protocols, risk of bias, synthesis)</span><span class="note">Beyond scope by design - this course teaches the screening discipline, not the whole method</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · In the lab, which lever produces the biggest combined gain in recall AND precision?</p>
+      <button class="qopt" type="button">A · AI screening with verification - the model reads faster than you</button>
+      <button class="qopt" type="button">B · The boolean search string - it triples the reachable evidence</button>
+      <button class="qopt" type="button">C · Written inclusion criteria - borderline studies recovered, near-misses ejected</button>
+      <p class="qwhy">The boolean string is the biggest pure-recall jump (4 to 7), but written criteria move both meters at once: recall 9 to 11 and precision to 100%. The AI rung changes neither number - it cuts the reading. The unglamorous paperwork lever is the strongest one on the board, which is the session's quiet thesis.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Why is the unverified-AI failure mode specifically dangerous, compared with a crash or an error message?</p>
+      <button class="qopt" type="button">A · The wrong calls come with plausible reasons, so there is nothing visibly broken to notice</button>
+      <button class="qopt" type="button">B · It is slower than human screening in practice</button>
+      <button class="qopt" type="button">C · It only fails on papers published before the tool's training cutoff</button>
+      <p class="qwhy">"Excluded - retention interval unclear from abstract" reads like a decision, not a malfunction. Wrong exclusions look identical to right ones unless someone checks, and the studies they remove are precisely the evidence you never knew existed. That is why every published evaluation showing real savings keeps a human verifying the boundary.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · The best stack in the lab tops out at 11 of 12. What does the missing study teach?</p>
+      <button class="qopt" type="button">A · The corpus has an error - a perfect screen finds everything</button>
+      <button class="qopt" type="button">B · Search cannot find what is not indexed - grey literature needs registries and expert contact, and an honest review reports the limit</button>
+      <button class="qopt" type="button">C · You should keep adding databases until recall reaches 12 of 12</button>
+      <p class="qwhy">The twelfth study lives in an unindexed conference proceeding. No search lever reaches it, because searching only covers what is indexed. The real-world equivalents are trial registries, theses, preprints outside your databases, and asking people in the field. The defensible move is not pretending to completeness - it is stating the coverage limit in your methods.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The two numbers</b><span>Recall: of what is relevant, how much did you find? Precision: of what you included, how much belongs? Low recall changes your answer silently.</span></div>
+      <div class="cheat-item"><b>The ladder</b><span>Keyword 4/12 → boolean 7/12 → snowball 9/12 → dedup (precision 75%) → criteria 11/12 + 100% → AI-verified: same numbers, one third of the reading.</span></div>
+      <div class="cheat-item"><b>Criteria beat the AI</b><span>Written PICO rules are the strongest lever on the board - and the AI is only as good as the criteria you hand it verbatim.</span></div>
+      <div class="cheat-item"><b>Known-set spot check</b><span>List 5 must-find papers before screening. If your search misses any, fix the string - you just measured recall for free.</span></div>
+      <div class="cheat-item"><b>AI screening protocol</b><span>Criteria in the prompt · confidence-ranked triage, not verdicts · verify the boundary band · log every exclusion with its reason · calibrate on 50 records first.</span></div>
+      <div class="cheat-item"><b>The trap's signature</b><span>Wrong calls with reasonable-sounding reasons. Nothing crashes; the meters just get worse. Checking is the only detector.</span></div>
+      <div class="cheat-item"><b>The honest ceiling</b><span>11/12 - the unindexed study exists in every real review. Grey literature, registries, expert contact, and a stated limit in your methods.</span></div>
+      <div class="cheat-item"><b>PRISMA flow</b><span>Identified → deduplicated → screened → included. Report the counts even outside formal systematic reviews - it is your audit trail.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 3 of 10 · learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b2-search-and-discovery.html">← Previous: Search and discovery</a> &nbsp;·&nbsp; <a href="b4-extraction-and-synthesis.html">Next: Extraction and synthesis →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/acad-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

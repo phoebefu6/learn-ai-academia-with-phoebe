@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 2 · Search and discovery - learn ai academia with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-academia-with-phoebe</a> / Researcher session 2 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe · Researcher track · Session 2 of 10</div>
+    <h1>Search and discovery: <span class="accent">finding what six names are hiding</span></h1>
+    <p class="sub">The literature you need exists; the question is whether your search can see it. This session builds your search stack from tools that cost nothing, teaches the boolean craft that survives the field's vocabulary chaos, and puts the shiny deep-research buttons in their honest place: a fast first map, never a screen, never a review. You leave with a search string tested against papers you already know must be found - which is the closest thing to measuring your own recall for free.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Researcher track</span>
+      <span class="chip audience">PhD students · postdocs · anyone entering a literature</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-20 · The stack + the craft</span>
+      <span class="a3" style="flex:5">20-41 · Build-along: your string, your map</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this sits in the track</h2>
+    </div>
+    <p class="lede">b1 gave you the ground rules and the policy check. Now the cycle starts for real: before you can screen (b3) or extract (b4), you have to find the evidence - and finding is a craft with tools, not a vibe with a search box. Everything in this session runs on free tiers, and every tool claim below traces to vendor documentation catalogued in the course map.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A working search stack (baseline, structured search with an API, graph discovery), a boolean string for YOUR research question built from harvested synonyms and validated against a known set of must-find papers, a snowballing discipline with a log, and a calibrated rule for deep-research agents: leads, never evidence.
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="stack">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the stack</span>
+      <h2>The search stack that is actually free <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Three jobs, three shelves. A baseline engine for quick coverage checks, structured search with an API for strings you can log and rerun, and graph tools that walk outward from a paper instead of a keyword. None of it costs money to start - and each shelf covers a failure mode of the others.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The free search stack by job: Google Scholar as baseline, Semantic Scholar and OpenAlex for structured search, Connected Papers, ResearchRabbit and Litmaps for graph discovery.">
+        <style>
+          .stT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .stH { font: 600 12px Inter, sans-serif; fill: #22252B; }
+          .stX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .stK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="170" height="56" rx="10" fill="#101C36"/>
+        <text class="stT" x="40" y="47">Baseline</text>
+        <text class="stX" x="40" y="66" fill="#A8B9D6">everyone's reflex</text>
+        <rect x="208" y="24" width="190" height="56" rx="10" fill="#FFFFFF" stroke="#C9CFD9" stroke-width="1.5"/>
+        <text class="stH" x="224" y="47">Google Scholar</text>
+        <text class="stX" x="224" y="66">broad, free, opaque</text>
+        <rect x="412" y="24" width="444" height="56" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="stX" x="428" y="47">Quick coverage check and citation counts - no API,</text>
+        <text class="stX" x="428" y="64">no exportable search logic. Start here, never end here.</text>
+
+        <rect x="24" y="96" width="170" height="56" rx="10" fill="#1B2A4A"/>
+        <text class="stT" x="40" y="119">Structured search</text>
+        <text class="stX" x="40" y="138" fill="#A8B9D6">strings + APIs</text>
+        <rect x="208" y="96" width="190" height="56" rx="10" fill="#FFFFFF" stroke="#C9CFD9" stroke-width="1.5"/>
+        <text class="stH" x="224" y="119">Semantic Scholar</text>
+        <text class="stX" x="224" y="138">Ai2 non-profit, free API</text>
+        <rect x="412" y="96" width="180" height="56" rx="10" fill="#FFFFFF" stroke="#C9CFD9" stroke-width="1.5"/>
+        <text class="stH" x="428" y="119">OpenAlex</text>
+        <text class="stX" x="428" y="138">fully open, CC0 data</text>
+        <rect x="606" y="96" width="250" height="56" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="stX" x="622" y="116">200M+ papers on Semantic</text>
+        <text class="stX" x="622" y="131">Scholar; OpenAlex is the</text>
+        <text class="stX" x="622" y="146">plumbing under many tools.</text>
+
+        <rect x="24" y="168" width="170" height="56" rx="10" fill="#3A5488"/>
+        <text class="stT" x="40" y="191">Graph discovery</text>
+        <text class="stX" x="40" y="210" fill="#EEF2F9">start from a paper</text>
+        <rect x="208" y="168" width="190" height="56" rx="10" fill="#FFFFFF" stroke="#C9CFD9" stroke-width="1.5"/>
+        <text class="stH" x="224" y="191">Connected Papers</text>
+        <text class="stX" x="224" y="210">similarity map, one seed</text>
+        <rect x="412" y="168" width="200" height="56" rx="10" fill="#FFFFFF" stroke="#C9CFD9" stroke-width="1.5"/>
+        <text class="stH" x="428" y="191">ResearchRabbit</text>
+        <text class="stX" x="428" y="210">free-forever tier</text>
+        <rect x="626" y="168" width="230" height="56" rx="10" fill="#FFFFFF" stroke="#C9CFD9" stroke-width="1.5"/>
+        <text class="stH" x="642" y="191">Litmaps</text>
+        <text class="stX" x="642" y="210">free: 20 inputs, 2 maps</text>
+
+        <rect x="24" y="244" width="832" height="72" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="stH" x="44" y="268">One moving part to verify before you build on it</text>
+        <text class="stX" x="44" y="288">OpenAlex introduced usage-based API pricing for heavy traffic in Feb 2026. A free allowance remains for</text>
+        <text class="stX" x="44" y="304">normal research use - verify the current terms on the live page before wiring it into a pipeline.</text>
+
+        <rect x="24" y="340" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="stK" x="48" y="352">Free covers the whole job: a baseline sweep, structured strings with an API, and a map to walk outward from.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the three-shelf stack, and each shelf covers the others' blind spots</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Three engines, three failure modes<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <tr><th>Tool</th><th>What it verifiably is</th><th>What it will not do for you</th></tr>
+          <tr><td>Google Scholar</td><td>The broadest familiar baseline - fast coverage checks, citation counts</td><td>No API, ranking you cannot inspect, searches you cannot log or rerun exactly</td></tr>
+          <tr><td>Semantic Scholar</td><td>Free academic search from the non-profit Ai2, 200M+ papers, free API</td><td>Coverage varies by field - pair it, never marry it</td></tr>
+          <tr><td>OpenAlex</td><td>Fully open scholarly index, CC0 data - the plumbing under many other tools</td><td>It is infrastructure, not an interface: strongest through its API and the tools built on it</td></tr>
+        </table>
+        <p>The working pattern: draft and test your string where you can log it (Semantic Scholar, OpenAlex, your field's own database), then use Google Scholar as the cross-check that nothing obvious is missing. A search you cannot rerun is a search you cannot defend in a methods section.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Graph discovery: three map tools, one idea<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Keyword search finds papers that share your vocabulary. Graph tools find papers that share your papers - through citations and similarity, which is exactly where the vocabulary problem cannot hide.</p>
+        <ul>
+          <li><strong>Connected Papers</strong> builds a similarity graph from a single seed paper - one screen showing the neighbourhood, its clusters, its prior and derivative works.</li>
+          <li><strong>ResearchRabbit</strong> keeps a free-forever tier and works from collections rather than single seeds; it was acquired by Litmaps in 2025, so watch how the tiers evolve.</li>
+          <li><strong>Litmaps</strong> free tier gives you 20 inputs and 2 maps - enough to test whether the mapping workflow earns a place in your routine before any money moves.</li>
+        </ul>
+        <p>All three sit on open citation data of the kind OpenAlex publishes. They are discovery aids, not coverage guarantees: what is not indexed is not on the map, a limit b3 turns into its honest-ceiling lesson.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the API matters even if you never write code<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A free API means your search is reproducible in principle: the same query, rerun next month, with the differences inspectable. Even if you personally stay in the web interface, choosing tools with open data and APIs means your review can graduate later - to scripted searches, to a PRISMA-grade audit trail, to handing a collaborator the exact query instead of a description of it. Closed ranking is fine for a first look; it is a poor foundation for a claim about what the literature says.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="craft">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the craft</span>
+      <h2>Boolean craft, synonym harvesting, and the snowball <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">The single biggest silent failure in literature search is vocabulary: the same intervention can carry six names across subfields and decades. A reviewer who searches one term finds one slice and honestly believes it is the field. The craft below is how you beat that without any AI at all - and it is what makes the AI tools safe to add later.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Snowballing directions: backward through the seed paper's reference list, forward through the papers citing it since.">
+        <style>
+          .swT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .swH { font: 600 12px Inter, sans-serif; fill: #22252B; }
+          .swX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .swK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="20" width="832" height="64" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="swH" x="44" y="44">Why one search string is never enough</text>
+        <text class="swX" x="44" y="62">The same intervention hides under six names across subfields; a string only finds papers that share its vocabulary.</text>
+
+        <rect x="24" y="116" width="250" height="64" rx="10" fill="#1B2A4A"/>
+        <text class="swT" x="40" y="142">Backward snowball</text>
+        <text class="swX" x="40" y="161" fill="#A8B9D6">its reference list - older roots</text>
+        <rect x="340" y="116" width="200" height="64" rx="10" fill="#A87B2F"/>
+        <text class="swT" x="356" y="142">Your seed paper</text>
+        <text class="swX" x="356" y="161" fill="#F7EFDF">one you trust, in scope</text>
+        <rect x="606" y="116" width="250" height="64" rx="10" fill="#101C36"/>
+        <text class="swT" x="622" y="142">Forward snowball</text>
+        <text class="swX" x="622" y="161" fill="#A8B9D6">papers citing it since - newer</text>
+        <path d="M 336 148 L 282 148" stroke="#C9C9D6" stroke-width="2" marker-end="url(#swAr)"/>
+        <path d="M 544 148 L 598 148" stroke="#C9C9D6" stroke-width="2" marker-end="url(#swAr)"/>
+
+        <rect x="24" y="212" width="832" height="64" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="swH" x="44" y="236">The discipline part</text>
+        <text class="swX" x="44" y="254">Chase in passes, log every paper you follow and why - a snowball you cannot retrace is a vibe, not a method.</text>
+
+        <rect x="24" y="296" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="swK" x="48" y="308">Backward finds the roots your string missed; forward finds what was built on them under newer names.</text>
+        <defs><marker id="swAr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#C9C9D6"/></marker></defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - two directions from one trusted seed, both logged</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Synonym harvesting: mine the papers, not your imagination<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Do not invent your synonym list at a blank page. Take the first three genuinely relevant papers you have and mine them: the author keywords, the title phrasing, the terms in the abstract that are not yours. Each subfield's dialect is written down in its own papers - harvesting beats brainstorming every time.</p>
+        <div class="prompt-box bad">
+          <span class="label">The naive string</span>
+          <p>retrieval practice university</p>
+        </div>
+        <div class="prompt-box good">
+          <span class="label">The harvested string</span>
+          <p>("retrieval practice" OR "testing effect" OR "practice testing" OR "test-enhanced learning" OR "low-stakes quizzing" OR "successive relearning") AND (undergraduate OR university OR "higher education") AND (retention OR "long-term learning")</p>
+        </div>
+        <p>Two craft notes. First, group synonyms with OR inside parentheses, then connect the concept groups with AND - one group per concept, never one giant soup. Second, most databases let you scope a term to title and abstract fields rather than full text; the field-code syntax differs per database, so check its help page rather than guessing. Scoping cuts noise dramatically once your synonym groups are wide.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The known-set spot check: recall measured for free<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Before you trust any string, write down 5 papers you already know MUST be in scope - from your supervisor, from a course, from your own reading. Run the string. Count how many of the 5 come back.</p>
+        <ul>
+          <li><strong>5 of 5:</strong> the string passes its smoke test. It may still miss unknowns, but it is not broken on the knowns.</li>
+          <li><strong>Fewer:</strong> open each missed paper and find out why - almost always a vocabulary gap. Add the missing synonym group and rerun until all 5 return.</li>
+        </ul>
+        <p>This is the cheapest measurement in all of research methodology: a recall check that costs ten minutes and requires no ground truth beyond what is already in your head. b3's screening lab turns this exact move into one of its levers.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Snowballing as a discipline, not a vibe<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Everyone snowballs casually - you read a paper, you chase a citation. The disciplined version differs in three ways:</p>
+        <ul>
+          <li><strong>Both directions, deliberately.</strong> Backward through the reference list finds the roots; forward through citing papers (Semantic Scholar and the graph tools both show these) finds what was built afterwards, often under newer vocabulary your string never contained.</li>
+          <li><strong>In passes, not wanders.</strong> Snowball from your included set, add what qualifies, then snowball the additions. Stop when a pass adds nothing new - that saturation point is a reportable fact about your search.</li>
+          <li><strong>Logged.</strong> Every chased paper gets a line: found via which seed, which direction, kept or dropped and why. The log is what turns "I followed some citations" into a method a reviewer can audit.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="section" id="agents">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the shiny buttons</span>
+      <h2>Deep-research agents, in their honest place <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">OpenAI's Deep Research, Gemini Deep Research and Claude's Research mode will plan a multi-step search, browse, and hand you a long cited report on your topic. Used honestly, that is genuinely useful. Used as a substitute for Parts 1 and 2, it is how reviews quietly go wrong.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Leads, not evidence - the rule and the reason<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Quotas are real and volatile.</strong> These modes are rationed on every plan tier and the allowances change often - check your plan's current numbers rather than remembering old ones.</li>
+          <li><strong>No published audit measures their citation accuracy in academic domains.</strong> That absence is itself the finding: nobody can currently tell you how often these reports cite wrongly. The nearest rigorous evidence is Magesh et al. (2025), a preregistered audit of retrieval-grounded legal AI tools, which found 17-33% hallucination even WITH retrieval grounding. Treat every citation in a generated report as a lead until you have resolved it to a DOI and read it.</li>
+          <li><strong>Right job: a fast first map of unfamiliar territory.</strong> New field, new method, a literature you have never touched - a deep-research run gives you names, terms and candidate seed papers in minutes. Those terms feed your synonym harvest; those seeds feed your snowball. The report itself feeds nothing downstream.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The one-line rule</strong>
+          A deep-research report may hand you the seed papers and the vocabulary. It is never a screen, never an extraction, and never a literature review - those need the audit trail this track builds in b3 and b4.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Semantic search engines: what we can and cannot tell you<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Tools like Consensus and Perplexity offer semantic search over research - ask a question in plain language, get papers and synthesized answers. Honesty requires a flag here: their current corpus composition and pricing specifics are unverified in this course's source map, so this page will not state numbers for them - check the live pages. The usage rule is the same as for the agent modes regardless: whatever surfaces is a lead to resolve and read, never a fact to cite from the summary.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>Build the search string for YOUR question <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Not a toy exercise: this string is the one your actual review will run on. Bring your real research question and your three most relevant papers.</p>
+
+    <div class="steps">
+      <div class="step"><p>Write your question as concepts: population, intervention or exposure, outcome. One line each. These become your AND groups.</p></div>
+      <div class="step"><p>Harvest synonyms: open your three most relevant papers and copy every keyword, title phrase and abstract term that names your concepts differently. Aim for at least three synonyms per concept before you stop.</p></div>
+      <div class="step"><p>Assemble the boolean: OR within each concept group, AND between groups. Scope to title and abstract if your database supports field codes - check its help page for the syntax.</p></div>
+      <div class="step"><p>Run the known-set spot check: list 5 papers that must be in scope, run the string on Semantic Scholar or your field's database, count the returns.</p></div>
+      <div class="step"><p>Fix until 5 of 5: for each miss, open the paper, find the vocabulary gap, widen the right group, rerun. Save the final string AND the date - it goes in your methods section.</p></div>
+    </div>
+
+    <div class="prompt-box good">
+      <span class="label">★ Try it now - AI as synonym harvester, with the safety rail</span>
+      <p>Here are the titles, keywords and abstracts of three papers central to my review: [paste]. List every distinct term these papers use for (1) the intervention, (2) the population, (3) the outcome. Only list terms that literally appear in the text I pasted - do not add terms from your own knowledge. I will widen the net myself from other papers.</p>
+    </div>
+    <div class="callout tip">
+      <strong>Why the "only from the text" rail</strong>
+      Restricted to text you supplied, the model is doing extraction - a task you can check in seconds. Unrestricted, it will helpfully invent plausible synonyms, and a plausible-but-unused term costs you nothing while a hallucinated-but-adopted concept can skew a whole search. Same tool, different risk, one sentence apart.
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>Walk the graph from your own papers <span class="tag demo">★ 9 min · explore</span></h2>
+    </div>
+    <p class="lede">Keyword search is done; now the map. You will seed a graph tool with papers you already trust and see what the citation network knows that your vocabulary did not.</p>
+
+    <div class="steps">
+      <div class="step"><p>Seed ResearchRabbit (free-forever tier) or Connected Papers with your 3 favourite papers - the ones any review of your topic must cite.</p></div>
+      <div class="step"><p>Read the map before clicking anything: which clusters do you recognise? Which cluster have you never heard of? That unknown cluster is the map earning its keep.</p></div>
+      <div class="step"><p>Write down every surfaced paper you did not know that looks in scope - title and one line on why. This list is tomorrow's reading, not today's.</p></div>
+      <div class="step"><p>Chase one backward snowball: open the reference list of your best seed and pull one older paper your string never found.</p></div>
+      <div class="step"><p>Chase one forward snowball: open the citing papers of the same seed and pull one newer paper - check what vocabulary it uses. If it names your topic differently, that term goes back into Demo 1's string.</p></div>
+    </div>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The forward snowball is where fields change their clothes.</strong> The b3 lab's corpus is built on a real case: an intervention that appears as retrieval practice, the testing effect, practice testing, test-enhanced learning, low-stakes quizzing and successive relearning - six names, decades apart, different subfields. No single string catches all six on the first try. The citation graph does not care what anyone calls it - which is exactly why the stack has a graph shelf.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 35-45 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the string if Demo 1 ran out of time: harvest from two more papers, rerun the known-set spot check, and store the final string with its date in your project notes.</li>
+      <li>Run one full snowball pass from your included seeds - backward and forward - with a log line per chased paper. Note where the pass stopped adding new papers.</li>
+      <li>If your topic borders unfamiliar territory, run ONE deep-research query on the unfamiliar part. Highlight every citation in the report, resolve each to a DOI, and keep a tally of how many resolve cleanly. That tally is your personal calibration for these tools.</li>
+      <li>Compare your string's results between Semantic Scholar and Google Scholar. Anything major that only one of them finds tells you about your field's indexing - worth one line in your search log.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Every tool claim on this page traces to vendor documentation or a peer-reviewed evaluation catalogued in this course's source map. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Semantic Scholar (Ai2, 200M+ papers, free API) and OpenAlex (CC0 open index)</span><span class="note">Part 1 · vendor documentation; OpenAlex API terms re-verified before delivery</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Connected Papers, ResearchRabbit (free-forever tier; Litmaps acquisition 2025), Litmaps free tier</span><span class="note">Part 1 · pricing pages as of course writing</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Boolean craft, synonym harvesting, known-set spot check, snowballing discipline</span><span class="note">Part 2 + demos · the method core, applied to your own question</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Magesh et al. (2025) - 17-33% hallucination in retrieval-grounded legal AI tools</span><span class="note">Part 3 · the nearest rigorous evidence on grounded-tool citation reliability</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Deep-research mode quotas (OpenAI, Gemini, Claude) - rationed and volatile</span><span class="note">Stated without numbers by design · check your plan's live page</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Consensus and Perplexity corpus/pricing specifics</span><span class="note">Unverified in the course map · flagged on this page, not asserted</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Why does a careful, well-spelled keyword search still miss whole slices of a literature?</p>
+      <button class="qopt" type="button">A · Because most databases only index recent papers</button>
+      <button class="qopt" type="button">B · Because the same intervention carries different names across subfields and decades, and a string only finds papers that share its vocabulary</button>
+      <button class="qopt" type="button">C · Because keyword search engines cap the number of results they return</button>
+      <p class="qwhy">The vocabulary problem is the field's oldest silent failure: one intervention, six names, and each name marks a subfield you either found or did not. The countermeasures are all in this session - harvest synonyms from real papers, OR them into concept groups, and let the citation graph find what no vocabulary guess could.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · What does the known-set spot check actually measure?</p>
+      <button class="qopt" type="button">A · The precision of your search - how much noise it returns</button>
+      <button class="qopt" type="button">B · Whether your five favourite papers are highly cited</button>
+      <button class="qopt" type="button">C · A free lower-bound check on recall: if the string cannot find five papers you know are in scope, it is broken on the knowns and untrustworthy on the unknowns</button>
+      <p class="qwhy">You can never measure true recall - the relevant papers you missed are, by definition, invisible to you. But five must-find papers give you a smoke test that costs ten minutes: each miss points at a specific vocabulary gap to fix. It is the single highest-value habit in this session, and b3's lab makes it a lever.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · What is the honest role of a deep-research agent report in your review?</p>
+      <button class="qopt" type="button">A · A fast first map of unfamiliar territory - its terms feed your synonym harvest and its citations are leads to resolve, never evidence to cite</button>
+      <button class="qopt" type="button">B · A first-pass screen you verify later, like AI screening in b3</button>
+      <button class="qopt" type="button">C · A citable review, provided you disclose the tool in your methods</button>
+      <p class="qwhy">No published audit measures these modes' citation accuracy in academic domains - and the nearest rigorous evidence, Magesh et al. (2025) on retrieval-grounded legal tools, found 17-33% hallucination even with grounding. A screen has an audit trail; a report has vibes. Take the vocabulary and the seed papers, resolve everything else to DOIs, and build the review with b3-b4's discipline.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The free stack</b><span>Google Scholar for the baseline sweep · Semantic Scholar (Ai2, 200M+, free API) + OpenAlex (CC0) for structured search · graph tools for discovery.</span></div>
+      <div class="cheat-item"><b>The vocabulary problem</b><span>Same intervention, six names across subfields. Your string only finds papers that share its vocabulary - so widen it from evidence, not imagination.</span></div>
+      <div class="cheat-item"><b>Synonym harvesting</b><span>Mine keywords, titles and abstracts of your first relevant papers. AI may extract terms from text you supply - never from its own memory.</span></div>
+      <div class="cheat-item"><b>Boolean skeleton</b><span>OR within a concept group, AND between groups, field-scoped to title/abstract where the database allows. Log the string and the date.</span></div>
+      <div class="cheat-item"><b>Known-set spot check</b><span>Five must-find papers before you trust any string. Each miss is a vocabulary gap with a fix. Free recall measurement, ten minutes.</span></div>
+      <div class="cheat-item"><b>Snowball discipline</b><span>Backward (references) and forward (citing papers), in passes, every chase logged with its reason. Stop at saturation and report it.</span></div>
+      <div class="cheat-item"><b>Graph tools</b><span>Connected Papers: similarity map from one seed. ResearchRabbit: free forever, collections. Litmaps: free = 20 inputs, 2 maps. Maps ≠ coverage.</span></div>
+      <div class="cheat-item"><b>Deep-research rule</b><span>A fast first map of unfamiliar ground. Citations are leads to resolve to DOIs - never a screen, never a review. No academic accuracy audit exists.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 2 of 10 · learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b1-setup-and-ground-rules.html">← Previous: Setup and ground rules</a> &nbsp;·&nbsp; <a href="b3-screening-lab.html">Next: The screening lab →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

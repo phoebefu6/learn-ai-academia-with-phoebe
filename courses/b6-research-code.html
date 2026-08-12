@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Researcher session 6 · Research code that survives review - learn ai academia with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-academia-with-phoebe</a> / Researcher session 6 of 10</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Academia with Phoebe · Researcher track · Session 6 of 10</div>
+    <h1>Research code that survives review: <span class="accent">tests as the contract</span></h1>
+    <p class="sub">Industry code that is wrong gets a bug report; research code that is wrong gets published. Your analysis script runs once, by you, and its output becomes a claim with your name on it - which is why "it ran without errors" was never the bar. This session sets the real bar (the one JOSS reviewers, artifact evaluators and the NeurIPS checklist actually apply), then shows the one workflow that makes AI-assisted coding safe for science: you write the test that encodes the truth, the model writes the code, and the test - not your optimism - decides.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Researcher track</span>
+      <span class="chip audience">PhD students · postdocs · anyone whose results come from code</span>
+      <span class="chip audience">Hands-on</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Where we are</span>
+      <span class="a2" style="flex:4">3-19 · The bar, the workflow, the audit</span>
+      <span class="a3" style="flex:5">19-41 · Build-along: pytest on your pipeline</span>
+      <span class="a4" style="flex:1">41-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where this sits in the track</h2>
+    </div>
+    <p class="lede">b5 ended with a preregistered plan. The next thing that plan meets is code - the scripts that clean, transform and analyse your data. AI assistants are genuinely excellent at writing this code, which is exactly why this session exists: the faster code appears, the more the checking discipline matters, and the checking discipline has a name. It is called a test suite.</p>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill inkpill">Official sources covered</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      A known-answer pytest wrapped around one real function from YOUR analysis pipeline, the test-first workflow that lets AI draft code without you inheriting its mistakes, a mini reproducibility package (pinned environment, seed, one-command README) a colleague can actually run, and the audit ritual for the gap no tool closes: code that silently disagrees with your methods section.
+    </div>
+  </section>
+
+  <!-- ============ PART 1 ============ -->
+  <section class="section" id="the-bar">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · the bar</span>
+      <h2>Why research code is different, and what reviewers now check <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">Research code has a brutal property: it typically runs once, on one dataset, operated by its author - and its correctness IS the result. There is no user base to find the off-by-one for you. The venues have noticed, and the expectations are no longer informal.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="What reviewers check: JOSS requires automated tests, ACM badges artifacts, NeurIPS requires seeds and error bars, journals require data and code availability.">
+        <style>
+          .rvT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .rvH { font: 600 12.5px Inter, sans-serif; fill: #22252B; }
+          .rvX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .rvK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="24" width="196" height="82" rx="10" fill="#101C36"/>
+        <text class="rvT" x="40" y="49">JOSS</text>
+        <text class="rvX" x="40" y="68" fill="#A8B9D6">objective verification:</text>
+        <text class="rvX" x="40" y="84" fill="#A8B9D6">tests + CI rate "Good",</text>
+        <text class="rvX" x="40" y="100" fill="#A8B9D6">none = not acceptable</text>
+        <rect x="234" y="24" width="196" height="82" rx="10" fill="#1B2A4A"/>
+        <text class="rvT" x="250" y="49">ACM artifact badges</text>
+        <text class="rvX" x="250" y="68" fill="#A8B9D6">Available · Functional ·</text>
+        <text class="rvX" x="250" y="84" fill="#A8B9D6">Results Reproduced -</text>
+        <text class="rvX" x="250" y="100" fill="#A8B9D6">stamped on the paper</text>
+        <rect x="444" y="24" width="196" height="82" rx="10" fill="#3A5488"/>
+        <text class="rvT" x="460" y="49">NeurIPS checklist</text>
+        <text class="rvX" x="460" y="68" fill="#EEF2F9">seeds, error bars, and</text>
+        <text class="rvX" x="460" y="84" fill="#EEF2F9">the information needed</text>
+        <text class="rvX" x="460" y="100" fill="#EEF2F9">to reproduce results</text>
+        <rect x="654" y="24" width="202" height="82" rx="10" fill="#3A5488"/>
+        <text class="rvT" x="670" y="49">Journal policies</text>
+        <text class="rvX" x="670" y="68" fill="#EEF2F9">data + code availability</text>
+        <text class="rvX" x="670" y="84" fill="#EEF2F9">statements - PLOS is a</text>
+        <text class="rvX" x="670" y="100" fill="#EEF2F9">clear worked example</text>
+
+        <rect x="24" y="130" width="832" height="56" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="rvH" x="44" y="154">The shared demand</text>
+        <text class="rvX" x="44" y="173">Someone who is not you must be able to verify your computational result without you in the room.</text>
+
+        <rect x="24" y="210" width="832" height="76" rx="10" fill="#F7EFDF" stroke="#A87B2F" stroke-width="1.5"/>
+        <text class="rvH" x="44" y="234">Why "it ran" was never the bar</text>
+        <text class="rvX" x="44" y="253">Code that crashes is the good case - you notice. Code that runs and returns a subtly wrong number looks</text>
+        <text class="rvX" x="44" y="270">exactly like a finding. Only a test with a known answer can tell those two apart, and only before you publish.</text>
+
+        <rect x="24" y="320" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="rvK" x="48" y="332">Verify each venue's current criteria before submitting - these bars are real, published, and moving.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - four venues, one shared demand: verifiable computation, not trusted computation</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The four bars, in the venues' own terms<span class="mini">5 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>JOSS (Journal of Open Source Software)</strong> requires an objective way to verify that the software works: its review criteria rate an automated test suite plus continuous integration as "Good", documented manual steps as merely OK, and no verification procedure as not acceptable. A reviewer literally cannot pass your submission without it.</li>
+          <li><strong>ACM artifact badging</strong> stamps papers with badges: Artifacts Available (archived and findable), Artifacts Evaluated - Functional (they run and do what is documented), and Results Reproduced (an independent party regenerated your numbers). The badge names are the reproducibility ladder in miniature.</li>
+          <li><strong>The NeurIPS paper checklist</strong> asks authors point blank about random seeds, error bars, and whether the paper provides the information needed to reproduce the main results. Answering "no" in public is its own deterrent.</li>
+          <li><strong>Journal data and code availability policies</strong> - PLOS is a clear example - require statements about where data and code live. The direction of travel across publishers is one way: toward more required sharing, not less. Verify the current version of your target journal's policy before you submit.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The once-run trap, spelled out<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Industrial code fails loudly and repeatedly in front of thousands of users, so bugs surface. Research code fails once, quietly, in front of the one person with the strongest incentive to believe the output. Three consequences worth internalising:</p>
+        <ul>
+          <li><strong>Your most dangerous bug produces a plausible number.</strong> A sign flip, a dropped group in a merge, a filter applied twice - each yields output that looks like a result and reads like a finding.</li>
+          <li><strong>Review will not catch it.</strong> Manuscript reviewers see your prose and figures, not your join logic. The venue mechanisms in the figure above exist precisely because prose review cannot see code.</li>
+          <li><strong>You are the QA department.</strong> Which is not a burden so much as a role clarification - and the whole point of Part 2 is that the role is cheap to perform if you encode what you know into tests.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 2 ============ -->
+  <section class="section" id="test-first">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the workflow</span>
+      <h2>AI-assisted coding with tests as the contract <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">There is now peer-reviewed guidance for exactly this: "Twelve quick tips for AI-assisted coding in science" (PLOS Computational Biology, 2026). Its spine matches this session's: prepare the problem before prompting, manage what context the model sees, test and validate everything, and accept that you become the reader and reviewer of code you did not type - while keeping full responsibility for it. The workflow below is that guidance made mechanical.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Test-first loop: write the known-answer test, let AI draft the implementation, the test judges - pass commits with pinned seed and environment, fail loops back to the draft.">
+        <style>
+          .tfT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .tfH { font: 600 12.5px Inter, sans-serif; fill: #22252B; }
+          .tfX { font: 400 11px Inter, sans-serif; fill: #6A7180; }
+          .tfK { font: 600 13px Inter, sans-serif; fill: #3A2A08; }
+        </style>
+        <rect x="24" y="40" width="240" height="76" rx="10" fill="#101C36"/>
+        <text class="tfT" x="40" y="66">1 · You write the test</text>
+        <text class="tfX" x="40" y="85" fill="#A8B9D6">a known-answer case: this</text>
+        <text class="tfX" x="40" y="101" fill="#A8B9D6">input MUST yield this output</text>
+        <path d="M 268 78 L 302 78" stroke="#C9C9D6" stroke-width="2" marker-end="url(#tfAr)"/>
+        <rect x="308" y="40" width="240" height="76" rx="10" fill="#1B2A4A"/>
+        <text class="tfT" x="324" y="66">2 · AI drafts the code</text>
+        <text class="tfX" x="324" y="85" fill="#A8B9D6">implementation, refactor,</text>
+        <text class="tfX" x="324" y="101" fill="#A8B9D6">speedup - its strong suit</text>
+        <path d="M 552 78 L 586 78" stroke="#C9C9D6" stroke-width="2" marker-end="url(#tfAr)"/>
+        <rect x="592" y="40" width="264" height="76" rx="10" fill="#A87B2F"/>
+        <text class="tfT" x="608" y="66">3 · The test judges</text>
+        <text class="tfX" x="608" y="85" fill="#F7EFDF">pass: read it, then commit ·</text>
+        <text class="tfX" x="608" y="101" fill="#F7EFDF">fail: back to step 2, not to hope</text>
+        <path d="M 700 116 C 700 160 440 160 434 122" fill="none" stroke="#C9C9D6" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#tfAr)"/>
+        <text class="tfX" x="500" y="172">fail loops back - the test stays fixed</text>
+
+        <rect x="24" y="196" width="404" height="76" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="tfH" x="44" y="220">Why the ORDER is the whole safety case</text>
+        <text class="tfX" x="44" y="239">The test encodes what YOU know must be true,</text>
+        <text class="tfX" x="44" y="255">before the model's fluent code can persuade you.</text>
+        <rect x="452" y="196" width="404" height="76" rx="10" fill="#EEF2F9" stroke="#A8B9D6" stroke-width="1.5"/>
+        <text class="tfH" x="472" y="220">Determinism rides along</text>
+        <text class="tfX" x="472" y="239">Fix random seeds and pin the environment -</text>
+        <text class="tfX" x="472" y="255">a test that flakes cannot arbitrate anything.</text>
+
+        <rect x="24" y="300" width="14" height="14" rx="3" fill="#A87B2F"/>
+        <text class="tfK" x="48" y="312">You stay reader and reviewer of every line you keep - the test narrows the risk, you own the result.</text>
+        <defs><marker id="tfAr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#C9C9D6"/></marker></defs>
+      </svg>
+      <figcaption>🔍 Click to zoom - the test-first loop: your truth in the test, the model's speed in the middle, the test as judge</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What a known-answer test looks like for analysis code<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Not abstract software engineering - a tiny dataset where you can compute the truth by hand:</p>
+        <ul>
+          <li><strong>For a cleaning function:</strong> six rows you wrote yourself, two with the known defect (a duplicate ID, an impossible date). Assert the function returns exactly four rows and exactly the right four.</li>
+          <li><strong>For a statistical step:</strong> a toy input whose correct output you computed by hand or with a trusted reference implementation. Assert equality to sensible precision.</li>
+          <li><strong>For a whole pipeline:</strong> a miniature input fixture and one number the full run must produce from it. This is the test that catches the refactor that "worked" but reordered a filter.</li>
+        </ul>
+        <p>The pattern generalises: every test is a small place where the truth is known independently of the code. That independence is what lets it judge AI output - the model never saw the answer key.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The twelve-tips spine, mapped to your week<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Prepare the problem.</strong> Decompose before prompting: one function, one contract, one test. Models are dramatically better at well-scoped tasks, and so is your review of them.</li>
+          <li><strong>Manage context.</strong> Give the model your data's actual shape - column names, dtypes, a few example rows (never sensitive data; b1's rule 3 still applies). Most "AI wrote wrong code" stories are "AI guessed the schema" stories.</li>
+          <li><strong>Test and validate.</strong> The loop above. Run the suite every time the model touches anything - a passing suite is the only sentence in the conversation you can trust unconditionally.</li>
+          <li><strong>You are the reader-reviewer.</strong> Read every line you keep. Accepting code you do not understand into an analysis whose correctness is the result is not delegation; per the PLOS guidance, the responsibility never moved.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ PART 3 ============ -->
+  <section class="section" id="audit">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · the audit</span>
+      <h2>Code vs methods: the discrepancy no tool closes <span class="tag concept">5 min live</span></h2>
+    </div>
+    <p class="lede">Tests check the code against your intent. One gap remains: the code against your PAPER. What your methods section says you did and what your script actually does can drift apart - a threshold changed in week eight, an exclusion added during revision - and that gap is now formally studied.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The evidence, and the ritual it dictates<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>SciCoQA (ACL 2026) catalogued 635 real discrepancies between published papers and their released code, then asked the best available LLMs to find them: they caught only 46.7%. So the honest division of labour writes itself - AI can assist the audit, flagging candidate mismatches faster than you would, but more than half the real discrepancies get past it. The human read is not a formality; it is the majority of the detection power.</p>
+        <p>The audit ritual, before every submission:</p>
+        <ul>
+          <li><strong>One pass reading the methods section with the code open.</strong> Every number in the prose - thresholds, exclusions, model settings - gets pointed at the line that implements it. No line, no sentence.</li>
+          <li><strong>One known-answer reproduction.</strong> Fresh environment, one command, and check that a headline number matches the manuscript. Demo 2 builds exactly this.</li>
+          <li><strong>One seed-change robustness check.</strong> Change the seed, rerun. Your point estimates should wobble within reason and your conclusions should not move. A conclusion that dies with the seed was never a conclusion.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>The drift is rarely dishonest - that is what makes it common.</strong> The methods section was written in month three; the exclusion rule changed in month seven during revision; nobody reread the prose against the diff. The 635 catalogued cases are largely this: honest drift, published. The ritual costs an afternoon; the correction notice costs more.</p>
+        </div>
+      </div>
+    </details>
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What this audit is, and what it is not<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>It is narrower than a code review.</strong> You are not judging style or architecture; you are checking that prose and implementation tell the same story. That narrowness is why it fits in an afternoon.</li>
+          <li><strong>It is not the claim-vs-source audit.</strong> Checking whether your citations support the sentences attached to them is a different ritual, owned by the AI + Research course (learn-ai-research-with-phoebe). This session's audit stays inside your own repository.</li>
+          <li><strong>It is not the statistics check either.</strong> Whether the analysis you correctly implemented was the right analysis - forking paths, multiple comparisons, AI-assisted analysis pitfalls - is b7, next session. Correct code running the wrong analysis passes every test on this page.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ DEMO 1 ============ -->
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Demo 1 of 2</span>
+      <h2>One function, one test, one arbitrated refactor <span class="tag demo">★ 12 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">Bring one real function from your actual analysis pipeline - a cleaner, a scorer, a transform. Not a toy: the point is to leave with YOUR code safer than it was at minute zero.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pick the function whose failure would most embarrass you in print. That instinct is a good test-priority ranking, and it is free.</p></div>
+      <div class="step"><p>Build the known answer: construct a tiny input (5-10 rows is plenty) where you can state the correct output by hand. Include one edge case you know is nasty - the missing value, the duplicate, the boundary date.</p></div>
+      <div class="step"><p>Write the pytest: <code>test_yourfunction_known_answer</code> asserting the exact expected output. Run it against the current implementation. If it fails NOW, congratulations - the session already paid for itself; fix that first.</p></div>
+      <div class="step"><p>Ask AI to refactor the function - clearer, faster, vectorised, whatever you actually want. Paste the function and the test; ask for an implementation that passes the test.</p></div>
+      <div class="step"><p>Run the suite on the draft. Pass: read every line, then keep it. Fail: send the failure output back and iterate. Notice what you are NOT doing - eyeballing two versions and deciding which "looks right". The test arbitrates; you review.</p></div>
+    </div>
+
+    <div class="prompt-box good">
+      <span class="label">★ Try it now - the refactor request with the contract attached</span>
+      <p>Here is a function from my analysis pipeline and the pytest that defines its required behaviour: [paste both]. Refactor the function for clarity and speed. Hard constraints: the test must still pass unchanged, the function signature stays the same, and behaviour on edge cases in the test is non-negotiable. If any part of the required behaviour seems wrong or ambiguous to you, say so explicitly instead of silently changing it.</p>
+    </div>
+
+    <div class="prompt-box bad">
+      <span class="label">The version that inherits every mistake</span>
+      <p>"Rewrite my analysis script to be cleaner" - no test, no contract, whole script at once. Whatever comes back will look better and might be wrong in ways nothing will ever check. You just swapped code you understood for code you have not read, in the one codebase where correctness is the result.</p>
+    </div>
+  </section>
+
+  <!-- ============ DEMO 2 ============ -->
+  <section class="section" id="demo-2">
+    <div class="section-kicker">
+      <span class="klabel">Demo 2 of 2</span>
+      <h2>The mini repro package <span class="tag demo">★ 10 min · everyone builds</span></h2>
+    </div>
+    <p class="lede">The smallest package that lets someone else reproduce one number from your current project. This is the seed of the ACM Functional badge, the NeurIPS reproduction answer and the JOSS verification story, built in ten minutes.</p>
+
+    <div class="steps">
+      <div class="step"><p>Pin the environment: export your dependencies with versions (a <code>requirements.txt</code> or environment file). "pandas" is a hope; "pandas==2.2.1" is an environment.</p></div>
+      <div class="step"><p>Pin the randomness: one seed, set in one visible place at the top of the pipeline, never scattered through the code.</p></div>
+      <div class="step"><p>Write the README run command: install line, run line, and the sentence "this should print [your number]". One command, one expected output - that sentence is the reproducibility claim in miniature.</p></div>
+      <div class="step"><p>Reproduce it yourself, hostile-witness style: fresh terminal, fresh environment, follow only the README. Every stumble you hit is a stumble your reviewer hits - fix the README, not the reviewer.</p></div>
+      <div class="step"><p>Best version: hand it to a colleague and trade - you run theirs, they run yours. Ten minutes each, and both projects now have independently reproduced numbers. That is Results Reproduced culture at lab scale.</p></div>
+    </div>
+
+    <div class="callout tip">
+      <strong>CI, the five-minute version</strong>
+      Continuous integration just means your tests run automatically on every push - GitHub Actions does this with one small config file, and AI assistants write that file well (it is boilerplate, their home turf - and the tests judging the result are already yours). For a JOSS submission this is the difference between "OK" and "Good" on the verification criterion. Verify the current version of the criteria on the JOSS review page when you submit.
+    </div>
+  </section>
+
+  <!-- ============ HOMEWORK ============ -->
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Try it yourself - this week <span class="tag exercise">◐ 40-50 min total</span></h2>
+    </div>
+    <ul>
+      <li>Extend Demo 1: known-answer tests for the two next-scariest functions in your pipeline. Three tested functions is a test suite; a test suite is a JOSS answer.</li>
+      <li>Run the code-vs-methods pass on your current draft: every number in the methods prose pointed at the line that implements it. Log every mismatch you find - that log is your revision to-do list.</li>
+      <li>Run the seed-change robustness check on your headline result and write one sentence about what moved. If a conclusion moved, that sentence belongs in your paper.</li>
+      <li>Look up the artifact or reproducibility expectations at YOUR next target venue - JOSS criteria, ACM badging, the NeurIPS checklist, or your journal's data and code availability policy - and verify the current version rather than trusting this page's snapshot.</li>
+    </ul>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">This session's bar comes from the venues' own published criteria, and its workflow from peer-reviewed guidance - all catalogued with primary URLs in this course's source map. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">JOSS review criteria: automated tests + CI = "Good"; no verification = not acceptable</span><span class="note">Part 1 · Demo 2's CI tip closes the loop</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">ACM artifact badging (Available / Functional / Results Reproduced) + NeurIPS checklist (seeds, error bars, reproduction info)</span><span class="note">Part 1 · the repro package is the ten-minute seed of both</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">"Twelve quick tips for AI-assisted coding in science" (PLOS Comp Biol 2026) - prepare, manage context, test and validate, reader-reviewer responsibility</span><span class="note">Part 2 · made mechanical as the test-first loop</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">SciCoQA (ACL 2026): 635 real paper-code discrepancies; best LLMs found 46.7%</span><span class="note">Part 3 · why the human audit read survives</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Journal data/code availability specifics (PLOS as the worked example)</span><span class="note">Policies vary by journal · verify the current version at submission</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">AI in the statistics itself - forking paths, sandboxed analysis tools</span><span class="note">That is b7, next session · this one stops at correct code</span></div>
+    </div>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · What does JOSS actually require on the verification front?</p>
+      <button class="qopt" type="button">A · Nothing formal - reviewers use their judgement about code quality</button>
+      <button class="qopt" type="button">B · A video demonstrating the software running</button>
+      <button class="qopt" type="button">C · An objective verification procedure - automated tests plus CI rate "Good", and no procedure at all is not acceptable</button>
+      <p class="qwhy">The JOSS review criteria are explicit: there must be an objective way to check the software works. An automated suite with continuous integration is the "Good" answer; documented manual steps scrape by; nothing fails review. It is the clearest signal that tests moved from virtue to requirement - verify the current criteria when you submit.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · In the AI-assisted workflow, why does the test get written BEFORE the model drafts the implementation?</p>
+      <button class="qopt" type="button">A · Because the test encodes what you independently know must be true, so it can judge code whose fluency would otherwise persuade you</button>
+      <button class="qopt" type="button">B · Because models write better code when a test exists in the prompt</button>
+      <button class="qopt" type="button">C · Because pytest requires tests to exist before implementations</button>
+      <p class="qwhy">The order is the safety case. Written first, the test is an answer key the model never saw, and the arbiter is independent of the thing it judges. Written after - or worse, BY the model against its own code - it merely certifies that the code does what the code does. Your knowledge goes in the test; the model's speed goes in the middle; per the PLOS guidance, you stay reader-reviewer of the result.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · SciCoQA found the best LLMs caught 46.7% of 635 real paper-code discrepancies. What follows for your pre-submission audit?</p>
+      <button class="qopt" type="button">A · Wait for models to improve, then automate the audit fully</button>
+      <button class="qopt" type="button">B · Use AI to flag candidates, but keep the human methods-vs-code read - it carries the majority of the detection power</button>
+      <button class="qopt" type="button">C · Skip the audit - if the tests pass, code and paper must agree</button>
+      <p class="qwhy">46.7% means more than half the real discrepancies get past the best current tools - so AI assists the audit and cannot own it. And tests cannot close this gap either: they check code against your intent, not against your prose. The methods pass, the known-answer reproduction and the seed-change check remain human rituals with your name on the result.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <!-- ============ CHEAT SHEET ============ -->
+  <section class="cheat" id="cheatsheet">
+    <h3>Researcher session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Why research code is different</b><span>Runs once, by you, and its correctness IS the result. The dangerous bug returns a plausible number, not a crash.</span></div>
+      <div class="cheat-item"><b>The venue bar</b><span>JOSS: tests + CI = "Good", none = fail. ACM: Available / Functional / Results Reproduced. NeurIPS: seeds, error bars, repro info. Journals: availability statements.</span></div>
+      <div class="cheat-item"><b>Test-first loop</b><span>You write the known-answer test → AI drafts → the test judges. Pass: read, then commit. Fail: iterate. The test stays fixed.</span></div>
+      <div class="cheat-item"><b>Known-answer test</b><span>A tiny input where the truth is computable by hand, with one nasty edge case. Independence from the code is what lets it judge the code.</span></div>
+      <div class="cheat-item"><b>The twelve-tips spine</b><span>Prepare the problem · manage context · test and validate · you are reader-reviewer and responsibility never moves (PLOS Comp Biol 2026).</span></div>
+      <div class="cheat-item"><b>Determinism</b><span>One seed in one visible place, environment pinned with versions. A flaky test cannot arbitrate anything.</span></div>
+      <div class="cheat-item"><b>The audit ritual</b><span>Methods read with code open · one known-answer reproduction · one seed-change check. SciCoQA: best LLMs catch 46.7% - the human read stays.</span></div>
+      <div class="cheat-item"><b>Mini repro package</b><span>Pinned requirements + seed + README with one command and one expected number. Fresh-terminal test it, then trade with a colleague.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Researcher session 6 of 10 · learn-ai-academia-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="b5-hypothesis-engine.html">← Previous: The hypothesis engine</a> &nbsp;·&nbsp; <a href="b7-data-analysis.html">Next: Data analysis →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
